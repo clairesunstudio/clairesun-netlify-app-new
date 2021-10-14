@@ -48,9 +48,6 @@ const Navbar = class extends React.Component {
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
-              role="menuitem"
-              tabIndex={0}
-              onKeyPress={() => this.toggleHamburger()}
               onClick={() => this.toggleHamburger()}
             >
               <span />
@@ -82,7 +79,7 @@ const Navbar = class extends React.Component {
             <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
                 target="_blank"
                 rel="noopener noreferrer"
               >

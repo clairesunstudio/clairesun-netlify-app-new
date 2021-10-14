@@ -1,0 +1,23 @@
+@import 'custom-variables';
+
+.card {
+  margin-top: 1rem;
+  width: 350px;
+  height: 380px;
+  border: 1px solid $color-gray-lighter;
+  border-radius: 0;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  // filter: grayscale(100%);
+
+  &:hover {
+   box-shadow: $box-shadow-hover;
+   // filter: grayscale(0%);
+   transition: $transition;
+ }
+
+ p {
+   font-weight: 300;
+ }
+}

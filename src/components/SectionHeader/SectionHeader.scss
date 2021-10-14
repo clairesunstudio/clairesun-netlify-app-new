@@ -1,0 +1,33 @@
+@import 'variables';
+
+.section-divider-title {
+  color: $color-gray;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 40px;
+  display: flex;
+
+  &:before {
+      border-top: 2px solid $color-gray-light;
+      content:"";
+      margin: 0 auto; /* this centers the line to the full width specified */
+      position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+      top: 45%; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      z-index: -1;
+  }
+
+  span {
+      display: inline-flex;
+      align-items: center;
+      /* to hide the lines from behind the text, you have to set the background color the same as the container */
+      background: $color-white;
+      padding-right: 15px;
+      font-size: $h5-font-size;
+  }
+  svg {
+    margin-left: 0.5rem;
+  }
+}

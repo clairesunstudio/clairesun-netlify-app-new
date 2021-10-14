@@ -1,0 +1,73 @@
+// Color
+$color-green:        #43956f;
+$color-blue:         #0D47A1;
+$color-yellow:       #f6c51b;
+$color-purple:       #4A148C;
+$color-orange:       #EE7752;
+$color-pink:         #FF0066;
+$color-blue-light:   #23A6D5;
+
+$color-gray-darker:          #263238;
+$color-gray-dark:            #455A64;
+$color-gray:            	   #607D8B;
+$color-gray-light:           #B0BEC5;
+$color-gray-lighter:    	   #CFD8DC;
+
+$color-white:                #ffffff;
+$color-black:                #000000;
+
+$color-white-alt:        rgba($color-white,0.9);
+$color-green-alt:        rgba(#43956f,0.5);
+$color-blue-alt:         rgba(#14558f,0.5);
+$color-yellow-alt:       rgba(#f6c51b,0.5);
+
+@import url('https://fonts.googleapis.com/css?family=Monoton|Montserrat');
+// // Typography
+$font-sans:           'Montserrat','Helvetica Neue','Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+$font-serif:          "Roboto Slab", 'Merriweather', 'Georgia', 'Times New Roman', serif;
+$font-style:          "Monoton",'Montserrat','Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+
+$em-base:             10px;
+$tiny-font-size:      1.1rem;
+$small-font-size:     1.2rem;
+$regular-font-size:   1.6rem;
+$base-font-size:      1.8rem;
+$lead-font-size:      2.5rem;
+$title-font-size:     3rem;
+$large-font-size:     4rem;
+$larger-font-size:    5rem;
+$base-line-height:    1.5;
+$heading-line-height: 1.3;
+$lead-line-height:    1.7;
+
+$font-normal:         400;
+$font-bold:           700;

@@ -1,16 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Claire Sun Studio',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Design and Development Portfolio of Minghua Sun',
+    keywords: 'design, develop, UX, portfolio'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-sass',
+      resolve: `gatsby-plugin-sass`,
       options: {
-        indentedSyntax: true,
-      },
+        includePaths: [`${__dirname}/src/components/styles/`]
+      }
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -33,6 +34,23 @@ module.exports = {
         path: `${__dirname}/src/img`,
         name: 'images',
       },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+          rule: {
+            include: `${__dirname}/src/icons/`
+          }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Claire Sun Studio',
+        short_name: 'clairesunstudio',
+        description: `Minghua Sun's Portfolio`,
+        icon: `${__dirname}/static/img/favicon.ico`
+      }
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -61,6 +79,15 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: 'gatsby-remark-rehype-images',
+            // resolve: require.resolve('..'),
+            options: {
+              tag: 'rehype-image',
+              sharpFunction: 'fluid',
+              maxWidth: 600,
+            },
+          }
         ],
       },
     },
@@ -78,5 +105,5 @@ module.exports = {
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
-  ],
+  ]
 }

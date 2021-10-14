@@ -1,0 +1,80 @@
+@import 'custom-variables';
+@import 'bootstrap';
+
+.pagers {
+  //border-top: 1px solid $color-gray-light;
+  //border-bottom: 1px solid $color-gray-light;
+  align-items: center;
+
+  .col {
+    padding: 0;
+    flex-grow: 1;
+    align-self: stretch;
+    align-items: center;
+    
+    a {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $color-gray-lighter;
+      
+      span {
+        margin: 0 10px;
+        
+        @include media-breakpoint-down(xs) {
+          display: none;
+        }
+      }
+      
+      &:hover {
+        box-shadow: $box-shadow;
+        transition: $transition;
+      }
+    }
+
+    &:first-child {
+      flex-grow: 3;
+      a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-self: stretch;
+        width: 100%;
+        padding: 1rem 0;
+        flex: 1 1 auto;
+        border-right: none;
+        
+        span {
+          text-align: left;
+        }
+        
+        svg {
+          margin: 0 1rem;
+          min-width: 12px;
+        }
+      }
+    }
+    &:last-child {
+      flex-grow: 3;
+      a {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 0;
+        flex: 1 1 auto;
+        border-left: none;
+        
+        span {
+          text-align: right;
+        }
+        
+        svg {
+          margin: 0 1rem;
+          min-width: 12px;
+        }
+      }
+    }
+  }
+}

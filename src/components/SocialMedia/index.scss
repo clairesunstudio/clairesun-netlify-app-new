@@ -1,0 +1,33 @@
+@import '../styles/variables';
+
+@mixin social-svg-icons($foreground, $background){
+  g.social-svg {
+    &-mask {
+      fill: $background !important;
+    }
+    &-icon{
+      fill: $foreground !important;
+    }
+  }
+}
+
+.social-media{
+    display: inline-block;
+    @media screen and (max-width: 911px) {
+      text-align: center;
+    }
+}
+
+nav.navbar {
+  @include social-svg-icons($color-black, transparent);
+  .social-icon:hover{
+    @include social-svg-icons($color-white, $color-black);
+  }
+}
+
+footer {
+  @include social-svg-icons($color-white, transparent);
+  .social-icon:hover{
+    @include social-svg-icons($color-black, $color-white);
+  }
+}

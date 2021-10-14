@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+
+.project-header{
+  @include gradient-animate;
+
+  h1{
+    font-size: $h1-font-size;
+    letter-spacing: normal;
+    color: $color-white;
+    margin: 0 auto;
+  }
+  p {
+    font-size: $h5-font-size;
+    color: $color-white;
+    margin-bottom: 30px;
+  }
+  hr {
+    border-color: $color-white;
+  }
+}

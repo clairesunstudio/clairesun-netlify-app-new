@@ -1,0 +1,26 @@
+@import 'variables';
+
+footer{
+  background-color: $color-black;
+  color: $color-white;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: block;
+  .row {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px){
+    & > .container {
+      display: inline-flex;
+      div {
+        text-align: left;
+        &:nth-child(2){
+          text-align: right;
+        }
+      }
+    }
+  }
+}

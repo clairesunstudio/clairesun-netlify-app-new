@@ -1,27 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import { Row, Col, Container } from 'react-bootstrap'
+import ProjectCard from './ProjectCard'
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
-    {gridItems.map((item) => (
-      <div key={item.text} className="column is-6">
-        <section className="section">
-          <div className="has-text-centered">
-            <div
-              style={{
-                width: '240px',
-                display: 'inline-block',
-              }}
-            >
-              <PreviewCompatibleImage imageInfo={item} />
-            </div>
-          </div>
-          <p>{item.text}</p>
-        </section>
-      </div>
+  <Row noGutters>
+    {gridItems.map(item => (
+      <Col>
+        <ProjectCard image={item} text={item.text} buttonText="Learn More"/>
+      </Col>
     ))}
-  </div>
+  </Row>
 )
 
 FeatureGrid.propTypes = {

@@ -24,7 +24,9 @@ class BlogRoll extends React.Component {
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          alt: `featured image thumbnail for post ${
+                            post.title
+                          }`,
                         }}
                       />
                     </div>
@@ -76,7 +78,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 200)
               id
               fields {
                 slug

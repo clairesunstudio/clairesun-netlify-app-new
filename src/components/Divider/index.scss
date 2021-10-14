@@ -1,0 +1,7 @@
+@import 'variables';
+@import 'mixins';
+
+.divider-color {
+  @include gradient-animate;
+  padding: 5px 0;
+}

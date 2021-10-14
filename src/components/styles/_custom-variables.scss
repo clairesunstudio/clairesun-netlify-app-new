@@ -1,0 +1,69 @@
+// Overwrite Bootstrap's variables here
+// You can find them in node_modules/bootstrap/scss/_variables.scss
+// Copy the variables you need into this file, don't modify files under node_modules/
+
+// Some example variables that you can uncomment:
+
+// Enabling shadows and gradients
+//$enable-shadows: true;
+//$enable-gradients: true;
+
+// Changing the body background and text
+//$body-bg: #d3e9eb;
+//$body-color: #151417;
+
+
+
+
+// Theme colors
+$color-green:        #43956f;
+$color-blue:         #0D47A1;
+$color-yellow:       #f6c51b;
+$color-purple:       #4A148C;
+$color-orange:       #EE7752;
+$color-pink:         #FF0066;
+$color-blue-light:   #23A6D5;
+
+$color-gray-darker:          #263238;
+$color-gray-dark:            #455A64;
+$color-gray:            	   #607D8B;
+$color-gray-light:           #B0BEC5;
+$color-gray-lighter:    	   #CFD8DC;
+
+$color-white:                #ffffff;
+$color-black:                #000000;
+
+$color-white-alt:        rgba($color-white,0.9);
+$color-green-alt:        rgba(#43956f,0.5);
+$color-blue-alt:         rgba(#14558f,0.5);
+$color-yellow-alt:       rgba(#f6c51b,0.5);
+// Changing the theme colors
+$primary: $color-gray-darker;
+$secondary: $color-purple;
+$info: $color-blue-light;
+$warning: $color-yellow;
+$danger: $color-pink;
+$light: $color-gray-lighter;
+$dark: $color-black;
+$success: $color-green;
+
+// Changing the variables relating to buttons
+//$box-shadow: 0 0 2em 0 rgba($color-gray-dark,1);
+$border-radius: 3px;
+$border-width: 1px;
+$btn-font-weight: 700;
+$btn-box-shadow: 0 0.25rem 0.5rem rgba($dark, 0.25);
+$box-shadow: 0px 10px 20px -10px $color-gray-lighter;
+$box-shadow-hover: 0px 10px 20px 0px $color-gray-light;
+$transition: all 0.3s ease-in-out;
+
+
+
+
+$font-family-sans-serif:      "Texta", "Helvetica", "Arial", "sans-serif";
+$font-family-base:            $font-family-sans-serif;
+
+// Adding (!) an additional theme color (ex. classes btn-cool, bg-cool)
+//$theme-colors: (
+//  "cool": #4d3fa3
+//);
