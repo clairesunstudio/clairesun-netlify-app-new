@@ -6,7 +6,7 @@ export const siteMetadataFragment = graphql`
     buildTime
     siteMetadata {
       description
-      # keywords
+      keywords
       title
     }
   }
