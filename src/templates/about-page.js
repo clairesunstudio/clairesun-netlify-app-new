@@ -14,7 +14,7 @@ import { Timeline, TimelineEvent } from '../components/Timeline'
 import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights }) => {
   const PageContent = contentComponent || Content
   const svgSize ={
     svgWidth: 30,
@@ -97,43 +97,18 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
                 ))
               }
             </Timeline>
-        <SectionHeader>Projects<Icon name='project' {...svgSize} /></SectionHeader>
+        <SectionHeader>Highlights<Icon name='project' {...svgSize} /></SectionHeader>
         <Timeline>
-          <TimelineEvent title="The ABCs of High School Success"
-                         sub="Mass.gov/SuccessABCs"
-                         project="dese"
-                         url="http://mass.gov/Chapter55"
-                         date={["Launched","Oct. 2017"]}>
-                        <p>
-                        I worked closely with the Department of Education and Secondary Education on developing this interactive data story to highlight the impact of the ABCs by following a group of students from the time they entered 9th grade, to when each left or completed high school. In this project, my work includes storyboading with exisiting data, data visualization design, prototyping, website development and deployment and user testing. The site was built using React with a highly componentized front end and a light weight page load.
-                        </p>
-          </TimelineEvent>
-          <TimelineEvent title="Redesigning Mass.gov"
-                         sub="Mass.gov"
-                         url="http://mass.gov/Chapter55"
-                         date={["Launched","Sept. 2017"]}>
-                         <ul>
-                          <li> Work on design and front end development of the new Mass.gov and its design system 'Mayflower'</li>
-                          <li> Research and build pilots on data visualization and search solutions</li>
-                          <li> Extending the use of 'Mayflower' onto other web app and data dashboards</li>
-                          <li> Vendor selection and RFR website construction</li>
-                          <li> Quick wins on the classic Mass.gov homepage design and photo contest</li>
-                         </ul>
-          </TimelineEvent>
-          <TimelineEvent title="Chapter 55"
-                         sub="Mass.gov/Chapter55"
-                         project="chapter55"
-                         url="http://mass.gov/Chapter55"
-                         date={["Launched","Dec. 2016"]}>
-                        <p>
-                        As the designer and developer of this interactive data story on the MA opioid epidemic, I worked from concept sketching, data visualization designing, prototyping, and iterating, into the final deployment. The code repository was also made public as the pilot project of Mass.gov’s open-source initiative. This project received the Innovation in Data Science Award at the Massachusetts Digital Government Summit 2017.
-                        </p>
-          </TimelineEvent>
-          <TimelineEvent title="Artificial Bioluminescence"
-                         project="freshmedia1"
-                         sub="A sensory lighting installation exhibited at the Boston CyberArts Gallery"
-                         date="April 2015">
-          </TimelineEvent>
+            { highlights.map((highlight, i) => (
+                  <TimelineEvent
+                    key={`highlight_${i}`}
+                    title={highlight.title}
+                    sub={highlight.subTitle}
+                    date={[highlight.endDate, highlight.startDate]}>
+                    {highlight.descriptions}
+                  </TimelineEvent>
+                ))
+            }
         </Timeline>
         <SectionHeader>volunteer<Icon name='volunteer' {...svgSize} /></SectionHeader>
         <Timeline>
@@ -200,18 +175,23 @@ export const aboutPageQuery = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
-            extension
-            publicURL
           }
           href
           text
         }
         jobs {
-          descriptions
-          endDate
           jobTitle
-          startDate
           workPlace
+          descriptions
+          startDate
+          endDate
+        }
+        highlights {
+          title
+          subTitle
+          descriptions
+          startDate
+          endDate
         }
       }
     }

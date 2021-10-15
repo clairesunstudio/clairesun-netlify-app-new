@@ -14,19 +14,19 @@ about:
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist, Cat Mom
 info:
-  - icon: "/img/icons/phone.svg"
+  - icon: /img/icons/phone.svg
     href: tel:6178341062
     text: +1 (617) 834-1062
-  - icon: "/img/icons/location.svg"
+  - icon: /img/icons/location.svg
     text: Boston, MA
     href: https://clairesunstudio.com
-  - icon: "/img/icons/website.svg"
+  - icon: /img/icons/website.svg
     href: https://clairesunstudio.com
     text: clairesunstudio.com
-  - icon: "/img/icons/email.svg"
+  - icon: /img/icons/email.svg
     href: mailto:clairesunstudio@gmail.com
     text: clairesunstudio@gmail.com
-  - icon: "/img/icons/github.svg"
+  - icon: /img/icons/github.svg
     href: https://github.com/clairesunstudio
     text: "@clairesunstudio"
 jobs:
@@ -59,4 +59,22 @@ jobs:
     startDate: Feb 2014
     endDate: Sep 2013
     descriptions: ""
+highlights:
+  - title: Massachusetts Excellence in Technology Award – Innovation in Data Science
+    subTitle: Center for Digital Government | GovTech
+    descriptions: Interactive Data Story on the [Massachusetts opioid
+      epidemic](https://chapter55.digital.mass.gov/), creative lead, data
+      visualization developer.
+    endDate: Sep 2017
+    startDate: "2017"
+  - title: Massachusetts Performance Recognition Program
+    subTitle: Commonwealth of Massachusett
+    descriptions: Mass.gov redesign and re-platform project
+    startDate: "2018"
+    endDate: "2018"
+  - title: Artificial Bioluminescence
+    subTitle: Boston CyberArts Gallery Exibition
+    descriptions: A multisensory LED light installation
+    startDate: "2018"
+    endDate: "2018"
 ---
