@@ -9,10 +9,12 @@ about:
   blurb: >
     I wear many hats in various projects — conducting user research, translating
     requirements into wireframes, writing and reviewing code, creating data
-    visualizations and venturing into data analytics. I&apos;m the Product Owner
-    of the Commonwealth Design System and I sometimes PM technical projects.
+    visualizations and venturing into data analytics. I'm the Product Owner of
+    the Commonwealth Design System and I sometimes PM technical projects.
+  Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
+    Technologist, Cat Mom
 info:
-  - icon: /img/icons/phone.svg
+  - icon: "/img/icons/phone.svg"
     href: tel:6178341062
     text: +1 (617) 834-1062
   - icon: "/img/icons/location.svg"
@@ -28,26 +30,6 @@ info:
     href: https://github.com/clairesunstudio
     text: "@clairesunstudio"
 jobs:
-  - jobTitle: Design Internship
-    workPlace: NH Division of Economic Development, Concord, NH
-    startDate: Feb 2014
-    endDate: Sep 2013
-    descriptions: ""
-  - jobTitle: Web/Graphic Designer
-    startDate: May 2014
-    endDate: Oct 2014
-    workPlace: StudentUniverse
-    descriptions: |-
-      * Wire-framing and front-end design of company’s new website
-      * Design website visuals and marketing collateral
-      * Create HTML email campaigns and landing pages
-  - jobTitle: Visual Designer
-    workPlace: UMass Boston
-    startDate: Mar 2014
-    endDate: Jun 2015
-    descriptions: |-
-      * Design and create promotional collateral
-      * event filming (Chinese Bridge) and post productions
   - jobTitle: UX Designer & Engineer
     workPlace: Digital Services, Commonwealth of Massachusetts
     startDate: May 2015
@@ -57,6 +39,24 @@ jobs:
       * Analyze and visualize data for Mass.gov social media accounts
       * Lead public facing marketing campaign branding and visual design
       * Direct and mentor design interns
+  - jobTitle: Visual Designer
+    workPlace: UMass Boston
+    startDate: Mar 2014
+    endDate: Jun 2015
+    descriptions: |-
+      * Design and create promotional collateral
+      * event filming (Chinese Bridge) and post productions
+  - jobTitle: Web/Graphic Designer
+    startDate: May 2014
+    endDate: Oct 2014
+    workPlace: StudentUniverse
+    descriptions: |-
+      * Wire-framing and front-end design of company’s new website
+      * Design website visuals and marketing collateral
+      * Create HTML email campaigns and landing pages
+  - jobTitle: Design Internship
+    workPlace: NH Division of Economic Development, Concord, NH
+    startDate: Feb 2014
+    endDate: Sep 2013
+    descriptions: ""
 ---
-
-...
