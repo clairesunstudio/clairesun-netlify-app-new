@@ -159,7 +159,7 @@ collections:
               fields:
                 [
                   { label: Name, name: name, widget: string },
-                  { label: Job, name: job, widget: text },
+                  { label: Title, name: Title, widget: string },
                   { label: Blurb, name: blurb, widget: text },
                 ],
             }
@@ -170,7 +170,15 @@ collections:
               - { label: Icon, name: icon, widget: "string" }
               - { label: Href, name: href, widget: "string" }
               - { label: Text, name: text, widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Jobs"
+            name: "jobs"
+            widget: "list"
+            fields:
+              - { label: "Job Title", name: jobTitle, widget: "string" }
+              - { label: "Start Date", name: startDate, widget: "string" }
+              - { label: "End Date", name: endDate, widget: "string" }
+              - { label: "Work Place", name: workPlace, widget: "string" }
+              - { label: "Descriptions", name: descriptions, widget: "markdown", required: false }
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

@@ -14,12 +14,13 @@ import { Timeline, TimelineEvent } from '../components/Timeline'
 import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs }) => {
   const PageContent = contentComponent || Content
   const svgSize ={
     svgWidth: 30,
     svgHeight: 20
   }
+  console.log(jobs)
   return (
     <Fragment>
       <Divider />
@@ -201,7 +202,6 @@ export default AboutPage
 export const aboutPageQuery = graphql`
   query AboutPage($id: String = "/about-page/") {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
         about {
@@ -217,17 +217,16 @@ export const aboutPageQuery = graphql`
           }
         }
         info {
-          icon {
-            childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-            extension
-            publicURL
-          }
+          icon
           href
           text
+        }
+        jobs {
+          descriptions
+          endDate
+          jobTitle
+          startDate
+          workPlace
         }
       }
     }
