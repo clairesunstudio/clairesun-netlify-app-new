@@ -9,22 +9,22 @@ about:
   blurb: >
     I wear many hats in various projects — conducting user research, translating
     requirements into wireframes, writing and reviewing code, creating data
-    visualizations and venturing into data analytics. I'm the Product Owner of
-    the Commonwealth Design System and I sometimes PM technical projects.
+    visualizations and venturing into data analytics. I&apos;m the Product Owner
+    of the Commonwealth Design System and I sometimes PM technical projects.
 info:
   - icon: /img/icons/phone.svg
     href: tel:6178341062
     text: +1 (617) 834-1062
-  - icon: /img/icons/location.svg
+  - icon: "/img/icons/location.svg"
     text: Boston, MA
     href: https://clairesunstudio.com
-  - icon: /img/icons/website.svg
+  - icon: "/img/icons/website.svg"
     href: https://clairesunstudio.com
     text: clairesunstudio.com
-  - icon: /img/icons/email.svg
+  - icon: "/img/icons/email.svg"
     href: mailto:clairesunstudio@gmail.com
     text: clairesunstudio@gmail.com
-  - icon: /img/icons/github.svg
+  - icon: "/img/icons/github.svg"
     href: https://github.com/clairesunstudio
     text: "@clairesunstudio"
 jobs:
@@ -50,11 +50,13 @@ jobs:
       * event filming (Chinese Bridge) and post productions
   - jobTitle: UX Designer & Engineer
     workPlace: Digital Services, Commonwealth of Massachusetts
-    startDate: Mar 2014
-    endDate: June 2015
+    startDate: May 2015
+    endDate: Present
     descriptions: |-
       * UI/UX design, web front end development
       * Analyze and visualize data for Mass.gov social media accounts
       * Lead public facing marketing campaign branding and visual design
       * Direct and mentor design interns
 ---
+
+...

@@ -20,7 +20,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
     svgWidth: 30,
     svgHeight: 20
   }
-  console.log(jobs)
   return (
     <Fragment>
       <Divider />
@@ -87,38 +86,16 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
             </Timeline>
         <SectionHeader>Experience<Icon name='job' {...svgSize} /></SectionHeader>
             <Timeline>
-              <TimelineEvent title="UX Designer & Engineer"
-                             sub="Digital Services, EOTSS, Commonwealth of Massachusetts
-"
-                             date={["Present","May 2015"]}>
-                             <ul>
-                              <li> UI/UX design, web front end development</li>
-                              <li> Analyze and visualize data for Mass.gov social media accounts</li>
-                              <li> Lead public facing marketing campaign branding and visual design</li>
-                              <li> Direct and mentor design interns</li>
-                             </ul>
-              </TimelineEvent>
-              <TimelineEvent title="Visual Designer"
-                             sub="Confucius Institute, UMass Boston"
-                             date={["Mar. 2014","June 2015"]}>
-                             <ul>
-                              <li> Design and create promotional collateral</li>
-                              <li> Chinese Bridge contest event filming and post productions</li>
-                             </ul>
-              </TimelineEvent>
-              <TimelineEvent title="Web/Graphic Designer"
-                             sub="StudentUniverse, Waltham"
-                             date={["May 2014","Oct 2014"]}>
-                             <ul>
-                              <li> Assist in the wire-framing and front-end design of company’s new website</li>
-                              <li> Design website visuals and marketing collateral</li>
-                              <li> Create HTML email campaigns and landing pages</li>
-                             </ul>
-              </TimelineEvent>
-              <TimelineEvent title="Design Internship"
-                             sub=" NH Division of Economic Development, Concord, NH"
-                             date={["Feb. 2014","Sep. 2013"]}>
-              </TimelineEvent>
+              { jobs.map((job, i) => (
+                  <TimelineEvent
+                    key={`job_${i}`}
+                    title={job.jobTitle}
+                    sub={job.workPlace}
+                    date={[job.endDate, job.startDate]}>
+                    {job.descriptions}
+                  </TimelineEvent>
+                ))
+              }
             </Timeline>
         <SectionHeader>Projects<Icon name='project' {...svgSize} /></SectionHeader>
         <Timeline>
@@ -217,7 +194,15 @@ export const aboutPageQuery = graphql`
           }
         }
         info {
-          icon
+          icon {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+            extension
+            publicURL
+          }
           href
           text
         }
