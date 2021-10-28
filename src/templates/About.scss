@@ -6,16 +6,9 @@
 .info_list{
   margin: 30px auto 50px;
   list-style-type: none;
-  li{
-    img{
-      margin-left: -35px;
-      margin-right: 10px;
-      width: 23px;
-      height: 33px;
-    }
-    &:first-child{
-      margin-bottom: 5px;
-    }
+  padding-left: 0;
+  li {
+    margin-top: .5rem;
   }
 }
 a{

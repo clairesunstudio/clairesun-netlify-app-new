@@ -14,19 +14,19 @@ about:
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist, Cat Mom
 info:
-  - icon: /img/icons/phone.svg
+  - icon: phone
     href: tel:6178341062
     text: +1 (617) 834-1062
-  - icon: /img/icons/location.svg
+  - icon: location
     text: Boston, MA
     href: https://clairesunstudio.com
-  - icon: /img/icons/website.svg
+  - icon: website
     href: https://clairesunstudio.com
     text: clairesunstudio.com
-  - icon: /img/icons/email.svg
+  - icon: email
     href: mailto:clairesunstudio@gmail.com
     text: clairesunstudio@gmail.com
-  - icon: /img/icons/github.svg
+  - icon: github
     href: https://github.com/clairesunstudio
     text: "@clairesunstudio"
 jobs:
@@ -77,4 +77,13 @@ highlights:
     descriptions: A multisensory LED light installation
     startDate: "2018"
     endDate: "2018"
+volunteer:
+  - title: "Design Director, Marketing (Facebook) Admin "
+    subTitle: " Bright & Beautiful (有灵且美)"
+    startDate: April 2015
+    endDate: "2019"
+    descriptions: Bright & Beautiful is a non-profit organization aiming at
+      inspiring and encourage creative talents and art education to girls in
+      rural China. We host Summer Arts Camp once or twice a year at the middle
+      schools in rural Yunnan China.
 ---

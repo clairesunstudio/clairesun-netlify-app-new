@@ -1,1 +1,10 @@
-<svg id="contact" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 8.93 12.34"><defs><style>.cls-1,.cls-2{fill:#fff;stroke:#231f20;stroke-miterlimit:10;}.cls-1{stroke-width:0.5px;}.cls-2{stroke-width:0.31px;}</style><symbol id="location" data-name="location" viewBox="0 0 8.93 12.34"><path class="cls-1" d="M4.47,0.25A4.22,4.22,0,0,0,.25,4.47C0.25,7.77,4.47,12,4.47,12S8.68,7.77,8.68,4.47A4.22,4.22,0,0,0,4.47.25Z"/><circle class="cls-2" cx="4.47" cy="4.72" r="2.24"/></symbol></defs><title>location</title><use width="8.93" height="12.34" xlink:href="#location"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>location</title>
+    <g id="location" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(4.000000, 1.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#231F20">
+            <path d="M8.25947766,0.399998877 C10.4264346,0.40513386 12.386883,1.2867566 13.8055927,2.7088362 C15.2243049,4.13091823 16.1012766,6.09345885 16.1012766,8.26042553 C16.1012766,13.8966034 9.69573232,20.9223555 8.26002744,22.4261812 C6.82159617,20.9230413 0.4,13.8969237 0.4,8.26042553 C0.4,6.08982896 1.2798081,4.12472257 2.70226534,2.70226534 C4.12472257,1.2798081 6.08982896,0.4 8.25947766,0.399998877 Z" id="Path" stroke-width="0.8"></path>
+            <circle id="Oval" stroke-width="0.5" cx="8.26042553" cy="8.74978723" r="4.38468085"></circle>
+        </g>
+    </g>
+</svg>

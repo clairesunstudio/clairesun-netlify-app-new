@@ -14,6 +14,7 @@ import { Timeline, TimelineEvent } from '../components/Timeline'
 import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+
 export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights }) => {
   const PageContent = contentComponent || Content
   const svgSize ={
@@ -37,14 +38,17 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
             <div className="about-section">
               <ul className="info_list">
               {
-                info.map((item, index) => (
-                  <li>
-                    <PreviewCompatibleImage imageInfo={item.icon} />
-                    {
-                      item.href ? (<a href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
-                    }
-                  </li>
-                ))
+                info.map((item, index) => {
+                console.log(item.icon)
+                  return(
+                    <li>
+                      <Icon name={item.icon} />
+                      {
+                        item.href ? (<a href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
+                      }
+                    </li>
+                  )
+                })
               }
               </ul>
             </div>
@@ -169,13 +173,7 @@ export const aboutPageQuery = graphql`
           }
         }
         info {
-          icon {
-            childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          icon
           href
           text
         }

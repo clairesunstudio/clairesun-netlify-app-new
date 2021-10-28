@@ -29,8 +29,8 @@ export default class Icon extends React.Component {
       .then(({ default: SVG }) => {
         if (SVG) {
           const attr = {
-            width: svgWidth || '40',
-            height: svgHeight || '40',
+            width: svgWidth || '25',
+            height: svgHeight || '25',
             className: (classes && classes.length > 0) ? classes.filter((c) => c).toString() : null,
             'aria-hidden': ariaHidden || null
           };
