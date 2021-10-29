@@ -15,7 +15,7 @@ import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
-export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights, volunteer, skills: { code, languages } }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
   const PageContent = contentComponent || Content
   const svgSize ={
     svgWidth: 30,
@@ -59,7 +59,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
           </div>
           <div className="about-section">
             <SectionHeader>Skill Set Cloud</SectionHeader>
-            <WordCloud/>
+            <WordCloud data={skillSet}/>
 
           </div>
           <div className="about-section">
@@ -189,6 +189,15 @@ export const aboutPageQuery = graphql`
         skills {
           code
           languages
+          skillSet {
+            name
+            value
+          }
+          toolSet {
+            name
+            value
+            size
+          }
         }
         jobs {
           jobTitle
