@@ -1,21 +1,21 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { Container, Row, Col, Button } from 'react-bootstrap'
+import './About.scss'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Divider from '../components/Divider'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import './About.scss'
 import WordCloud from '../components/WordCloud'
 import SectionHeader from '../components/SectionHeader'
 import DonutChart from '../components/DonutChart'
-import TagPill from '../components/Pill'
+import Pills from '../components/Pills'
 import { Timeline, TimelineEvent } from '../components/Timeline'
 import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
-export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights, volunteer }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights, volunteer, skills: { code, languages } }) => {
   const PageContent = contentComponent || Content
   const svgSize ={
     svgWidth: 30,
@@ -54,16 +54,19 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
             </div>
           </div>
           <div className="about-section">
-            <SectionHeader>Design Tools proficiency</SectionHeader>
+            <SectionHeader>Design Tools Proficiency</SectionHeader>
             <DonutChart/>
           </div>
           <div className="about-section">
-            <SectionHeader>WordCloud</SectionHeader>
+            <SectionHeader>Skill Set Cloud</SectionHeader>
             <WordCloud/>
+
           </div>
           <div className="about-section">
-            <SectionHeader>languages</SectionHeader>
-            <TagPill />
+            <SectionHeader>Languages</SectionHeader>
+            <Pills data={code} />
+            <hr />
+            <Pills data={languages} />
           </div>
         </Col>
         <Col>
@@ -182,6 +185,10 @@ export const aboutPageQuery = graphql`
           icon
           href
           text
+        }
+        skills {
+          code
+          languages
         }
         jobs {
           jobTitle

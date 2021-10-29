@@ -15,6 +15,8 @@ skills:
   skillSet:
     - name: Atomic Design
       value: 15
+    - name: Rapid Prototyping
+      value: 18
 path: /about
 templateKey: about-page
 title: About Me
