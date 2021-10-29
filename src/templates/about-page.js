@@ -55,7 +55,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
           </div>
           <div className="about-section">
             <SectionHeader>Design Tools Proficiency</SectionHeader>
-            <DonutChart/>
+            <DonutChart data={toolSet} />
           </div>
           <div className="about-section">
             <SectionHeader>Skill Set Cloud</SectionHeader>
