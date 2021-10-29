@@ -15,7 +15,7 @@ import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
-export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights }) => {
+export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights, volunteer }) => {
   const PageContent = contentComponent || Content
   const svgSize ={
     svgWidth: 30,
@@ -116,10 +116,16 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
         </Timeline>
         <SectionHeader>volunteer<Icon name='volunteer' {...svgSize} /></SectionHeader>
         <Timeline>
-          <TimelineEvent title="Bright & Beautiful (有灵且美)"
-                         sub="Design Director, Facebook Admin"
-                         date="April 2015">
-          </TimelineEvent>
+            { volunteer.map((item, i) => (
+                    <TimelineEvent
+                      key={`item_${i}`}
+                      title={item.title}
+                      sub={item.subTitle}
+                      date={[item.endDate, item.startDate]}>
+                      {item.descriptions}
+                    </TimelineEvent>
+                  ))
+            }
         </Timeline>
         </Col>
         </Row>
@@ -185,6 +191,13 @@ export const aboutPageQuery = graphql`
           endDate
         }
         highlights {
+          title
+          subTitle
+          descriptions
+          startDate
+          endDate
+        }
+        volunteer {
           title
           subTitle
           descriptions

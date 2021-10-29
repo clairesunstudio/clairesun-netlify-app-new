@@ -1,4 +1,20 @@
 ---
+skills:
+  toolSet:
+    - name: Figma
+      value: 85
+      size: md
+    - name: AI
+      value: 100
+      size: lg
+    - name: Optimal Workshop
+      value: 85
+      size: sm
+  code: HTML,CSS,SASS,JS,Jquery,SQL,React.JS,Node.JS,D3.JS,P5.JS,Arduino,Processing,GTM,Drupal,Twig,Git,Regex,R,ggplot2,Python,Pandas,AWS
+  languages: English,Mandarin Chinese,Cantonese
+  skillSet:
+    - name: Atomic Design
+      value: 15
 path: /about
 templateKey: about-page
 title: About Me
