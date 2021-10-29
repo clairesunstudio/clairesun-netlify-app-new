@@ -4,12 +4,33 @@ skills:
     - name: Figma
       value: 85
       size: md
-    - name: AI
+    - name: Sketch
+      value: 89
+      size: md
+    - name: Invision
       value: 100
-      size: lg
+      size: md
+    - name: User Zoom
+      value: 90
+      size: sm
     - name: Optimal Workshop
       value: 85
       size: sm
+    - name: AI
+      value: 100
+      size: lg
+    - name: XD
+      value: 80
+      size: lg
+    - name: PS
+      value: 95
+      size: lg
+    - name: AE
+      value: 50
+      size: lg
+    - name: ID
+      value: 66
+      size: lg
   code: HTML,CSS,SASS,JS,Jquery,SQL,React.JS,Node.JS,D3.JS,P5.JS,Arduino,Processing,GTM,Drupal,Twig,Git,Regex,R,ggplot2,Python,Pandas,AWS
   languages: English,Mandarin Chinese,Cantonese
   skillSet:
