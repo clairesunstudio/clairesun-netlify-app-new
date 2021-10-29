@@ -19,11 +19,12 @@
       position: relative;
       margin: 25px 0px;
       padding-left: 100px;
-      .timeline_event-date{
+      &-date{
         position: absolute;
-          top: 0px; left: 10px;
+          top: -.5rem; left: 10px;
+        text-align: right;
         }
-      .timeline_event-icon{
+      &-icon{
         position: absolute;
           top: 0px; left: 88px;
         width: 12px;
@@ -39,17 +40,17 @@
           background: $color-gray-light;
         }
       }
-      .timeline_event-content{
+      &-content{
         position: relative;
         margin-left: 10px;
-        .timeline_event-content-url{
-          margin: 0 0 20px;
+        &-url{
+          margin-bottom: 0.5rem;
         }
       }
     }
     &:first-child{
       .timeline_event{
-        .timeline_event-icon{
+        &-icon{
           &:after{
             position: absolute;
               left: -7px; top:-7px;
