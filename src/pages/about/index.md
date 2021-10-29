@@ -12,27 +12,45 @@ skills:
       size: sm
   code: HTML,CSS,SASS,JS,Jquery,SQL,React.JS,Node.JS,D3.JS,P5.JS,Arduino,Processing,GTM,Drupal,Twig,Git,Regex,R,ggplot2,Python,Pandas,AWS
   languages: English,Mandarin Chinese,Cantonese
-  skillSet: [
-    {name: "Atomic Design", value: 15},
-    {name: "Rapid Prototyping", value: 18},
-    {name: "Data Visualization", value: 30},
-    {name: "Front End Development", value: 30},
-    {name: "User Research", value: 16},
-    {name: "UX Design", value: 30},
-    {name: "Installation Art", value: 20},
-    {name: "Animation", value: 20},
-    {name: "UI Design", value: 20},
-    {name: "Branding", value: 20},
-    {name: "Marketing Campaign", value: 15},
-    {name: "Design Thinking", value: 20},
-    {name: "Social Media", value: 20},
-    {name: "Storytelling", value: 20},
-    {name: "Data Analytics", value: 20},
-    {name: "Interaction Design", value: 20},
-    {name: "Agile", value: 13},
-    {name: "Project Management", value: 10},
-    {name: "Accessibility", value: 15}
-  ]
+  skillSet:
+    - name: Atomic Design
+      value: 15
+    - name: Rapid Prototyping
+      value: 18
+    - name: Data Visualization
+      value: 30
+    - name: Front End Dev
+      value: 30
+    - name: User Research
+      value: 16
+    - name: UX Design
+      value: 30
+    - name: Installation Art
+      value: 20
+    - name: Animation
+      value: 20
+    - name: UI Design
+      value: 20
+    - name: Branding
+      value: 20
+    - name: Marketing Campaign
+      value: 15
+    - name: Design Thinking
+      value: 20
+    - name: Social Media
+      value: 20
+    - name: Storytelling
+      value: 20
+    - name: Data Analytics
+      value: 20
+    - name: Interaction Design
+      value: 20
+    - name: Agile
+      value: 13
+    - name: Product Management
+      value: 10
+    - name: Accessibility
+      value: 15
 path: /about
 templateKey: about-page
 title: About Me
