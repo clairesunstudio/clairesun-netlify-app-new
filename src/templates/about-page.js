@@ -62,7 +62,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
 
           </div>
           <div className="about-section">
-            <SectionHeader>Languages</SectionHeader>
+            <SectionHeader>Languages and Frameworks</SectionHeader>
             <Pills data={code} />
             <hr />
             <Pills data={languages} />

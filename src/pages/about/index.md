@@ -19,19 +19,19 @@ skills:
     - name: AI
       value: 100
       size: lg
-    - name: XD
-      value: 80
-      size: lg
     - name: PS
       value: 95
       size: lg
-    - name: AE
-      value: 50
+    - name: XD
+      value: 80
       size: lg
     - name: ID
       value: 66
       size: lg
-  code: HTML,CSS,SASS,JS,Jquery,SQL,React.JS,Node.JS,D3.JS,P5.JS,Arduino,Processing,GTM,Drupal,Twig,Git,Regex,R,ggplot2,Python,Pandas,AWS
+    - name: AE
+      value: 50
+      size: lg
+  code: HTML,CSS,SASS,JS,Jquery,SQL,React.JS,Node.JS,D3.JS,P5.JS,Arduino,Processing,Drupal,Twig,Git,Regex,R,ggplot2,Python,AWS,GTM
   languages: English,Mandarin Chinese,Cantonese
   skillSet:
     - name: Atomic Design
@@ -47,7 +47,7 @@ skills:
     - name: UX Design
       value: 30
     - name: Installation Art
-      value: 20
+      value: 15
     - name: Animation
       value: 20
     - name: UI Design
