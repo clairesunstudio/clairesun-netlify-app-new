@@ -25,7 +25,7 @@ const Masonry = ({ data, tags, filterPath }) => {
   const target = React.useRef()
   console.log(target)
   const size = useMeasure(target)
-  const width = size && size.width
+  const width = size ? size.width : 0;
   console.log(width)
   // Hook3: Hold items
   const [items, setItems] = useState(projects)
