@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../Users/minghuasun/Documents/Github/clairesun-netlify-app-new/lambda/hello.js"],
+  "sourceRoot": "/var/folders/s2/ts3njpvs0kb31w0g8lw_3t040000gp/T/tmp-56771-3svlVb7QMH3Z",
+  "sourcesContent": ["// For more info, check https://docs.netlify.com/functions/build-with-javascript\nmodule.exports.handler = async function(event, context) {\n  console.log(\"queryStringParameters\", event.queryStringParameters)\n  return {\n    // return null to show no errors\n    statusCode: 200, // http status code\n    body: JSON.stringify({\n      msg: \"Hello, World! This is better \" + Math.round(Math.random() * 10)\n    })\n  }\n}\n\n// Now you are ready to access this API from anywhere in your Gatsby app! For example, in any event handler or lifecycle method, insert:\n// fetch(\"/.netlify/functions/hello\")\n//    .then(response => response.json())\n//    .then(console.log)\n// For more info see: https://www.gatsbyjs.org/blog/2018-12-17-turning-the-static-dynamic/#static-dynamic-is-a-spectrum\n"],
+  "mappings": ";AACA,OAAO,QAAQ,UAAU,eAAe,OAAO,SAAS;AACtD,UAAQ,IAAI,yBAAyB,MAAM;AAC3C,SAAO;AAAA,IAEL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU;AAAA,MACnB,KAAK,kCAAkC,KAAK,MAAM,KAAK,WAAW;AAAA;AAAA;AAAA;",
+  "names": []
+}

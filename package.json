@@ -41,7 +41,11 @@
     "react-tagcloud": "^1.4.1",
     "recharts": "^1.7.1",
     "rehype-react": "^4.0.1",
+    "rehype-stringify": "^9.0.2",
+    "remark-parse": "^10.0.0",
+    "remark-rehype": "^10.0.0",
     "resize-observer-polyfill": "^1.5.1",
+    "unified": "^10.1.0",
     "uuid": "^7.0.0"
   },
   "keywords": [
