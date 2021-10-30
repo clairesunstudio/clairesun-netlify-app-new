@@ -39,7 +39,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
               <ul className="info_list">
               {
                 info.map((item, index) => {
-                console.log(item.icon)
                   return(
                     <li>
                       <Icon name={item.icon} />

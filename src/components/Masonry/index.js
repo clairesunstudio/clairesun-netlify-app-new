@@ -1,12 +1,10 @@
-import { render } from 'react-dom'
 import React, { useState, useEffect } from 'react'
 import { useTransition, a } from 'react-spring'
-import shuffle from 'lodash/shuffle'
 import { Button, Container } from 'react-bootstrap'
 import classNames from 'classnames'
 import useMeasure from './useMeasure'
 import useMedia from './useMedia'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import ProjectCard, { cardWidth, cardPadding } from '../ProjectCard'
 // import data from './data'
 import './index.scss'
@@ -23,7 +21,12 @@ const Masonry = ({ data, tags, filterPath }) => {
     [5, 4, 3, 2], 1
   )
   // Hook2: Measure the width of the container element
-  const [bind, { width }] = useMeasure()
+  // const [bind, { width }] = useMeasure()
+  const target = React.useRef()
+  console.log(target)
+  const size = useMeasure(target)
+  const width = size && size.width
+  console.log(width)
   // Hook3: Hold items
   const [items, setItems] = useState(projects)
   const [filter, setFilter] = useState('all')
@@ -106,7 +109,7 @@ const Masonry = ({ data, tags, filterPath }) => {
         {FilterList}
       </div>
     </Container>
-    <div {...bind} className="masonry" style={{ height: Math.max(...heights) }}>
+    <div ref={target} className="masonry" style={{ height: Math.max(...heights) }}>
       {transitions.map(({ item, props: { xy, ...rest }, key }) => {
         return(<a.div key={key} style={{ transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`), ...rest }}>
           <ProjectCard title={item.frontmatter.title} text={item.frontmatter.description} image={item.frontmatter.image} link={item.fields.slug}/>
