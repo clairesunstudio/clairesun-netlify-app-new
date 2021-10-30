@@ -1,20 +1,21 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { Container, Row, Col, Button } from 'react-bootstrap'
+import './About.scss'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Divider from '../components/Divider'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import './About.scss'
 import WordCloud from '../components/WordCloud'
 import SectionHeader from '../components/SectionHeader'
 import DonutChart from '../components/DonutChart'
-import TagPill from '../components/Pill'
+import Pills from '../components/Pills'
 import { Timeline, TimelineEvent } from '../components/Timeline'
 import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info }) => {
+
+export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
   const PageContent = contentComponent || Content
   const svgSize ={
     svgWidth: 30,
@@ -37,29 +38,34 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
             <div className="about-section">
               <ul className="info_list">
               {
-                info.map((item, index) => (
-                  <li>
-                    <PreviewCompatibleImage imageInfo={item.icon} />
-                    {
-                      item.href ? (<a href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
-                    }
-                  </li>
-                ))
+                info.map((item, index) => {
+                  return(
+                    <li>
+                      <Icon name={item.icon} />
+                      {
+                        item.href ? (<a href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
+                      }
+                    </li>
+                  )
+                })
               }
               </ul>
             </div>
           </div>
           <div className="about-section">
-            <SectionHeader>Design Tools proficiency</SectionHeader>
-            <DonutChart/>
+            <SectionHeader>Design Tools Proficiency</SectionHeader>
+            <DonutChart data={toolSet} />
           </div>
           <div className="about-section">
-            <SectionHeader>WordCloud</SectionHeader>
-            <WordCloud/>
+            <SectionHeader>Skill Set Cloud</SectionHeader>
+            <WordCloud data={skillSet}/>
+
           </div>
           <div className="about-section">
-            <SectionHeader>languages</SectionHeader>
-            <TagPill />
+            <SectionHeader>Languages</SectionHeader>
+            <Pills data={code} />
+            <hr />
+            <Pills data={languages} />
           </div>
         </Col>
         <Col>
@@ -86,83 +92,42 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
             </Timeline>
         <SectionHeader>Experience<Icon name='job' {...svgSize} /></SectionHeader>
             <Timeline>
-              <TimelineEvent title="UX Designer & Engineer"
-                             sub="Digital Services, EOTSS, Commonwealth of Massachusetts
-"
-                             date={["Present","May 2015"]}>
-                             <ul>
-                              <li> UI/UX design, web front end development</li>
-                              <li> Analyze and visualize data for Mass.gov social media accounts</li>
-                              <li> Lead public facing marketing campaign branding and visual design</li>
-                              <li> Direct and mentor design interns</li>
-                             </ul>
-              </TimelineEvent>
-              <TimelineEvent title="Visual Designer"
-                             sub="Confucius Institute, UMass Boston"
-                             date={["Mar. 2014","June 2015"]}>
-                             <ul>
-                              <li> Design and create promotional collateral</li>
-                              <li> Chinese Bridge contest event filming and post productions</li>
-                             </ul>
-              </TimelineEvent>
-              <TimelineEvent title="Web/Graphic Designer"
-                             sub="StudentUniverse, Waltham"
-                             date={["May 2014","Oct 2014"]}>
-                             <ul>
-                              <li> Assist in the wire-framing and front-end design of company’s new website</li>
-                              <li> Design website visuals and marketing collateral</li>
-                              <li> Create HTML email campaigns and landing pages</li>
-                             </ul>
-              </TimelineEvent>
-              <TimelineEvent title="Design Internship"
-                             sub=" NH Division of Economic Development, Concord, NH"
-                             date={["Feb. 2014","Sep. 2013"]}>
-              </TimelineEvent>
+              { jobs.map((job, i) => (
+                  <TimelineEvent
+                    key={`job_${i}`}
+                    title={job.jobTitle}
+                    sub={job.workPlace}
+                    date={[job.endDate, job.startDate]}>
+                    {job.descriptions}
+                  </TimelineEvent>
+                ))
+              }
             </Timeline>
-        <SectionHeader>Projects<Icon name='project' {...svgSize} /></SectionHeader>
+        <SectionHeader>Highlights<Icon name='project' {...svgSize} /></SectionHeader>
         <Timeline>
-          <TimelineEvent title="The ABCs of High School Success"
-                         sub="Mass.gov/SuccessABCs"
-                         project="dese"
-                         url="http://mass.gov/Chapter55"
-                         date={["Launched","Oct. 2017"]}>
-                        <p>
-                        I worked closely with the Department of Education and Secondary Education on developing this interactive data story to highlight the impact of the ABCs by following a group of students from the time they entered 9th grade, to when each left or completed high school. In this project, my work includes storyboading with exisiting data, data visualization design, prototyping, website development and deployment and user testing. The site was built using React with a highly componentized front end and a light weight page load.
-                        </p>
-          </TimelineEvent>
-          <TimelineEvent title="Redesigning Mass.gov"
-                         sub="Mass.gov"
-                         url="http://mass.gov/Chapter55"
-                         date={["Launched","Sept. 2017"]}>
-                         <ul>
-                          <li> Work on design and front end development of the new Mass.gov and its design system 'Mayflower'</li>
-                          <li> Research and build pilots on data visualization and search solutions</li>
-                          <li> Extending the use of 'Mayflower' onto other web app and data dashboards</li>
-                          <li> Vendor selection and RFR website construction</li>
-                          <li> Quick wins on the classic Mass.gov homepage design and photo contest</li>
-                         </ul>
-          </TimelineEvent>
-          <TimelineEvent title="Chapter 55"
-                         sub="Mass.gov/Chapter55"
-                         project="chapter55"
-                         url="http://mass.gov/Chapter55"
-                         date={["Launched","Dec. 2016"]}>
-                        <p>
-                        As the designer and developer of this interactive data story on the MA opioid epidemic, I worked from concept sketching, data visualization designing, prototyping, and iterating, into the final deployment. The code repository was also made public as the pilot project of Mass.gov’s open-source initiative. This project received the Innovation in Data Science Award at the Massachusetts Digital Government Summit 2017.
-                        </p>
-          </TimelineEvent>
-          <TimelineEvent title="Artificial Bioluminescence"
-                         project="freshmedia1"
-                         sub="A sensory lighting installation exhibited at the Boston CyberArts Gallery"
-                         date="April 2015">
-          </TimelineEvent>
+            { highlights.map((highlight, i) => (
+                  <TimelineEvent
+                    key={`highlight_${i}`}
+                    title={highlight.title}
+                    sub={highlight.subTitle}
+                    date={[highlight.endDate, highlight.startDate]}>
+                    {highlight.descriptions}
+                  </TimelineEvent>
+                ))
+            }
         </Timeline>
         <SectionHeader>volunteer<Icon name='volunteer' {...svgSize} /></SectionHeader>
         <Timeline>
-          <TimelineEvent title="Bright & Beautiful (有灵且美)"
-                         sub="Design Director, Facebook Admin"
-                         date="April 2015">
-          </TimelineEvent>
+            { volunteer.map((item, i) => (
+                    <TimelineEvent
+                      key={`item_${i}`}
+                      title={item.title}
+                      sub={item.subTitle}
+                      date={[item.endDate, item.startDate]}>
+                      {item.descriptions}
+                    </TimelineEvent>
+                  ))
+            }
         </Timeline>
         </Col>
         </Row>
@@ -201,7 +166,6 @@ export default AboutPage
 export const aboutPageQuery = graphql`
   query AboutPage($id: String = "/about-page/") {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
         about {
@@ -217,17 +181,43 @@ export const aboutPageQuery = graphql`
           }
         }
         info {
-          icon {
-            childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-            extension
-            publicURL
-          }
+          icon
           href
           text
+        }
+        skills {
+          code
+          languages
+          skillSet {
+            name
+            value
+          }
+          toolSet {
+            name
+            value
+            size
+          }
+        }
+        jobs {
+          jobTitle
+          workPlace
+          descriptions
+          startDate
+          endDate
+        }
+        highlights {
+          title
+          subTitle
+          descriptions
+          startDate
+          endDate
+        }
+        volunteer {
+          title
+          subTitle
+          descriptions
+          startDate
+          endDate
         }
       }
     }

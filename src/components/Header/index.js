@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Nav, Navbar, Container } from 'react-bootstrap'
-import SocialMedia from '../SocialMedia'
 import './index.scss'
 
 class SiteHeader extends React.Component {
