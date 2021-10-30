@@ -23,7 +23,6 @@ const Masonry = ({ data, tags, filterPath }) => {
   // Hook2: Measure the width of the container element
   // const [bind, { width }] = useMeasure()
   const target = React.useRef()
-  console.log(target)
   const size = useMeasure(target)
   const width = size ? size.width : 0;
   console.log(width)
