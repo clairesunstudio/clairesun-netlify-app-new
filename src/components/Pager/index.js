@@ -31,7 +31,7 @@ const Pager = ({ left, right }) => {
           }
         </Col>
         <Col>
-          <Link >
+          <Link to='/'>
             <Icon name='grid-three-up' {...svgSize}/>
           </Link>
         </Col>

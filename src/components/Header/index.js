@@ -60,10 +60,10 @@ class SiteHeader extends React.Component {
         <Navbar.Brand>
           <Link to="/">{brandName}</Link>
         </Navbar.Brand>
-        <Nav pullRight>
+        <Nav>
           {
             navLinks.map(({ text, path }) => (
-              <Link className={activeClass({path, currentPath})} to={path}><span>{text}</span></Link>
+              <Link key={`navlink_${path}`} className={activeClass({path, currentPath})} to={path}><span>{text}</span></Link>
             ))
           }
         </Nav>

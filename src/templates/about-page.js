@@ -39,7 +39,7 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
               {
                 info.map((item, index) => {
                   return(
-                    <li>
+                    <li key={`info_${item.text}`}>
                       <Icon name={item.icon} />
                       {
                         item.href ? (<a href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
