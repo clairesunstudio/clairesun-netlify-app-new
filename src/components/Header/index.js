@@ -49,9 +49,6 @@ class SiteHeader extends React.Component {
     componentWillUnmount() {
       window.removeEventListener("scroll", this.handleScroll);
     }
-    onConnectClick(){
-      this.state.connect == 'collapsed'? this.setState({connect: 'expanded'}): this.setState({connect: 'collapsed'})
-    }
 
   render(){
     const {fixedTop, brandName, connect} = this.state;

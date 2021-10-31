@@ -103,6 +103,23 @@ info:
   - icon: github
     href: https://github.com/clairesunstudio
     text: "@clairesunstudio"
+education:
+  - title: Graduate Certificate in Interactive Design
+    startDate: ""
+    subTitle: Dynamic Media Institute, MassArt, Boston, MA
+    endDate: May 2015
+  - title: Interactive Environment Group
+    endDate: May 2015
+    subTitle: MIT Media Lab, Cambridge
+    startDate: ""
+  - title: B.S. in Applied Mathematics, B.A. in Graphic Design
+    subTitle: New England College, NH
+    endDate: May 2013
+    descriptions: |-
+      * Magna Cum Laude Graduate, GPA: 3.77/4.0
+      * Academic Achievement Award for Mathematic Program
+      * 4-year Presidential Scholarship and Dean’s List Recipient
+      * National College Honor Scholarship Society (Alpha Chi) Member
 jobs:
   - jobTitle: UX Designer & Engineer
     workPlace: Digital Services, Commonwealth of Massachusetts

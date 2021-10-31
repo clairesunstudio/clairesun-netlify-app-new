@@ -15,8 +15,7 @@ import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
-export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
-  const PageContent = contentComponent || Content
+export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, education, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
   const svgSize ={
     svgWidth: 30,
     svgHeight: 20
@@ -71,24 +70,16 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
         <Col>
         <SectionHeader>Education<Icon name='education' {...svgSize} /></SectionHeader>
             <Timeline>
-              <TimelineEvent title="Graduate Certificate in Interactive Design"
-                             sub="Dynamic Media Institute, MassArt, Boston, MA"
-                             date="May 2015">
-              </TimelineEvent>
-              <TimelineEvent title="Interactive Environment Group"
-                             sub="MIT Media Lab, Cambridge, MA"
-                             date="May 2015">
-              </TimelineEvent>
-              <TimelineEvent title="B.S. in Applied Mathematics, B.A. in Graphic Design"
-                             sub="New England College, Henniker, NH"
-                             date="May 2013">
-                             <ul>
-                              <li> Magna Cum Laude Graduate, GPA: 3.77/4.0</li>
-                              <li> Academic Achievement Award for Mathematic Program</li>
-                              <li> 4-year Presidential Scholarship and Dean’s List Recipient</li>
-                              <li> National College Honor Scholarship Society (Alpha Chi) Member</li>
-                             </ul>
-              </TimelineEvent>
+              { education.map((ed, i) => (
+                    <TimelineEvent
+                      key={`ed_${i}`}
+                      title={ed.title}
+                      sub={ed.subTitle}
+                      date={[ed.endDate, ed.startDate]}>
+                      {ed.descriptions}
+                    </TimelineEvent>
+                  ))
+                }
             </Timeline>
         <SectionHeader>Experience<Icon name='job' {...svgSize} /></SectionHeader>
             <Timeline>
@@ -197,6 +188,13 @@ export const aboutPageQuery = graphql`
             value
             size
           }
+        }
+        education {
+          title
+          startDate
+          subTitle
+          endDate
+          descriptions
         }
         jobs {
           jobTitle
