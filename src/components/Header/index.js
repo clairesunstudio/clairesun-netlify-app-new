@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { Nav, Navbar, Container } from 'react-bootstrap'
 import './index.scss'
 
-const brandName = {
+const brandNameData = {
   full: 'clairesunstudio',
   short: 'css'
 }
@@ -16,62 +16,45 @@ const navLinks = [{
   path: '/about'
 }]
 
-class SiteHeader extends React.Component {
+const SiteHeader = ({ currentPath }) => {
+  const [fixedTop, setFixedTop] = useState(false);
+  const [brandName, setBrandName] = useState(brandNameData.full);
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        fixedTop: false,
-        brandName: brandName.full,
-        connect: 'collapsed'
-      };
-      this.handleScroll = this.handleScroll.bind(this);
+  const handleScroll = () => {
+    if (window.pageYOffset >=  30) {
+      setFixedTop(true);
+      setBrandName(brandNameData.short);
+    } else {
+      setFixedTop(false);
+      setBrandName(brandNameData.full);
     }
-
-      handleScroll() {
-      if (window.pageYOffset >=  30) {
-        this.setState({
-          fixedTop: true,
-          brandName: brandName.short
-        });
-      } else {
-        this.setState({
-          fixedTop: false,
-          brandName: brandName.full
-        });
-      }
-    }
-
-    componentDidMount() {
-      window.addEventListener("scroll", this.handleScroll);
-    }
-
-    componentWillUnmount() {
-      window.removeEventListener("scroll", this.handleScroll);
-    }
-
-  render(){
-    const {fixedTop, brandName, connect} = this.state;
-    const { currentPath } = this.props; 
-    const activeClass = ({path, currentPath}) => path === currentPath ? 'active' : null; 
-    return(
-      <Navbar className={connect} fixed={fixedTop ? 'top' : false }>
-        <Container>
-        <Navbar.Brand>
-          <Link to="/">{brandName}</Link>
-        </Navbar.Brand>
-        <Nav>
-          {
-            navLinks.map(({ text, path }) => (
-              <Link key={`navlink_${path}`} className={activeClass({path, currentPath})} to={path}><span>{text}</span></Link>
-            ))
-          }
-        </Nav>
-        </Container>
-      </Navbar>
-    )
   }
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  })
+
+  const activeClass = ({path, currentPath}) => path === currentPath ? 'active' : null; 
+  return(
+    <Navbar fixed={fixedTop ? 'top' : false }>
+      <Container>
+      <Navbar.Brand>
+        <Link to="/">{brandName}</Link>
+      </Navbar.Brand>
+      <Nav>
+        {
+          navLinks.map(({ text, path }) => (
+            <Link key={`navlink_${path}`} className={activeClass({path, currentPath})} to={path}><span>{text}</span></Link>
+          ))
+        }
+      </Nav>
+      </Container>
+    </Navbar>
+  )
 }
 
-export default SiteHeader
+export default SiteHeader;
