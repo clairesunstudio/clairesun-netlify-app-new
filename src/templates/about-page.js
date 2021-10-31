@@ -14,12 +14,12 @@ import { Timeline, TimelineEvent } from '../components/Timeline'
 import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+const svgSize ={
+  svgWidth: 30,
+  svgHeight: 20
+}
 
 export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, education, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
-  const svgSize ={
-    svgWidth: 30,
-    svgHeight: 20
-  }
   return (
     <Fragment>
       <Divider />
@@ -133,11 +133,11 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, location: { pathname } }) => {
   const { markdownRemark: post } = data
   const { title, ...rest } = post.frontmatter;
   return (
-    <Layout>
+    <Layout path={pathname} >
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

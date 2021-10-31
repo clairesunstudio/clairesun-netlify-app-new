@@ -52,6 +52,7 @@ class SiteHeader extends React.Component {
 
   render(){
     const {fixedTop, brandName, connect} = this.state;
+    const { currentPath } = this.props; 
     const activeClass = ({path, currentPath}) => path === currentPath ? 'active' : null; 
     return(
       <Navbar className={connect} fixed={fixedTop ? 'top' : false }>
@@ -62,7 +63,7 @@ class SiteHeader extends React.Component {
         <Nav pullRight>
           {
             navLinks.map(({ text, path }) => (
-              <Link className={activeClass({path, currentPath: '/'})} to={path}><span>{text}</span></Link>
+              <Link className={activeClass({path, currentPath})} to={path}><span>{text}</span></Link>
             ))
           }
         </Nav>

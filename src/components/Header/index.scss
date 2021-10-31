@@ -44,6 +44,16 @@ nav.navbar {
     .social-media-collapsed{
       display: none;
     }
+
+    a {
+      &:hover {
+          span {
+            &:after {
+              background-color: $color-gray-dark;
+            }
+          }
+        }
+      }
 }
 
 

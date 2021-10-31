@@ -116,7 +116,7 @@ education:
     subTitle: New England College, NH
     endDate: May 2013
     descriptions: |-
-      * Magna Cum Laude Graduate, GPA: 3.77/4.0
+      * Magna Cum Laude Graduate
       * Academic Achievement Award for Mathematic Program
       * 4-year Presidential Scholarship and Dean’s List Recipient
       * National College Honor Scholarship Society (Alpha Chi) Member

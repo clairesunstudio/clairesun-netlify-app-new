@@ -18,8 +18,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data, location }) => {
   const { tags, site: { siteMetadata} } = data;
-  const { search } = location;
-  console.log(location)
+  const { search, pathname } = location;
   return (
     <Fragment>
       <Helmet
@@ -30,7 +29,7 @@ const IndexPage = ({ data, location }) => {
           { name: 'keywords', content: siteMetadata.keywords }
         ]}
       />
-      <Layout>
+      <Layout path={pathname}>
         <IndexPageTemplate {...tags} filterPath={search} />
       </Layout>
     </Fragment>
