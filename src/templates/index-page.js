@@ -1,12 +1,9 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby'
-import { Row, Col, Container } from 'react-bootstrap'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import Masonry from '../components/Masonry'
-import Divider from '../components/Divider'
 
 export const IndexPageTemplate = ({ group: tags, filterPath }) => (
   <Fragment>
@@ -22,6 +19,7 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data, location }) => {
   const { tags, site: { siteMetadata} } = data;
   const { search } = location;
+  console.log(location)
   return (
     <Fragment>
       <Helmet

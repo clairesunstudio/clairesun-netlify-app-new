@@ -30,7 +30,6 @@ const MarkdownContent = ({ content, ...attributes }) => {
         converter(content)
     });
     
-    console.log(rehype)
     return (
         <div {...attributes} dangerouslySetInnerHTML={{ __html: rehype }} />
     )

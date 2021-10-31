@@ -61,7 +61,7 @@ html, body, #root{
             background-color: $color-black;
           }
         }
-    &:hover {
+    &:hover, &.active {
         cursor: pointer;
         span {
           &:after {
@@ -70,11 +70,4 @@ html, body, #root{
           }
         }
       }
-
-    &.active {
-      background: $color-black;
-      span {
-        color: $color-white;
-      }
-    }
     }

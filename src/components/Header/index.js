@@ -3,13 +3,26 @@ import { Link } from 'gatsby'
 import { Nav, Navbar, Container } from 'react-bootstrap'
 import './index.scss'
 
+const brandName = {
+  full: 'clairesunstudio',
+  short: 'css'
+}
+
+const navLinks = [{
+  text: 'Portfolio',
+  path: '/'
+},{
+  text: 'Resume',
+  path: '/about'
+}]
+
 class SiteHeader extends React.Component {
 
     constructor(props) {
       super(props);
       this.state = {
         fixedTop: false,
-        brandName: 'clairesunstudio',
+        brandName: brandName.full,
         connect: 'collapsed'
       };
       this.handleScroll = this.handleScroll.bind(this);
@@ -19,12 +32,12 @@ class SiteHeader extends React.Component {
       if (window.pageYOffset >=  30) {
         this.setState({
           fixedTop: true,
-          brandName: 'css'
+          brandName: brandName.short
         });
       } else {
         this.setState({
           fixedTop: false,
-          brandName: 'clairesunstudio'
+          brandName: brandName.full
         });
       }
     }
@@ -41,13 +54,8 @@ class SiteHeader extends React.Component {
     }
 
   render(){
-    const {fixedTop, brandName, connect} = this.state
-    const socialIconStyle ={
-      width:30,
-      height:30,
-      margin:3
-    }
-    const socialIconColor = "#263238"
+    const {fixedTop, brandName, connect} = this.state;
+    const activeClass = ({path, currentPath}) => path === currentPath ? 'active' : null; 
     return(
       <Navbar className={connect} fixed={fixedTop ? 'top' : false }>
         <Container>
@@ -55,8 +63,11 @@ class SiteHeader extends React.Component {
           <Link to="/">{brandName}</Link>
         </Navbar.Brand>
         <Nav pullRight>
-          <Link to="/"><span>Portfolio</span></Link>
-          <Link to="/about"><span>Resume</span></Link>
+          {
+            navLinks.map(({ text, path }) => (
+              <Link className={activeClass({path, currentPath: '/'})} to={path}><span>{text}</span></Link>
+            ))
+          }
         </Nav>
         </Container>
       </Navbar>
