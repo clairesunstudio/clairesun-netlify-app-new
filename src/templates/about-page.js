@@ -32,7 +32,7 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
               <h2>{name}</h2>
               <h4>{job}</h4>
               <p>{blurb}</p>
-              <Button bsStyle='tab' onClick={() => window.print()} download="Minghua's Resume">Print Resume</Button>
+              <Button onClick={() => window.print()} download="Minghua's Resume">Print Resume</Button>
             </div>
             <div className="about-section">
               <ul className="info_list">
