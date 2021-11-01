@@ -1,15 +1,29 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Masonry from '../components/Masonry'
 
-export const IndexPageTemplate = ({ group: tags, filterPath }) => (
-  <Fragment>
-    <Masonry tags={tags} filterPath={filterPath} />
-  </Fragment>
-)
+export const IndexPageTemplate = ({ group: tags, filterPath }) => {
+  // useLayoutEffect in Masonry can't run until the JavaScript is downloaded in SSR
+  // Lazily show component with useLayoutEffect: https://gist.github.com/gaearon/e7d97cdf38a2907924ea12e4ebdf3c85
+  const [showChild, setShowChild] = useState(false);
+  // Wait until after client-side hydration to show
+  useEffect(() => {
+    setShowChild(true);
+  }, []);
+  
+  if (!showChild) {
+    // You can show some kind of placeholder UI here
+    return null;
+  }
+  return(
+    <Fragment>
+      <Masonry tags={tags} filterPath={filterPath} />
+    </Fragment>
+  )
+}
 
 IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
