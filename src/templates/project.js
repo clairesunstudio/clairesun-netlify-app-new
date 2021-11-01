@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import rehypeReact from 'rehype-react'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import { Row, Col } from 'react-bootstrap'
@@ -12,8 +11,6 @@ import Content, { HTMLContent } from '../components/Content'
 import Counter from "../components/Counter"
 import Icon from "../components/Icon"
 import LightBox from "../components/LightBox"
-//import Photo from '../components/Photo';
-// import GridComponent from '../components/Grid';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import './project.scss';
 
