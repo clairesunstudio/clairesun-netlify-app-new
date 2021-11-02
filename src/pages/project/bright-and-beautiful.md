@@ -7,19 +7,11 @@ date: 2019-04-30T04:26:43.334Z
 ---
 <blockquote>I said this<footer></footer></blockquote>
 
-<lightbox col='3'>
-<rehype-image src="billionaire.jpg" text="text"></rehype-image>
-<rehype-image src="BGPS.jpg" text="text"></rehype-image>
-<rehype-image src="chapter55.jpg" text="text"></rehype-image>
-</lightbox>
+<lightbox imagesString="/img/bnbcards.jpg,/img/bnbgirls.jpg"/>
 
-array="/img/BGPS.jpg,/img/bnbcards.jpg,/img/bnbgirls.jpg"
+![](/img/bnbcards.jpg)
 
 <iframe width="800" height="315" src="https://www.youtube.com/embed/HuoU8piIMxg" frameborder="0" allowfullscreen></iframe>
-
-<lightbox col='3'>
-<rehype-image src="billionaire.jpg" text="text"></rehype-image>
-</lightbox>
 
 ```json
 // this is a code block
