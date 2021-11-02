@@ -5,19 +5,19 @@ description: Design for the non-profit project empowering young women in rural C
 image: /img/bnbgirls.jpg
 date: 2019-04-30T04:26:43.334Z
 ---
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HuoU8piIMxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<blockquote>I said this<footer></footer></blockquote>
 
-<lightbox col='3'>
-<rehype-image src="billionaire.jpg" text="text"></rehype-image>
-<rehype-image src="BGPS.jpg" text="text"></rehype-image>
-<rehype-image src="chapter55.jpg" text="text"></rehype-image>
-</lightbox>
+<iframe width=560 height=315 src="https://www.youtube.com/embed/HuoU8piIMxg" frameborder="0" allowfullscreen></iframe>
+
+
+```json
+// this is a code block
+const something = doThis();
+```
 
 ## Overview
 
 The Bright & Beautiful project is designed to unlock potentials and bring art and mindfulness to the “left-behind” girls in rural China. Bright & Beautiful have successfully hosted more than 6 summer/winter arts camps and other inspiring workshops at schools in rural China, served over 400 girls in rural China, and provided more than 50 volunteers from around the world with the opportunities to connect with each other and with the girls.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JMNuv96GfHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Offline
 

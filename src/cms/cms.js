@@ -24,9 +24,14 @@ CMS.registerEditorComponent({
   // Visible label
   label: "Youtube",
   // Fields the user need to fill out when adding an instance of the component
-  fields: [{name: 'id', label: 'Youtube Video ID', widget: 'string'}],
+  fields: [
+    { name: "id", label: "Youtube Video ID", widget: "string" },
+    { name: "width", label: "Width", widget: "string" },
+    { name: "height", label: "Height", widget: "string" },
+    { name: "fullScreen", label: "Allow Full Screen", widget: "boolean" },
+  ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^youtube (\S+)$/,
+  pattern: /^<iframe width="(.*)" height="(.*)" src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe>$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
@@ -34,8 +39,8 @@ CMS.registerEditorComponent({
     };
   },
   // Function to create a text block from an instance of this component
-  toBlock: function({id}) {
-    return `<iframe src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+  toBlock: function({width, height, id, fullScreen}) {
+    return `<iframe width=${width} height=${height} src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
@@ -63,7 +68,7 @@ CMS.registerEditorComponent({
     ]
   }],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^<rehype-image (\S+)"><\/rehype-image>$/,
+  pattern: /^collage (\S+)$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
@@ -87,4 +92,44 @@ CMS.registerEditorComponent({
       }))
     }
   }
+});
+
+CMS.registerEditorComponent({
+  id: 'blockquote', // Internal id of the component
+  label: 'Blockquote', // Visible label
+  // Fields the user need to fill out when adding an instance of the component
+  fields: [
+      {name: 'quote', label: 'Quote', widget: 'string'},
+      {name: 'author', label: 'Author', widget: 'string'}
+  ],
+  pattern:
+      /^<blockquote>(.*)<footer>(.*)<\/footer><\/blockquote>/, // Pattern to identify a block as being an instance of this component
+  // Function to extract data elements from the regexp match
+  fromBlock: function (match) {
+      return {
+          quote: match[1],
+          author: match[2],
+      }
+  },
+  // Function to create a text block from an instance of this component
+  toBlock: function (obj) {
+      return (
+          '<blockquote>' +
+          obj.quote +
+          '<footer>' +
+          obj.author +
+          '</footer></blockquote>'
+      )
+  },
+  // Preview output for this component. Can either be a string or a React component
+  // (component gives better render performance)
+  toPreview: function (obj) {
+      return (
+          '<blockquote>' +
+          obj.quote +
+          '<footer>' +
+          obj.author +
+          '</footer></blockquote>'
+      )
+  },
 });
