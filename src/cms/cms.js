@@ -89,7 +89,6 @@ CMS.registerEditorComponent({
   },
   // Function to create a text block from an instance of this component
   toBlock: function(list) {
-    console.log(list)
     if (list.images && list.images.length > 0) {
       list.images.map((item) => (
         `<rehype-image src="../..${item.image}" text="${item.text}}"></rehype-image>`
@@ -119,7 +118,7 @@ CMS.registerEditorComponent({
      {label: 'Image', name: 'image',  widget: 'image'}
     }
   ],
-  pattern: /^array="(.*)"/,
+  pattern: /^<lightbox imagesString="(.*)"\/>$/,
   fromBlock: function(match) {
     const images = match[1]
       .split(',')
@@ -129,11 +128,15 @@ CMS.registerEditorComponent({
       return obj;
   },
   toBlock: function({ images }) {
-    return (
-      `array="${images.toString()}"`
-    );
+    if (images) {
+      return (
+        `<lightbox imagesString="${images.toString()}"/>`
+      );
+    }
   }
 });
+
+// parse string inside component 
 
 
 
