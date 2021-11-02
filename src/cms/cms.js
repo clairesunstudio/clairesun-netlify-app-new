@@ -18,6 +18,10 @@ CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('project', ProjectPreview)
 
 
+
+/* Youtube
+*/
+
 CMS.registerEditorComponent({
   // Internal id of the component
   id: "youtube",
@@ -31,11 +35,14 @@ CMS.registerEditorComponent({
     { name: "fullScreen", label: "Allow Full Screen", widget: "boolean" },
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^<iframe width="(.*)" height="(.*)" src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe>$/,
+  pattern: /^<iframe width=(.*) height=(.*) src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe>$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
-      id: match[1]
+      width: match[1],
+      height: match[2],
+      id: match[3],
+      fullScreen: match[4]
     };
   },
   // Function to create a text block from an instance of this component
@@ -50,6 +57,11 @@ CMS.registerEditorComponent({
     );
   }
 });
+
+
+
+/* Collage
+*/
 
 CMS.registerEditorComponent({
   // Internal id of the component
@@ -93,6 +105,11 @@ CMS.registerEditorComponent({
     }
   }
 });
+
+
+
+/* Blockquote
+*/
 
 CMS.registerEditorComponent({
   id: 'blockquote', // Internal id of the component
