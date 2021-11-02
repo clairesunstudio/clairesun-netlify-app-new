@@ -7,9 +7,7 @@ date: 2019-04-30T04:26:43.334Z
 ---
 <blockquote>I said this<footer></footer></blockquote>
 
-<lightbox imagesString="/img/bnbcards.jpg,/img/bnbgirls.jpg"/>
 
-![](/img/bnbcards.jpg)
 
 <iframe width="800" height="315" src="https://www.youtube.com/embed/HuoU8piIMxg" frameborder="0" allowfullscreen></iframe>
 

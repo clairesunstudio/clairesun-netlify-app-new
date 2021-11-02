@@ -49,7 +49,7 @@ CMS.registerEditorComponent({
   toBlock: function({width, height, id, fullScreen}) {
     return `<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
   },
-  // Preview output for this component. Can either be a string or a React component
+  // Preview output ´ this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: function({width, height, id, fullScreen}) {
     return (
@@ -111,11 +111,15 @@ CMS.registerEditorComponent({
   id: 'gallery',
   label: 'Gallery',
   fields: [
-    {label: 'Gallery',
+    {
+    label: 'Images',
     name: 'images',
     widget: 'list',
-    field:
-     {label: 'Image', name: 'image',  widget: 'image'}
+    default: [{ image: '', text: ''}],
+    fields: [
+      {label: 'Image', name: 'image', widget: 'image'},
+      {label: 'Text', name: 'text', widget: 'string'}
+    ]
     }
   ],
   pattern: /^<lightbox imagesString="(.*)"\/>$/,
@@ -130,7 +134,7 @@ CMS.registerEditorComponent({
   toBlock: function({ images }) {
     if (images) {
       return (
-        `<lightbox imagesString="${images.toString()}"/>`
+        `<lightbox imagesString="${JSON.stringify(images)}"/>`
       );
     }
   }
