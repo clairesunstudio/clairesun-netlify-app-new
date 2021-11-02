@@ -51,9 +51,9 @@ CMS.registerEditorComponent({
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: function({id}) {
+  toPreview: function({width, height, id, fullScreen}) {
     return (
-      '<img src="http://img.youtube.com/vi/' + id + '/maxresdefault.jpg" alt="Youtube Video"/>'
+      `<iframe width=${width} height=${height} src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
     );
   }
 });
