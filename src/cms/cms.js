@@ -35,7 +35,7 @@ CMS.registerEditorComponent({
     { name: "fullScreen", label: "Allow Full Screen", widget: "boolean" },
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^<iframe width=(.*) height=(.*) src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe>$/,
+  pattern: /^<iframe width="(.*)" height="(.*)" src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe>$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
@@ -47,13 +47,13 @@ CMS.registerEditorComponent({
   },
   // Function to create a text block from an instance of this component
   toBlock: function({width, height, id, fullScreen}) {
-    return `<iframe width=${width} height=${height} src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
+    return `<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: function({width, height, id, fullScreen}) {
     return (
-      `<iframe width=${width} height=${height} src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
+      `<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
     );
   }
 });
@@ -89,6 +89,7 @@ CMS.registerEditorComponent({
   },
   // Function to create a text block from an instance of this component
   toBlock: function(list) {
+    console.log(list)
     if (list.images && list.images.length > 0) {
       list.images.map((item) => (
         `<rehype-image src="../..${item.image}" text="${item.text}}"></rehype-image>`
@@ -103,6 +104,34 @@ CMS.registerEditorComponent({
         <img src={item.image} alt={item.text} />
       }))
     }
+  }
+});
+
+// gallery
+CMS.registerEditorComponent({
+  id: 'gallery',
+  label: 'Gallery',
+  fields: [
+    {label: 'Gallery',
+    name: 'images',
+    widget: 'list',
+    field:
+     {label: 'Image', name: 'image',  widget: 'image'}
+    }
+  ],
+  pattern: /^array="(.*)"/,
+  fromBlock: function(match) {
+    const images = match[1]
+      .split(',')
+      .filter(val => val)
+      .map(image => ({ image }));
+      const obj = {images};
+      return obj;
+  },
+  toBlock: function({ images }) {
+    return (
+      `array="${images.toString()}"`
+    );
   }
 });
 
