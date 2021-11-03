@@ -35,7 +35,7 @@ CMS.registerEditorComponent({
     { name: "fullScreen", label: "Allow Full Screen", widget: "boolean" },
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^<iframe width=(.*) height=(.*) src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe>$/,
+  pattern: /^<iframe width="(.*)" height="(.*)" src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe>$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
@@ -47,13 +47,13 @@ CMS.registerEditorComponent({
   },
   // Function to create a text block from an instance of this component
   toBlock: function({width, height, id, fullScreen}) {
-    return `<iframe width=${width} height=${height} src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
+    return `<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: function({id}) {
+  toPreview: function({width, height, id, fullScreen}) {
     return (
-      '<img src="http://img.youtube.com/vi/' + id + '/maxresdefault.jpg" alt="Youtube Video"/>'
+      `<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
     );
   }
 });
@@ -105,6 +105,38 @@ CMS.registerEditorComponent({
     }
   }
 });
+
+// gallery
+CMS.registerEditorComponent({
+  id: 'gallery',
+  label: 'Gallery',
+  fields: [
+    {label: 'Gallery',
+    name: 'images',
+    widget: 'list',
+    field:
+     {label: 'Image', name: 'image',  widget: 'image'}
+    }
+  ],
+  pattern: /^<lightbox imagesString="(.*)"\/>$/,
+  fromBlock: function(match) {
+    const images = match[1]
+      .split(',')
+      .filter(val => val)
+      .map(image => ({ image }));
+      const obj = {images};
+      return obj;
+  },
+  toBlock: function({ images }) {
+    if (images) {
+      return (
+        `<lightbox imagesString="${images.toString()}"/>`
+      );
+    }
+  }
+});
+
+// parse string inside component 
 
 
 
