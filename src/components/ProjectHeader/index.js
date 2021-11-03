@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Button, Row, Container } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap'
 import './index.scss'
 
 const Header = ({title, subtitle, url}) => (
@@ -12,7 +12,7 @@ const Header = ({title, subtitle, url}) => (
             <p>{subtitle}</p>
             {
               url && (
-                <a className="btn btn-primary btn-project" href={live_site}>Visit Live Site</a>
+                <a className="btn btn-primary btn-project" href={url}>Visit Live Site</a>
               )
             }
           </Col>

@@ -4,7 +4,7 @@ title: Mayflower Component Library
 description: Leading the transition from the Mass.gov UI library to a
   Commonwealth Design System
 image: /img/mayflower.png
-url: https://mayflower.digital.mass.gov/home/
+url: https://mayflower.digital.mass.gov/
 date: 2021-11-03T14:02:48.077Z
 tags:
   - Data Viz

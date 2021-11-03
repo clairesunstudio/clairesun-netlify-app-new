@@ -33,6 +33,7 @@ export const ProjectTemplate = ({
   allImageSharp
 }) => {
   const PostContent = contentComponent || Content;
+  console.log(url)
   const projectHeaderProps = {
     title,
     subtitle: description,
@@ -107,8 +108,8 @@ ProjectTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const Project = ({ data: { project, pagers, allImageSharp } }) => {
-  const pager = pagers.edges.find((pager) => pager.node.id === project.id);
+const Project = ({ data: { project: {id, htmlAst, frontmatter: { title, description, url, tags }}, pagers, allImageSharp } }) => {
+  const pager = pagers.edges.find((pager) => pager.node.id === id);
   const pagerProps = {
     left: {
       slug: pager.previous && pager.previous.fields.slug,
@@ -122,20 +123,21 @@ const Project = ({ data: { project, pagers, allImageSharp } }) => {
   return (
     <Layout>
       <ProjectTemplate
-        content={project.htmlAst}
+        content={htmlAst}
         contentComponent={HTMLContent}
-        description={project.frontmatter.description}
+        description={description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${project.frontmatter.title}`}</title>
+            <title>{`${title}`}</title>
             <meta
               name="description"
-              content={`${project.frontmatter.description}`}
+              content={`${description}`}
             />
           </Helmet>
         }
-        tags={project.frontmatter.tags}
-        title={project.frontmatter.title}
+        tags={tags}
+        title={title}
+        url={url}
         allImageSharp={allImageSharp}
       />
       <section className="section">
