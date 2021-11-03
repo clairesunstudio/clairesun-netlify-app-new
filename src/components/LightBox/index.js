@@ -19,7 +19,6 @@ class LightBox extends React.Component {
       gridTemplateColumns: `repeat(${col || 2}, auto)`,
     })
     const validChildren = children.filter((child) => React.isValidElement(child))
-    console.log(validChildren)
     const childrenWithProps = React.Children.map(validChildren, (child, i) => {
       const clone = React.cloneElement(child, {
         onClick: () => this.toggleModal(i)
