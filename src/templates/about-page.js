@@ -28,7 +28,7 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
         <Col>
           <div className="about-row">
             <div className="about-section">
-              <PreviewCompatibleImage imageInfo={image} className="profile_pic" />
+              {image && <PreviewCompatibleImage imageInfo={image} className="profile_pic" />}
               <h2>{name}</h2>
               <h4>{job}</h4>
               <p>{blurb}</p>
@@ -37,7 +37,7 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
             <div className="about-section">
               <ul className="info_list">
               {
-                info.map((item, index) => {
+                info && info.map((item, index) => {
                   return(
                     <li key={`info_${item.text}`}>
                       <Icon name={item.icon} />
@@ -51,26 +51,37 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
               </ul>
             </div>
           </div>
-          <div className="about-section">
-            <SectionHeader>Design Tools Proficiency</SectionHeader>
-            <DonutChart data={toolSet} />
-          </div>
-          <div className="about-section">
-            <SectionHeader>Skill Set Cloud</SectionHeader>
-            <WordCloud data={skillSet}/>
-
-          </div>
+          {
+            toolSet && (
+              <div className="about-section">
+                <SectionHeader>Design Tools Proficiency</SectionHeader>
+                <DonutChart data={toolSet} />
+              </div>
+            )
+          }
+          {
+            skillSet && (
+              <div className="about-section">
+                <SectionHeader>Skill Set Cloud</SectionHeader>
+                <WordCloud data={skillSet}/>
+              </div>
+            )
+          }
           <div className="about-section">
             <SectionHeader>Languages and Frameworks</SectionHeader>
-            <Pills data={code} />
-            <hr />
-            <Pills data={languages} />
+            { code && <Pills data={code} />}
+            { languages && (
+              <>
+                <hr />
+                <Pills data={languages} />
+              </>
+            )}
           </div>
         </Col>
         <Col>
         <SectionHeader>Education<Icon name='education' {...svgSize} /></SectionHeader>
             <Timeline>
-              { education.map((ed, i) => (
+              { education && education.map((ed, i) => (
                     <TimelineEvent
                       key={`ed_${i}`}
                       title={ed.title}
@@ -83,7 +94,7 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
             </Timeline>
         <SectionHeader>Experience<Icon name='job' {...svgSize} /></SectionHeader>
             <Timeline>
-              { jobs.map((job, i) => (
+              { jobs && jobs.map((job, i) => (
                   <TimelineEvent
                     key={`job_${i}`}
                     title={job.jobTitle}
@@ -96,7 +107,7 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
             </Timeline>
         <SectionHeader>Highlights<Icon name='project' {...svgSize} /></SectionHeader>
         <Timeline>
-            { highlights.map((highlight, i) => (
+            { highlights && highlights.map((highlight, i) => (
                   <TimelineEvent
                     key={`highlight_${i}`}
                     title={highlight.title}
@@ -109,7 +120,7 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
         </Timeline>
         <SectionHeader>volunteer<Icon name='volunteer' {...svgSize} /></SectionHeader>
         <Timeline>
-            { volunteer.map((item, i) => (
+            { volunteer && volunteer.map((item, i) => (
                     <TimelineEvent
                       key={`item_${i}`}
                       title={item.title}
