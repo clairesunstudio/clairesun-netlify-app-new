@@ -28,13 +28,15 @@ export const ProjectTemplate = ({
   description,
   tags,
   title,
+  url,
   helmet,
   allImageSharp
 }) => {
   const PostContent = contentComponent || Content;
   const projectHeaderProps = {
     title,
-    subtitle: description
+    subtitle: description,
+    url
   }
   const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -162,6 +164,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        url
         tags
       }
     }

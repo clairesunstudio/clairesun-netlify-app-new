@@ -86,6 +86,8 @@ about:
     analyzing web usage data and sometimes venturing into product management.
     I'm the Design System Lead for Mayflower at Mass Digital. 
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
+    Technologist
+  title: Hybrid UX Designer + Developer, Design System E vangelist, Creative
     Technologist, Cat Mom
 info:
   - icon: phone

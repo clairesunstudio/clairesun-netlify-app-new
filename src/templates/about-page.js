@@ -19,7 +19,7 @@ const svgSize ={
   svgHeight: 20
 }
 
-export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, education, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
+export const AboutPageTemplate = ({ image, about: { name, title, blurb }, info, education, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
   return (
     <Fragment>
       <Divider />
@@ -30,7 +30,7 @@ export const AboutPageTemplate = ({ image, about: { name, job, blurb }, info, ed
             <div className="about-section">
               {image && <PreviewCompatibleImage imageInfo={image} className="profile_pic" />}
               <h2>{name}</h2>
-              <h4>{job}</h4>
+              <h4>{title}</h4>
               <p>{blurb}</p>
               <Button onClick={() => window.print()} download="Minghua's Resume">Print Resume</Button>
             </div>
@@ -172,7 +172,7 @@ export const aboutPageQuery = graphql`
         title
         about {
           name
-          job
+          title
           blurb
         }
         image {
