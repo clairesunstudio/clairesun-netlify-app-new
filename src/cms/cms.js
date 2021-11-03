@@ -22,6 +22,11 @@ CMS.registerPreviewTemplate('project', ProjectPreview)
 /* Youtube
 */
 
+const youtubeVideo = ({ width, id, fullScreen }) => (
+  // Video aspect-ratio style set in project.scss for responsive iframe width
+  `<div class="youtubeWrapper" style="max-width:${width || 800}px"><iframe width="100%" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen ? 'allowfullscreen' : ''}></iframe></div>`
+)
+
 CMS.registerEditorComponent({
   // Internal id of the component
   id: "youtube",
@@ -30,32 +35,24 @@ CMS.registerEditorComponent({
   // Fields the user need to fill out when adding an instance of the component
   fields: [
     { name: "id", label: "Youtube Video ID", widget: "string" },
-    { name: "width", label: "Width", widget: "string" },
-    { name: "height", label: "Height", widget: "string" },
-    { name: "fullScreen", label: "Allow Full Screen", widget: "boolean" },
+    { name: "width", label: "Max Width", widget: "number", default: 800 },
+    { name: "fullScreen", label: "Allow Full Screen", widget: "boolean", default: true },
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^<iframe width="(.*)" height="(.*)" src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe>$/,
+  pattern: /^<div class="youtubeWrapper" style="max-width:(.*)px"><iframe width="100%" src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe><\/div>$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
       width: match[1],
-      height: match[2],
-      id: match[3],
-      fullScreen: match[4]
+      id: match[2],
+      fullScreen: match[3]
     };
   },
   // Function to create a text block from an instance of this component
-  toBlock: function({width, height, id, fullScreen}) {
-    return `<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
-  },
+  toBlock: (match) => youtubeVideo(match),
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: function({width, height, id, fullScreen}) {
-    return (
-      `<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen && 'allowfullscreen'}></iframe>`
-    );
-  }
+  toPreview: (match) => youtubeVideo(match),
 });
 
 

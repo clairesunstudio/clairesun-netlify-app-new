@@ -20,3 +20,12 @@ p {
     }
   }
 }
+
+// responsive youtube video iframe
+.youtubeWrapper {
+  width: 100%;
+
+  iframe {
+    aspect-ratio: 2 / 1;
+  }
+}
