@@ -41,24 +41,31 @@ export const ProjectTemplate = ({
     components: {
       'counter': Counter,
       'icon': Icon,
-      "lightbox": (props) => {
-        const { children } = props
+      "lightbox": ({ imagesString }) => {
+        console.log(imagesString)
+        const imgSrc = imagesString && imagesString.split(',');
         const images = [];
-        React.Children.forEach(children, element => {
-          if (React.isValidElement(element)) {
-            const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === element.props.src);
-            images.push({ source: match.node.parent.childImageSharp.fluid.src })
-            //do something with source..
-          }
-        })
+        const matches = [];
+        imgSrc && imgSrc.forEach((img) => {
+          const relativePath = img.split('/img/')[1];
+          const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === relativePath);
+          matches.push(match)
+          console.log(matches)
+          images.push({ source: match.node.parent.childImageSharp.fluid.src })
+        } )
         return (
-          <LightBox {...props} images={images} />
+          <LightBox images={images}>
+            {
+              matches.map((match) => (           
+                <ClickableImage childImageSharp={match.node.parent} />)
+              )
+            }
+          </LightBox>
         )
       },
       'rehype-image': (props) => {
         const { src } = props;
         const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === src);
-        //console.log(match.node.parent.childImageSharp)
         return (
           <ClickableImage {...props} childImageSharp={match.node.parent} />
         )

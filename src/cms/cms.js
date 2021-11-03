@@ -130,7 +130,7 @@ CMS.registerEditorComponent({
   toBlock: function({ images }) {
     if (images) {
       return (
-        `<lightbox imagesString="${images.toString()}"/>`
+        `<lightbox imagesString="${JSON.stringify(images)}"/>`
       );
     }
   }
