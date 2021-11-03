@@ -15,11 +15,10 @@ class LightBox extends React.Component {
   render() {
     const { currentModal } = this.state;
     const { children, images, col } = this.props;
-    const getGridStyle = (col) => ({
-      gridTemplateColumns: `repeat(${col || 2}, auto)`,
+    const getGridStyle = (column) => ({
+      gridTemplateColumns: `repeat(${column || 2}, auto)`,
     })
     const validChildren = children.filter((child) => React.isValidElement(child))
-    console.log(validChildren)
     const childrenWithProps = React.Children.map(validChildren, (child, i) => {
       const clone = React.cloneElement(child, {
         onClick: () => this.toggleModal(i)
@@ -28,7 +27,7 @@ class LightBox extends React.Component {
     })
     return (
       <div>
-        <div className='grid' style={getGridStyle(3)}>
+        <div className='grid' style={getGridStyle(col||3)}>
           {childrenWithProps}
         </div>
         <ModalGateway>
