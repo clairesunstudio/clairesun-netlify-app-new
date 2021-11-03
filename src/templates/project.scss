@@ -2,7 +2,12 @@
 
 p {
   max-width: 800px;
+
+  img {
+    width: 100%;
+  }
 }
+
 .taglist {
   padding: 0;
   list-style: none;

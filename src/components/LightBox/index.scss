@@ -9,7 +9,7 @@
       
   }
 
-  @media screen and (max-width: 360px) {
-    grid-template-columns: repeat(1) !important;
+  @media screen and (max-width: 420px) {
+    grid-template-columns: repeat(1, auto) !important;
   }
 }

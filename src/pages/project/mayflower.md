@@ -1,11 +1,11 @@
 ---
 templateKey: project
 title: Mayflower Component Library
-description: Leading the transition from Mass.gov Front-end framework to the
+description: Leading the transition from the Mass.gov UI library to a
   Commonwealth Design System
 image: /img/mayflower.png
-url: https://mayflower-react.digital.mass.gov
-date: 2019-06-02T22:42:51.326Z
+url: https://mayflower.digital.mass.gov/home/
+date: 2021-11-03T14:02:48.077Z
 tags:
   - Data Viz
   - Design
@@ -14,6 +14,8 @@ tags:
 ## Overview
 
 I worked on design and development of the data story, with the data and GIS team on the first-hand data from the rideshare companies on how Massachusetts residents use rideshare services, through exploratory and confirmatory data analysis, combining correlated datasets and data visualizations we highlight the important information and trends and making large data sets easy to consume for the public.
+
+![](/img/mayflower-home.png)
 
 ## My Roles
 
