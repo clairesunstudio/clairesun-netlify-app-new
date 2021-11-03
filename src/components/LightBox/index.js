@@ -38,7 +38,6 @@ class LightBox extends React.Component {
             >
               <Carousel
                 currentIndex={currentModal}
-                components={{ Footer: null }}
                 views={images}
               />
             </Modal>

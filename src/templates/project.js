@@ -48,9 +48,14 @@ export const ProjectTemplate = ({
         const images = [];
         React.Children.forEach(children, element => {
           if (React.isValidElement(element)) {
-            const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === element.props.src);
-            images.push({ source: match.node.parent.childImageSharp.fluid.src })
-            //do something with source..
+            const { src, caption } = element.props;
+            const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === src);
+            console.log(caption)
+            images.push({ 
+              source: match.node.parent.childImageSharp.fluid.src,
+              caption,
+              alt: caption
+            })
           }
         })
         return (
