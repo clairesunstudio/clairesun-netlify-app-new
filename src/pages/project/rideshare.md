@@ -1,10 +1,10 @@
 ---
 templateKey: project
 title: Rideshare in Massachussets
-image: /img/rideshare.jpg
-date: 2019-06-02T22:42:51.326Z
 description: An interative data report for rideshare in Massachussets
-url: https://www.mass.gov/rideshare
+image: /img/rideshare.jpg
+url: https://tnc.sites.digital.mass.gov/
+date: 2019-06-02T22:42:51.326Z
 tags:
   - Data Viz
   - Design

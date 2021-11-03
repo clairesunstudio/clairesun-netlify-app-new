@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Button, Row, Container } from 'react-bootstrap'
 import './index.scss'
 
-const Header = ({title,subtitle, live_site}) => (
+const Header = ({title, subtitle, url}) => (
     <header className="project-header">
       <Container>
         <Row>
@@ -11,8 +11,8 @@ const Header = ({title,subtitle, live_site}) => (
             <hr />
             <p>{subtitle}</p>
             {
-              (live_site != "") && (
-                <Button className="btn-project" href={live_site}>Visit Live Site</Button>
+              url && (
+                <a className="btn btn-primary btn-project" href={live_site}>Visit Live Site</a>
               )
             }
           </Col>

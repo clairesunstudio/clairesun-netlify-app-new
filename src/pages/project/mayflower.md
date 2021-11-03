@@ -1,10 +1,11 @@
 ---
 templateKey: project
 title: Mayflower Component Library
-image: /img/mayflower.jpg
-date: 2019-06-02T22:42:51.326Z
-description: Leading the transition from Mass.gov Front-end framework to the Commonwealth Design System
+description: Leading the transition from Mass.gov Front-end framework to the
+  Commonwealth Design System
+image: /img/mayflower.png
 url: https://mayflower-react.digital.mass.gov
+date: 2019-06-02T22:42:51.326Z
 tags:
   - Data Viz
   - Design
