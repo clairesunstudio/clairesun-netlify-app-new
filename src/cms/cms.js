@@ -57,51 +57,51 @@ CMS.registerEditorComponent({
 
 
 
-/* Collage
-*/
+// /* Collage
+// */
 
-CMS.registerEditorComponent({
-  // Internal id of the component
-  id: "collage",
-  // Visible label
-  label: "Collage",
-  // Fields the user need to fill out when adding an instance of the component
-  fields: [{
-    name: 'images',
-    label: 'Images',
-    widget: 'list',
-    default: [{ image: '', text: ''}],
-    fields: [
-      {label: 'Image', name: 'image', widget: 'image'},
-      {label: 'Text', name: 'text', widget: 'string'}
-    ]
-  }],
-  // Pattern to identify a block as being an instance of this component
-  pattern: /^collage (\S+)$/,
-  // Function to extract data elements from the regexp match
-  fromBlock: function(match) {
-    return {
-      id: match[1]
-    };
-  },
-  // Function to create a text block from an instance of this component
-  toBlock: function(list) {
-    if (list.images && list.images.length > 0) {
-      list.images.map((item) => (
-        `<rehype-image src="../..${item.image}" text="${item.text}}"></rehype-image>`
-      ))
-    }
-  },
-  // Preview output for this component. Can either be a string or a React component
-  // (component gives better render performance)
-  toPreview: function(list) {
-    if (list.images && list.images.length > 0) {
-      return (list.images.map((item) => {
-        <img src={item.image} alt={item.text} />
-      }))
-    }
-  }
-});
+// CMS.registerEditorComponent({
+//   // Internal id of the component
+//   id: "collage",
+//   // Visible label
+//   label: "Collage",
+//   // Fields the user need to fill out when adding an instance of the component
+//   fields: [{
+//     name: 'images',
+//     label: 'Images',
+//     widget: 'list',
+//     default: [{ image: '', text: ''}],
+//     fields: [
+//       {label: 'Image', name: 'image', widget: 'image'},
+//       {label: 'Text', name: 'text', widget: 'string'}
+//     ]
+//   }],
+//   // Pattern to identify a block as being an instance of this component
+//   pattern: /^collage (\S+)$/,
+//   // Function to extract data elements from the regexp match
+//   fromBlock: function(match) {
+//     return {
+//       id: match[1]
+//     };
+//   },
+//   // Function to create a text block from an instance of this component
+//   toBlock: function(list) {
+//     if (list.images && list.images.length > 0) {
+//       list.images.map((item) => (
+//         `<rehype-image src="../..${item.image}" text="${item.text}}"></rehype-image>`
+//       ))
+//     }
+//   },
+//   // Preview output for this component. Can either be a string or a React component
+//   // (component gives better render performance)
+//   toPreview: function(list) {
+//     if (list.images && list.images.length > 0) {
+//       return (list.images.map((item) => {
+//         <img src={item.image} alt={item.text} />
+//       }))
+//     }
+//   }
+// });
 
 // gallery
 CMS.registerEditorComponent({
@@ -140,6 +140,10 @@ CMS.registerEditorComponent({
 /* Blockquote
 */
 
+const blockQuote = ({ quote, author }) => (
+  `<blockquote>${quote}<footer>${author}</footer></blockquote>`
+)
+
 CMS.registerEditorComponent({
   id: 'blockquote', // Internal id of the component
   label: 'Blockquote', // Visible label
@@ -158,24 +162,8 @@ CMS.registerEditorComponent({
       }
   },
   // Function to create a text block from an instance of this component
-  toBlock: function (obj) {
-      return (
-          '<blockquote>' +
-          obj.quote +
-          '<footer>' +
-          obj.author +
-          '</footer></blockquote>'
-      )
-  },
+  toBlock: (obj) => blockQuote(obj),
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: function (obj) {
-      return (
-          '<blockquote>' +
-          obj.quote +
-          '<footer>' +
-          obj.author +
-          '</footer></blockquote>'
-      )
-  },
+  toPreview: (obj) => blockQuote(obj)
 });
