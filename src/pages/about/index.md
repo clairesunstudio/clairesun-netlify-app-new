@@ -123,7 +123,7 @@ education:
       * 4-year Presidential Scholarship and Dean’s List Recipient
       * National College Honor Scholarship Society (Alpha Chi) Member
 jobs:
-  - jobTitle: UX Designer & Engineer
+  - jobTitle: Sr. UX Developer, Design System Lead
     workPlace: Digital Services, Commonwealth of Massachusetts
     startDate: May 2015
     endDate: Present
@@ -158,17 +158,17 @@ highlights:
     descriptions: Interactive Data Story on the [Massachusetts opioid
       epidemic](https://chapter55.digital.mass.gov/), creative lead, data
       visualization developer.
-    endDate: Sep 2017
-    startDate: "2017"
+    endDate: "2017"
+    startDate: ""
   - title: Massachusetts Performance Recognition Program
     subTitle: Commonwealth of Massachusett
     descriptions: Mass.gov redesign and re-platform project
-    startDate: "2018"
+    startDate: ""
     endDate: "2018"
   - title: Artificial Bioluminescence
     subTitle: Boston CyberArts Gallery Exibition
     descriptions: A multisensory LED light installation
-    startDate: "2018"
+    startDate: ""
     endDate: "2018"
 volunteer:
   - title: "Design Director, Marketing (Facebook) Admin "

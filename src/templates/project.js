@@ -33,7 +33,6 @@ export const ProjectTemplate = ({
   allImageSharp
 }) => {
   const PostContent = contentComponent || Content;
-  console.log(url)
   const projectHeaderProps = {
     title,
     subtitle: description,
