@@ -82,3 +82,24 @@ MacOS users might also encounter some errors, for more info check [node-gyp](htt
 ## Purgecss
 
 This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
+
+## Authoring
+
+Custom editor for a image gallery (a list of images that rendered in a grid and a lightbox) is not fulling working, as a stop gap:
+```
+<lightbox col='3'>
+    <rehype-image src="yes-delislicer.jpg" text="text"></rehype-image>
+    <rehype-image src="yes-cleaner.jpg" text="text"></rehype-image>
+    <rehype-image src="yes-fryolator.jpg" text="text"></rehype-image>
+    <rehype-image src="yes-ladder.jpg" text="text"></rehype-image>
+    <rehype-image src="yes-register.jpg" text="text"></rehype-image>
+    <rehype-image src="yes-wheelchair.jpg" text="text"></rehype-image>
+</lightbox>
+```
+
+For a single image to leverage the grid for responsive widths and gatsby image:
+```
+<div class="grid grid--col_2">
+    <rehype-image src="facebookfan.jpg" caption="This is one of the four postcards I designed for this event. "></rehype-image>
+</div>
+```
