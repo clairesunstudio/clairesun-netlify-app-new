@@ -18,31 +18,3 @@ a{
 h4, .h4 {
   font-size: 1.25rem !important;
 }
-
-// Print styles
-
-@media print {
-  nav, header, footer,
-  .screen-only {
-    display: none !important;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-
-  .about-row {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-column-gap: 3rem;
-    align-items: baseline;
-  }
-
-  .dash_container {
-    flex-wrap: nowrap !important;
-  }
-
-  a[href]:after {
-    content: none !important;
-  }
-}

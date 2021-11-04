@@ -161,11 +161,11 @@ const Project = ({ data: { project: {id, htmlAst, frontmatter: { title, descript
         url={url}
         allImageSharp={allImageSharp}
       />
-      <section className="section">
+      <nav>
         {
           <Pager {...pagerProps} />
         }
-      </section>
+      </nav>
     </Layout>
   )
 }

@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import './About.scss'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Divider from '../components/Divider'
@@ -13,6 +12,8 @@ import Pills from '../components/Pills'
 import { Timeline, TimelineEvent } from '../components/Timeline'
 import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import './about.scss'
+import './print.scss'
 
 const svgSize ={
   svgWidth: 30,
