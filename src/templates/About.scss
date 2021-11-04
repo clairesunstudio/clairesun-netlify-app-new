@@ -19,44 +19,30 @@ h4, .h4 {
   font-size: 1.25rem !important;
 }
 
-// @media print {
-//   nav, header, footer {
-//     display: none;
-//   }
-//
-//   .about-row {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     width: 100%;
-//   }
-//
-//   .about-section {
-//     flex: 1;
-//
-//     & + & {
-//       padding-left: 20px;
-//     }
-//   }
-//
-//   .btn.btn-tab{
-//     display: none;
-//   }
-//
-//   .profile_pic{
-//     display: none;
-//   }
-//
-//   .section-divider-title:before {
-//     top: 120% !important;
-//   }
-//
-//   .dash_container {
-//     width: 68%;
-//   }
-//
-//   a[href]:after {
-//     content: none !important;
-//   }
-// }
+// Print styles
+
+@media print {
+  nav, header, footer,
+  .screen-only {
+    display: none !important;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .about-row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 3rem;
+    align-items: baseline;
+  }
+
+  .dash_container {
+    flex-wrap: nowrap !important;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+}

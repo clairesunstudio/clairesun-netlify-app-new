@@ -10,3 +10,11 @@
     animation: AnimationName 60s ease infinite;
     width: 100%;
 }
+
+@mixin clearfix {
+    clear: both;
+    &::after {
+      content: '';
+      display: table;
+    }
+  }

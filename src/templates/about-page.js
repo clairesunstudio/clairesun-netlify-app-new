@@ -28,11 +28,11 @@ export const AboutPageTemplate = ({ image, about: { name, title, blurb }, info, 
         <Col>
           <div className="about-row">
             <div className="about-section">
-              {image && <PreviewCompatibleImage imageInfo={image} className="profile_pic" />}
+              {image && <PreviewCompatibleImage imageInfo={image} className="profile_pic screen-only" />}
               <h2>{name}</h2>
               <h4>{title}</h4>
               <p>{blurb}</p>
-              <Button onClick={() => window.print()} download="Minghua's Resume">Print Resume</Button>
+              <Button className="screen-only" onClick={() => window.print()} download="Minghua's Resume">Print Resume</Button>
             </div>
             <div className="about-section">
               <ul className="info_list">

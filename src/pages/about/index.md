@@ -16,6 +16,9 @@ skills:
     - name: Optimal Workshop
       value: 85
       size: sm
+    - name: Miro
+      value: 80
+      size: md
     - name: AI
       value: 100
       size: lg
@@ -24,9 +27,6 @@ skills:
       size: lg
     - name: XD
       value: 80
-      size: lg
-    - name: ID
-      value: 66
       size: lg
     - name: AE
       value: 50
