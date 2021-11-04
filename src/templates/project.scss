@@ -1,36 +1,64 @@
 @import 'variables';
 
-p {
-  max-width: 800px;
+$paragraphWidth: 800px;
+// page content in project, blogpost 
+.container.content {
 
-  img {
-    width: 100%;
-  }
-}
+  h2 {
+    font-size: $h6-font-size;
+    text-transform: uppercase;
+    color: $color-gray;
+    display: flex;
+    flex: auto;
+    width: $paragraphWidth;
+    align-items: center;
+    margin-top: 2rem;
 
-img {
-  max-width: 100%;
-}
-
-
-.taglist {
-  padding: 0;
-  list-style: none;
-
-  li {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 0.5rem;
+    &:after {
+      margin-left: 1rem;
+      height: 1px;
+      content: " ";
+      text-shadow: none;
+      background-color: $color-gray-lighter;
+      width: 100%;
+      flex: 1;
     }
   }
-}
 
-// responsive youtube video iframe
-.youtubeWrapper {
-  width: 100%;
-
-  iframe {
-    aspect-ratio: 2 / 1;
+  p {
+    max-width: $paragraphWidth;
+  
+    img {
+      width: 100%;
+    }
   }
+  
+  img {
+    max-width: 100%;
+  }
+
+  // responsive youtube video iframe
+  .youtubeWrapper {
+    width: 100%;
+
+    iframe {
+      aspect-ratio: 2 / 1;
+    }
+  }
+
+
+  .taglist {
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
 }
+
