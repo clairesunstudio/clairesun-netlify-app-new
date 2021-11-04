@@ -4,6 +4,13 @@
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
 
+
+  @for $i from 2 through 4 {
+    &--col_#{$i} {
+      grid-template-columns: repeat($i, fit-content(100%/$i));
+    }
+  }
+
   @media screen and (max-width: 767px) {
     grid-template-columns: repeat(2, auto) !important;
       
@@ -13,3 +20,4 @@
     grid-template-columns: repeat(1, auto) !important;
   }
 }
+

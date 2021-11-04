@@ -7,9 +7,9 @@ const getGridStyle = (column) => ({
 
 const Grid = ({col, children}) => {
     return (
-        <div className='grid' style={getGridStyle(col)}>
+        <span className='grid' style={getGridStyle(col)}>
             {children}
-         </div>
+         </span>
     )
 }
 

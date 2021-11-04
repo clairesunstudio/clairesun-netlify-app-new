@@ -24,7 +24,7 @@ class LightBox extends React.Component {
       return clone;
     })
     return (
-      <div>
+      <>
         <Grid col={col}>
           {childrenWithProps}
         </Grid>
@@ -42,7 +42,7 @@ class LightBox extends React.Component {
           ) : null}
 
         </ModalGateway>
-      </div>
+      </>
     );
   }
 }

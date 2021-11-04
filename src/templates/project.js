@@ -16,9 +16,9 @@ import './project.scss';
 
 const ClickableImage = (props) => {
   return (
-    <div onClick={props.onClick}>
+    <span onClick={props.onClick}>
       <PreviewCompatibleImage imageInfo={props.childImageSharp} />
-    </div>
+    </span>
   );
 };
 
@@ -52,7 +52,7 @@ export const ProjectTemplate = ({
             const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === src);
             console.log(caption)
             images.push({ 
-              source: match.node.parent.childImageSharp.fluid.src,
+              source: match ? match.node.parent.childImageSharp.fluid.src : `/img/${src}`,
               caption,
               alt: caption
             })
@@ -64,10 +64,27 @@ export const ProjectTemplate = ({
       },
       'rehype-image': (props) => {
         const { src } = props;
+        // const isGIF = src.split('.')[1] === 'gif';
+        // console.log(isGIF)
+        // let gifProps = {};
+        // if (isGIF) {
+        //   gifProps = {
+        //     publicURL: `/img/${src}`,
+        //     ...props
+        //   }
+        // }
         const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === src);
+        const gifProps = {
+          publicURL: `/img/${src}`,
+          extension: 'gif',
+          ...props
+        }
+        const childImageSharp = match ? match.node.parent : gifProps;
+        
+        console.log(childImageSharp)
         //console.log(match.node.parent.childImageSharp)
         return (
-          <ClickableImage {...props} childImageSharp={match.node.parent} />
+          <ClickableImage {...props} childImageSharp={childImageSharp} />
         )
       }
     }
