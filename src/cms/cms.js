@@ -24,7 +24,7 @@ CMS.registerPreviewTemplate('project', ProjectPreview)
 
 const youtubeVideo = ({ width, id, fullScreen }) => (
   // Video aspect-ratio style set in project.scss for responsive iframe width
-  `<div class="youtubeWrapper" style="max-width:${width || 800}px"><iframe width="100%" src="https://www.youtube.com/embed/${id}" frameborder="0" ${fullScreen ? 'allowfullscreen' : ''}></iframe></div>`
+  `<div class="youtubeWrapper" style="max-width:${width || 800}px"><iframe width="100%" src="https://www.youtube.com/embed/${id}?rel=0" frameborder="0" ${fullScreen ? 'allowfullscreen' : ''}></iframe></div>`
 )
 
 CMS.registerEditorComponent({
@@ -39,7 +39,7 @@ CMS.registerEditorComponent({
     { name: "fullScreen", label: "Allow Full Screen", widget: "boolean", default: true },
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^<div class="youtubeWrapper" style="max-width:(.*)px"><iframe width="100%" src="https:\/\/www.youtube.com\/embed\/(\S+)" frameborder="0" (allowfullscreen)?><\/iframe><\/div>$/,
+  pattern: /^<div class="youtubeWrapper" style="max-width:(.*)px"><iframe width="100%" src="https:\/\/www.youtube.com\/embed\/(\S+)?rel=0" frameborder="0" (allowfullscreen)?><\/iframe><\/div>$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
