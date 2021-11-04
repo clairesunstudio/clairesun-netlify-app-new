@@ -42,6 +42,12 @@ html, body, #root{
     @media (max-width: 767px) {
       padding: 0 1rem;
     }
+
+    &.content {
+      h2 {
+        margin-top: 2.5rem;
+      }
+    }
   }
 
   a {
