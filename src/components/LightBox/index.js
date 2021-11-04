@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 import Grid from '../Grid';
+import './index.scss';
 
 class LightBox extends React.Component {
   constructor(props){
