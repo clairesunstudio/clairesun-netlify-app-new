@@ -39,6 +39,15 @@ $paragraphWidth: 800px;
     img {
       width: 100%;
     }
+
+    a {
+      text-decoration: underline;
+      color: $color-gray-dark;
+  
+      &:hover {
+        color: $color-black;
+      }
+    }
   }
   
   img {
@@ -58,15 +67,6 @@ $paragraphWidth: 800px;
     border-left: 3px solid $color-gray-lighter;
     padding-left: 1rem;
     color: $color-gray-dark;
-  }
-
-  a {
-    text-decoration: underline;
-    color: $color-gray-dark;
-
-    &:hover {
-      color: $color-black;
-    }
   }
 
   .taglist {
