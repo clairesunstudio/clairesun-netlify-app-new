@@ -49,31 +49,3 @@ html, body, #root{
       }
     }
   }
-
-  a {
-    text-decoration: none !important;
-        span {
-          text-align: center;
-          position: relative;
-          &:after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            width: 0px;
-            height: 2px;
-            transition: all 0.3s ease-in-out;
-            opacity: 0;
-            left: 0;
-            background-color: $color-black;
-          }
-        }
-    &:hover, &.active {
-        cursor: pointer;
-        span {
-          &:after {
-            width: 100%;
-            opacity: 1;
-          }
-        }
-      }
-    }

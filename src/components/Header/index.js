@@ -38,7 +38,7 @@ const SiteHeader = ({ currentPath }) => {
     }
   })
 
-  const activeClass = ({path, currentPath}) => path === currentPath ? 'active' : null; 
+  const activeClass = ({path, currentPath}) => path === currentPath ? 'active' : ''; 
   return(
     <Navbar fixed={fixedTop ? 'top' : false }>
       <Container>
@@ -48,7 +48,7 @@ const SiteHeader = ({ currentPath }) => {
       <Nav>
         {
           navLinks.map(({ text, path }) => (
-            <Link key={`navlink_${path}`} className={activeClass({path, currentPath})} to={path}><span>{text}</span></Link>
+            <Link key={`navlink_${path}`} className={`navbar-nav-link ${activeClass({path, currentPath})}`} to={path}><span>{text}</span></Link>
           ))
         }
       </Nav>

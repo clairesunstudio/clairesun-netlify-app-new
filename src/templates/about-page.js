@@ -36,14 +36,14 @@ export const AboutPageTemplate = ({ image, about: { name, title, blurb }, info, 
               <Button className="screen-only" onClick={() => window.print()} download="Minghua's Resume">Print Resume</Button>
             </div>
             <div className="about-section">
-              <ul className="info_list">
+              <ul className="info-list">
               {
                 info && info.map((item, index) => {
                   return(
                     <li key={`info_${item.text}`}>
                       <Icon name={item.icon} />
                       {
-                        item.href ? (<a href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
+                        item.href ? (<a class="info-list-link" href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
                       }
                     </li>
                   )

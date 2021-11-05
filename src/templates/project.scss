@@ -7,8 +7,10 @@ $paragraphWidth: 800px;
 
   h2 {
     width: $paragraphWidth;
+    
 
     @media screen {
+      font-weight: $font-bold;
       font-size: $h6-font-size;
       text-transform: uppercase;
       color: $color-gray;
@@ -17,6 +19,7 @@ $paragraphWidth: 800px;
       
       align-items: center;
       margin-top: 2rem;
+      margin-bottom: 1rem;
   
       &:after {
         margin-left: 1rem;
@@ -51,6 +54,20 @@ $paragraphWidth: 800px;
     }
   }
 
+  blockquote {
+    border-left: 3px solid $color-gray-lighter;
+    padding-left: 1rem;
+    color: $color-gray-dark;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $color-gray-dark;
+
+    &:hover {
+      color: $color-black;
+    }
+  }
 
   .taglist {
     padding: 0;

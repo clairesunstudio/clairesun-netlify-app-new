@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 nav.navbar {
     height: 50px;
@@ -26,6 +27,10 @@ nav.navbar {
       & > * {
         margin-right: 10px;
       }
+
+      &-link {
+        @include custom-link;
+      }
     }
     &.navbar.fixed-top{
       height: 35px;
@@ -44,16 +49,6 @@ nav.navbar {
     .social-media-collapsed{
       display: none;
     }
-
-    a {
-      &:hover {
-          span {
-            &:after {
-              background-color: $color-gray-dark;
-            }
-          }
-        }
-      }
 }
 
 
