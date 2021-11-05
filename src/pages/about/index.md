@@ -79,12 +79,10 @@ image: /img/profile-pic.jpg
 about:
   name: Minghua Sun
   job: Creative Technologist, UX Engineer
-  blurb: >
-    I wear many hats in various projects — conducting user research and
+  blurb: I wear many hats in various projects — conducting user research and
     usability testing, gathering business requirements and translating them into
     design, front-end development and code review, creating data stories,
     analyzing web usage data and sometimes venturing into product management.
-    I'm the Design System Lead for Mayflower at Mass Digital. 
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist
   title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
