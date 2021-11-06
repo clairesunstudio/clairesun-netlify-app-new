@@ -1,15 +1,22 @@
 ---
 templateKey: project
 title: Fashion in Movies
-image: /img/fashion.jpg
-date: 2019-06-02T22:42:51.326Z
 description: Proof of concept prototype for visualizing fashion in classic movies
+image: /img/fashion.jpg
 url: http://clairesunstudio.github.io/fashion-viz/
+date: 2019-06-02T22:42:51.326Z
 tags:
   - Data Viz
   - Design
   - Rapid Prototyping
 ---
+
 ## Overview
 
-Heavily inspired by Mike Bostock's visualization of the 2014 fall fashion week. I recreated a similar concept prototype using CSS and plain Javascript without D3. Taking screenshots of movie scenes from the Alfred Hitchcock movies, I assembled a working prototype that allows users to visualize the female fashion color palettes in Hitchcock's movies. This prototype also explores the opportunies connecting the fashion wore by leading ladies like Grace Kelly, Tippi Hedren, Janet Leigh, Joan Fontaine, Kim Novak to social media for sharing and recreating the outfits from classic movies.
+Heavily inspired by Mike Bostock's data visualization [Front Row to Fashion Week](https://www.nytimes.com/newsgraphics/2014/02/14/fashion-week-editors-picks/index.html), I created a prototype using CSS and plain Javascript (without the use of D3) as a personal project, featuring the outfits wore by the 7 leading ladies — Grace Kelly, Tippi Hedren, Janet Leigh, Joan Fontaine, Kim Novak, Eva Marie Saint, and Ingrid Bergman — in Alfred Hitchcock's movies.
+
+After programmatically capturing the scenes from from Hitchcock's movies, and mimicking Bostock's visualization technique, I built a working prototype that would allow the users to visualize the female leads' fashion and color palettes in the movies. This exercise was an exploration of my ideas of allowing people to easily recreate the outfits from classic movies leveraging the power of social media. 
+
+![](/img/fashion-interact.gif)
+
+![](/img/fashion_modal-ui.png)
