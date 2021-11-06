@@ -9,26 +9,25 @@ tags:
   - Design
   - Dev
 ---
-![]()
-
-
-
 ## Overview
 
-Exhibited at the Fresh Media Show in the Boston CyberArts Gallery, "Artificial Bioluminescence" was an interactive and immersive art installation originated from my final project for the sensor and responsive environment class at the MIT Media Lab. I used LEDs, Arduinos, self-designed and ready-made sensors to recreate my personal experiences with bioluminescence — light emitted by living creatures. The attempt to emulate the the natural phenomenon using technological artifacts in an urban setting, was a reminder of environmental appreciation and protection, for never letting these bio lights fade away in the process of technologization. 
+Exhibited at the Fresh Media Show in the Boston CyberArts Gallery, "Artificial Bioluminescence" was an interactive and immersive art installation originated from my final project for the sensor and responsive environment class at the MIT Media Lab. I used LEDs, Arduinos, self-designed and ready-made sensors to recreate my personal experiences with bioluminescence — light emitted by living creatures. The attempt to emulate the the natural phenomenon using technological artifacts in an urban setting, was a reminder of appreciate and respect the nature, and not letting these bio lights fade away in the process of technologization. 
 
-My academic background in art and technology, enabled my cross-disciplinary approach to research, conceptualize, prototype, program and fabricate all the pieces. The final installation was optimized through rounds of testing and iterations, and consisted of two pieces, which were taken inspirations from firelies and dinoflagellates — a marine bioluminescent bacteria.
+My academic background in art and technology, enabled my cross-disciplinary approach to research, conceptualize, prototype, program and fabricate all the pieces. The final installation was optimized through rounds of testing and iterations, and consisted of two pieces, which were taken inspirations from fireflies and dinoflagellates — a type of marine bioluminescent bacteria.
 
 ## Part I: LED Fireflies
 
+In this piece, 100 LEDs were programed to flicker asynchronously, simulating a large group of fireflies. Each LED encapsulated in a white pingpong ball and was soldered together into 10 strips and were together controlled by a single Arduino. Sound and light sensors were used to control the rhythm of these “fireflies”. Hang from the ceiling of a dark room, the viewers were welcomed to walk into the "fireflies" but were not encourage to use flash lights or talk loudly, as any strong light or sudden loud noise would return the room to darkness for a while. 
+
 <lightbox col='3'>
+<rehype-image src="freshmedia-fireflies-dark.jpg" text="text"></rehype-image>
     <rehype-image src="freshmedia-fireflies-setup.jpg" text="text"></rehype-image>
     <rehype-image src="freshmedia-arduino_fireflies.jpg" text="text"></rehype-image>
 </lightbox>
 
 ## Part II: LED Dinoflagellates
 
-This piece consists of a LED installation constructed in two parts: In one part, about 60 to 100 LEDs are flickering simulating the fireflies. Sound and light sensors control the lightness of these “fireflies”. The second part of the installation consists of a water tank and approximately 15 LEDs that are floating on the water and producing the effect of the bioluminescence. The floating lights respong to movement, so that they light up when people stir the water. Also, as the people pick out the LEDs with hand, the lights fade away. Both of the pieces were installed in a dark space, in order to extenuate the lighting effect, and to greatly impress the natural ambience on the users.
+The second piece consists of a water tank and approximately 20 LEDs that are floating on the water. The floating lights were devised to respond to the water movements — see the schematic for how they worked. 
 
 <lightbox col='4'>
     <rehype-image src="freshmedia-dino_design-01.jpg" text="text"></rehype-image>
@@ -37,6 +36,8 @@ This piece consists of a LED installation constructed in two parts: In one part,
     <rehype-image src="freshmedia-dino_design-04.jpg" text="text"></rehype-image>
 </lightbox>
 
+Each LED was sealed in a pingpong ball with a battery, had and was its own sensor. Individually, they would light up as the water moved or fade away as the the water calmed, or being removed from the water completely. 
+
 <lightbox col='3'>
     <rehype-image src="freshmedia-dino.gif" text="text"></rehype-image>
     <rehype-image src="freshmedia2.jpg" text="text"></rehype-image>
@@ -44,9 +45,9 @@ This piece consists of a LED installation constructed in two parts: In one part,
 
 ## Inspirations
 
-Bioluminescence never failed to fascinate me – whether it’s a firefly twinkling between the bushes on a dark night or a unicellular organism that glittering in the water from any movements. It is a phenomenon that puzzled many scientists and unreplicable by modern technology.  
+Bioluminescence never fails to fascinate me – whether it’s a firefly twinkling between bushes on a dark night or a unicellular organism that glitters in water. It is a phenomenon that puzzled many scientists and unreplicable by modern technology.  
 
-Growing up in a major city in China, I rarely got to see fireflies in a natural environment. I remember attending this event hosted by the city many years ago, where thousands of fireflies were transported from a different area to be set free in a park for the public to see. The event did not turn out well — all I could see were bright flashes coming from cellphone cameras, as the fireflies were too scared to light up or fly away by the large crowd, dense noises and strong camera flashes.
+Growing up in a major city in China, I rarely got to see fireflies in a natural environment. I remember attending this event hosted by the city many years ago, where thousands of fireflies were transported from a different area to be set free in a park for the public to see. The event did not turn out well — all I could remember seeing were bright flashes coming from cellphone cameras, as the fireflies were too scared to light up or fly away by the large crowd, dense noises and strong camera flashes.
 
 Fast forward a few years, I had a magical experience seeing and interacting with the "glowing water" off the coast of Puerto Rico. As I swept my hand into the water, countless of tiny single-celled creatures called dinoflagellates would light up the surrounding water. 
 
