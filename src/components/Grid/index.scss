@@ -7,17 +7,18 @@
 
   @for $i from 2 through 4 {
     &--col_#{$i} {
-      grid-template-columns: repeat($i, fit-content(100%/$i));
+      // grid-template-columns: repeat($i, fit-content(100%/$i));
+      grid-template-columns: repeat($i, 1fr);
     }
   }
 
   @media screen and (max-width: 767px) {
-    grid-template-columns: repeat(2, auto) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
       
   }
 
   @media screen and (max-width: 420px) {
-    grid-template-columns: repeat(1, auto) !important;
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
