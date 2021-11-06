@@ -9,12 +9,18 @@ tags:
   - Design
   - Dev
 ---
+![]()
+
+
+
 ## Overview
 
-Exhibited at the Boston CyberArts Gallery at the Fresh Media Art Show, "Artificial Bioluminescence" was an art installation came from my final project for the sensor and environment class at the MIT Media Lab. I recreated my personal experiences with bioluminescence organisms using Arduinos, LEDs, light and sound sensor to greatly impress the natural ambiance in a city setting. My skills crossing the disciplines of the art and technology, enabled me to conceptualize the design, devise the sensors, program the algorithm, leading up to the final fabrication, testing, and setup. The exhibition consists of two parts: Firelies and Dinoflagellates.
+Exhibited at the Fresh Media Show in the Boston CyberArts Gallery, "Artificial Bioluminescence" was an interactive and immersive art installation originated from my final project for the sensor and responsive environment class at the MIT Media Lab. I used LEDs, Arduinos, self-designed and ready-made sensors to recreate my personal experiences with bioluminescence — light emitted by living creatures. The attempt to emulate the the natural phenomenon using technological artifacts in an urban setting, was a reminder of environmental appreciation and protection, for never letting these bio lights fade away in the process of technologization. 
 
+My academic background in art and technology, enabled my cross-disciplinary approach to research, conceptualize, prototype, program and fabricate all the pieces. The final installation was optimized through rounds of testing and iterations, and consisted of two pieces, which were taken inspirations from firelies and dinoflagellates — a marine bioluminescent bacteria.
 
 ## Part I: LED Fireflies
+
 <lightbox col='3'>
     <rehype-image src="freshmedia-fireflies-setup.jpg" text="text"></rehype-image>
     <rehype-image src="freshmedia-arduino_fireflies.jpg" text="text"></rehype-image>
@@ -22,7 +28,7 @@ Exhibited at the Boston CyberArts Gallery at the Fresh Media Art Show, "Artifici
 
 ## Part II: LED Dinoflagellates
 
-This piece consists of a LED installation constructed in two parts: In one part, about 60 to 100 LEDs are flickering simulating the fireflies. Sound and light sensors control the lightness of these “fireflies”. The second part of the installation consists of a water tank and approximately 15 LEDs that are floating on the water and producing the effect of the bioluminescence. The floating lights respong to movement, so that they light up when people stir the water. Also, as the people pick out the LEDs with hand, the lights fade away. Both of the pieces were installed in a dark space, in order to extentuate the lighting effect, and to greatly impress the natural ambience on the users.
+This piece consists of a LED installation constructed in two parts: In one part, about 60 to 100 LEDs are flickering simulating the fireflies. Sound and light sensors control the lightness of these “fireflies”. The second part of the installation consists of a water tank and approximately 15 LEDs that are floating on the water and producing the effect of the bioluminescence. The floating lights respong to movement, so that they light up when people stir the water. Also, as the people pick out the LEDs with hand, the lights fade away. Both of the pieces were installed in a dark space, in order to extenuate the lighting effect, and to greatly impress the natural ambience on the users.
 
 <lightbox col='4'>
     <rehype-image src="freshmedia-dino_design-01.jpg" text="text"></rehype-image>
@@ -31,7 +37,10 @@ This piece consists of a LED installation constructed in two parts: In one part,
     <rehype-image src="freshmedia-dino_design-04.jpg" text="text"></rehype-image>
 </lightbox>
 
-
+<lightbox col='3'>
+    <rehype-image src="freshmedia-dino.gif" text="text"></rehype-image>
+    <rehype-image src="freshmedia2.jpg" text="text"></rehype-image>
+</lightbox>
 
 ## Inspirations
 
@@ -41,4 +50,4 @@ Growing up in a major city in China, I rarely got to see fireflies in a natural 
 
 Fast forward a few years, I had a magical experience seeing and interacting with the "glowing water" off the coast of Puerto Rico. As I swept my hand into the water, countless of tiny single-celled creatures called dinoflagellates would light up the surrounding water. 
 
-These personal experiences inspired me to create this installation art. The intention of this art was not to match the experiences I had, but a reminder for the viewers to appreciate and be mindful of the beauty of the nature and don't let these bio lights fade away in the process of technologization.
+These personal experiences inspired me to create this installation art. The intention of this art was not to match the experiences I had, but a reminder for the viewers to appreciate and be mindful of the beauty of the nature.
