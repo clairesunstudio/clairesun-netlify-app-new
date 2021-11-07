@@ -1,10 +1,10 @@
 ---
 templateKey: project
-title: State Budget Sites Revamp
-image: /img/budget.jpg
-date: 2019-06-02T22:42:51.326Z
+title: State Budget Sites Revamp (TODO)
 description: An interative data report for rideshare in Massachussets
+image: /img/budget.jpg
 url: https://www.mass.gov/rideshare
+date: 2019-06-02T22:42:51.326Z
 tags:
   - Data Viz
   - Design

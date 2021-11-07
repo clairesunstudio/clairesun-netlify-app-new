@@ -1,6 +1,6 @@
 ---
 templateKey: project
-title: Search.mass.gov
+title: Search.mass.gov (WIP)
 description: The search application powering Mass.gov
 image: /img/search.jpg
 url: https://search.mass.gov

@@ -169,12 +169,10 @@ highlights:
     startDate: ""
     endDate: "2018"
 volunteer:
-  - title: "Design Director, Marketing (Facebook) Admin "
+  - title: Creative Director
     subTitle: " Bright & Beautiful (有灵且美)"
     startDate: April 2015
     endDate: "2019"
-    descriptions: Bright & Beautiful is a non-profit organization aiming at
-      inspiring and encourage creative talents and art education to girls in
-      rural China. We host Summer Arts Camp once or twice a year at the middle
-      schools in rural Yunnan China.
+    descriptions: Bright & Beautiful is a non-profit organization aiming to inspire
+      creative talents by bringing arts education to the girls in rural China.
 ---
