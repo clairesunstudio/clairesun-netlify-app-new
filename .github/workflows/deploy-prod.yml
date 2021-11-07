@@ -48,7 +48,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14.18.0
 
       - name: Retrieve production artifacts
         uses: actions/download-artifact@v2
