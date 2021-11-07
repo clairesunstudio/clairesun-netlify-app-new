@@ -1,6 +1,6 @@
 ---
 templateKey: project
-title: Chapter55 (TODO)
+title: Chapter55 (WIP)
 description: An interactive data story on Massachusetts opioid epidemic.
 image: /img/chapter55.jpg
 url: https://mass.gov/chapter55
