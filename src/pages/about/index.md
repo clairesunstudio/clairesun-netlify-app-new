@@ -141,7 +141,7 @@ jobs:
       * Provide digital consulting services for partner state-agency projects in research, design and tech solutions.
 
 
-      > Previous title: UX and data visualization developer, UX designer, summer design intern
+      > Previous title: UX and data visualization engineer, UX designer, summer design intern
   - jobTitle: Visual Designer
     workPlace: UMass Boston
     startDate: Mar 2014
