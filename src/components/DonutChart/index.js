@@ -16,7 +16,7 @@ const DonutChart = ({ data }) => {
     return (
       <div className="dash_container">
         {charts.map((chart, i) =>
-          <div className="pie-wrap">
+          <div className="pie-wrap" key={`chart_${i}`}>
             <ResponsiveContainer>
               <PieChart>
                 <Pie
@@ -27,7 +27,7 @@ const DonutChart = ({ data }) => {
                   startAngle={90}
                   endAngle={450}
                 >
-                  {color.map((chart, i) => <Cell key={i} fill={chart} />)}
+                  {color.map((chart, index) => <Cell key={`cell_${i}`} fill={chart} />)}
                 </Pie>
               </PieChart>
             </ResponsiveContainer>

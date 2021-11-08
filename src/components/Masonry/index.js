@@ -24,8 +24,7 @@ const Masonry = ({ data, tags, filterPath }) => {
   // const [bind, { width }] = useMeasure()
   const target = React.useRef()
   const size = useMeasure(target)
-  const width = size ? size.width : 0;
-  console.log(width)
+  const width = size ? size.width : 0; // set initial value to prevent undefined 
   // Hook3: Hold items
   const [items, setItems] = useState(projects)
   const [filter, setFilter] = useState('all')

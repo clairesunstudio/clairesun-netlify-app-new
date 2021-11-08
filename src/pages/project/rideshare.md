@@ -1,19 +1,26 @@
 ---
 templateKey: project
 title: Rideshare in Massachussets
+description: An interative data report on rideshare in Massachussets
 image: /img/rideshare.jpg
+url: https://tnc.sites.digital.mass.gov/
 date: 2019-06-02T22:42:51.326Z
-description: An interative data report for rideshare in Massachussets
-url: https://www.mass.gov/rideshare
 tags:
   - Data Viz
   - Design
   - Dev
 ---
-## Overview
+## Background
 
-I worked on design and development of the data story, with the data and GIS team on the first-hand data from the rideshare companies on how Massachusetts residents use rideshare services, through exploratory and confirmatory data analysis, combining correlated datasets and data visualizations we highlight the important information and trends and making large data sets easy to consume for the public.
+In August 2016, Governor Baker signed legislation related to ridesharing companies, also known as transportation network companies (TNCs). Part of that legislation enabled Massachusetts Department of Utilities start collecting data on the innerstate and interstate rideshare patterns, in order to inform public transportation and other policy decisions for the Commonwealth. 
+
+![](/img/rideshare-inflow-outflow-maps.gif)
 
 ## My Roles
 
-In August 2016, Governor Baker signed legislation related to ridesharing companies, also known as transportation network companies (TNCs). Part of that legislation helped Massachusetts start collecting data about ridesharing service from TNCs.
+As the designer and developer on this project, I collaborated with the data and GIS team on turning the first-hand data provided by the rideshare companies into an interactive data visualization showing how Massachusetts residents use rideshare services. Through exploratory and confirmatory data analysis, combining correlated datasets, and data visualization, we were able to highlight the important information and patterns and present large datasets in a way that was easy for the general public to consume and understand.
+
+<lightbox col='2'>
+<rehype-image src="rideshare-population-correlation.png" text="text"></rehype-image>
+<rehype-image src="rideshare-speed-by-muni.png" text="text"></rehype-image>
+</lightbox>

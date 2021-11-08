@@ -1,25 +1,17 @@
 @import 'variables';
 
-@mixin clearfix {
-  clear: both;
-  &::after {
-    content: '';
-    display: table;
-  }
-}
-
 .pills{
+  display: flex;
+  flex-wrap: wrap;
+
   @media screen {
-    overflow: hidden;
     .capsule {
-      float: left;
       background-color: $color-blue-alt;
       color: $color-white;
       border-radius: 100px;
     }
   }
   margin: 20px 0;
-  @include clearfix;
   .capsule {
     margin: 5px 5px 5px 0px;
     padding: 5px 10px;

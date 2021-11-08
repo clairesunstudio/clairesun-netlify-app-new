@@ -1,0 +1,58 @@
+// Print styles
+
+@media print {
+    nav, footer,
+    .screen-only {
+      display: none !important;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    // about page
+    .profile_pic {
+      display: none;
+    }
+  
+    .about-row {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 3rem;
+      align-items: baseline;
+    }
+  
+    .dash_container {
+      flex-wrap: nowrap !important;
+    }
+  
+    // a[href]:after {
+    //   content: none !important;
+    // }
+  
+    // project
+    .container.content {
+      padding-bottom: 0;
+    }
+    
+    .project-header {
+      background: none !important;
+  
+      h1, p {
+        color: black !important;
+      }
+  
+      hr {
+        border-color: black !important;
+      }
+  
+      .btn {
+        display: none;
+      }
+    }
+  
+    .youtubeWrapper {
+      display: none;
+    }
+  }
+  

@@ -27,10 +27,10 @@ html, body, #root{
     padding-bottom: 10rem;
 
     @media screen and (max-width: 767px) {
-      margin-top:3rem;
+      margin-top:1.5rem;
     }
     @media screen and (max-width: 300px) {
-      margin-top:3rem;
+      margin-top:1.5rem;
     }
   }
 }
@@ -42,39 +42,16 @@ html, body, #root{
     @media (max-width: 767px) {
       padding: 0 1rem;
     }
+
+    &.content {
+      h2 {
+        margin-top: 2.5rem;
+      }
+    }
   }
 
-  a {
-    text-decoration: none !important;
-        span {
-          text-align: center;
-          position: relative;
-          &:after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            width: 0px;
-            height: 2px;
-            transition: all 0.3s ease-in-out;
-            opacity: 0;
-            left: 0;
-            background-color: $color-black;
-          }
-        }
-    &:hover {
-        cursor: pointer;
-        span {
-          &:after {
-            width: 100%;
-            opacity: 1;
-          }
-        }
-      }
-
-    &.active {
-      background: $color-black;
-      span {
-        color: $color-white;
-      }
-    }
-    }
+  blockquote {
+    border-left: 3px solid $color-gray-lighter;
+    padding-left: 1rem;
+    color: $color-gray-dark;
+  }

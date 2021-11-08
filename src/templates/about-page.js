@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import './About.scss'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Divider from '../components/Divider'
@@ -13,14 +12,15 @@ import Pills from '../components/Pills'
 import { Timeline, TimelineEvent } from '../components/Timeline'
 import Icon from '../components/Icon'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import './about.scss'
+import './print.scss'
 
+const svgSize ={
+  svgWidth: 30,
+  svgHeight: 20
+}
 
-export const AboutPageTemplate = ({ title, content, contentComponent, image, about: { name, job, blurb }, info, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
-  const PageContent = contentComponent || Content
-  const svgSize ={
-    svgWidth: 30,
-    svgHeight: 20
-  }
+export const AboutPageTemplate = ({ image, about: { name, title, blurb }, info, education, jobs, highlights, volunteer, skills: { code, languages, skillSet, toolSet } }) => {
   return (
     <Fragment>
       <Divider />
@@ -29,21 +29,21 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
         <Col>
           <div className="about-row">
             <div className="about-section">
-              <PreviewCompatibleImage imageInfo={image} className="profile_pic" />
+              {image && <PreviewCompatibleImage imageInfo={image} className="profile_pic screen-only" />}
               <h2>{name}</h2>
-              <h4>{job}</h4>
+              <h4>{title}</h4>
               <p>{blurb}</p>
-              <Button bsStyle='tab' onClick={() => window.print()} download="Minghua's Resume">Print Resume</Button>
+              <Button className="screen-only" onClick={() => window.print()} download="Minghua's Resume">Print Resume</Button>
             </div>
             <div className="about-section">
-              <ul className="info_list">
+              <ul className="info-list">
               {
-                info.map((item, index) => {
+                info && info.map((item, index) => {
                   return(
-                    <li>
+                    <li key={`info_${item.text}`}>
                       <Icon name={item.icon} />
                       {
-                        item.href ? (<a href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
+                        item.href ? (<a class="info-list-link" href={item.href}> <span>{item.text}</span></a>) : (<span> {item.text}</span>)
                       }
                     </li>
                   )
@@ -52,47 +52,50 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
               </ul>
             </div>
           </div>
+          {
+            toolSet && (
+              <div className="about-section">
+                <SectionHeader>Design Tools Proficiency</SectionHeader>
+                <DonutChart data={toolSet} />
+              </div>
+            )
+          }
+          {
+            skillSet && (
+              <div className="about-section">
+                <SectionHeader>Skill Set Cloud</SectionHeader>
+                <WordCloud data={skillSet}/>
+              </div>
+            )
+          }
           <div className="about-section">
-            <SectionHeader>Design Tools Proficiency</SectionHeader>
-            <DonutChart data={toolSet} />
-          </div>
-          <div className="about-section">
-            <SectionHeader>Skill Set Cloud</SectionHeader>
-            <WordCloud data={skillSet}/>
-
-          </div>
-          <div className="about-section">
-            <SectionHeader>Languages</SectionHeader>
-            <Pills data={code} />
-            <hr />
-            <Pills data={languages} />
+            <SectionHeader>Languages and Frameworks</SectionHeader>
+            { code && <Pills data={code} />}
+            { languages && (
+              <>
+                <hr />
+                <Pills data={languages} />
+              </>
+            )}
           </div>
         </Col>
         <Col>
         <SectionHeader>Education<Icon name='education' {...svgSize} /></SectionHeader>
             <Timeline>
-              <TimelineEvent title="Graduate Certificate in Interactive Design"
-                             sub="Dynamic Media Institute, MassArt, Boston, MA"
-                             date="May 2015">
-              </TimelineEvent>
-              <TimelineEvent title="Interactive Environment Group"
-                             sub="MIT Media Lab, Cambridge, MA"
-                             date="May 2015">
-              </TimelineEvent>
-              <TimelineEvent title="B.S. in Applied Mathematics, B.A. in Graphic Design"
-                             sub="New England College, Henniker, NH"
-                             date="May 2013">
-                             <ul>
-                              <li> Magna Cum Laude Graduate, GPA: 3.77/4.0</li>
-                              <li> Academic Achievement Award for Mathematic Program</li>
-                              <li> 4-year Presidential Scholarship and Dean’s List Recipient</li>
-                              <li> National College Honor Scholarship Society (Alpha Chi) Member</li>
-                             </ul>
-              </TimelineEvent>
+              { education && education.map((ed, i) => (
+                    <TimelineEvent
+                      key={`ed_${i}`}
+                      title={ed.title}
+                      sub={ed.subTitle}
+                      date={[ed.endDate, ed.startDate]}>
+                      {ed.descriptions}
+                    </TimelineEvent>
+                  ))
+                }
             </Timeline>
         <SectionHeader>Experience<Icon name='job' {...svgSize} /></SectionHeader>
             <Timeline>
-              { jobs.map((job, i) => (
+              { jobs && jobs.map((job, i) => (
                   <TimelineEvent
                     key={`job_${i}`}
                     title={job.jobTitle}
@@ -105,7 +108,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
             </Timeline>
         <SectionHeader>Highlights<Icon name='project' {...svgSize} /></SectionHeader>
         <Timeline>
-            { highlights.map((highlight, i) => (
+            { highlights && highlights.map((highlight, i) => (
                   <TimelineEvent
                     key={`highlight_${i}`}
                     title={highlight.title}
@@ -116,9 +119,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent, image, abo
                 ))
             }
         </Timeline>
-        <SectionHeader>volunteer<Icon name='volunteer' {...svgSize} /></SectionHeader>
+        <SectionHeader>Pro Bono<Icon name='volunteer' {...svgSize} /></SectionHeader>
         <Timeline>
-            { volunteer.map((item, i) => (
+            { volunteer && volunteer.map((item, i) => (
                     <TimelineEvent
                       key={`item_${i}`}
                       title={item.title}
@@ -142,11 +145,11 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, location: { pathname } }) => {
   const { markdownRemark: post } = data
   const { title, ...rest } = post.frontmatter;
   return (
-    <Layout>
+    <Layout path={pathname} >
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -170,7 +173,7 @@ export const aboutPageQuery = graphql`
         title
         about {
           name
-          job
+          title
           blurb
         }
         image {
@@ -197,6 +200,13 @@ export const aboutPageQuery = graphql`
             value
             size
           }
+        }
+        education {
+          title
+          startDate
+          subTitle
+          endDate
+          descriptions
         }
         jobs {
           jobTitle

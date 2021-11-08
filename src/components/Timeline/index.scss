@@ -21,7 +21,8 @@
       padding-left: 100px;
       &-date{
         position: absolute;
-          top: -.5rem; left: 10px;
+          top: -.25rem; left: 10px;
+        width: 3.8rem;
         text-align: right;
         }
       &-icon{
@@ -44,7 +45,8 @@
         position: relative;
         margin-left: 10px;
         &-url{
-          margin-bottom: 0.5rem;
+          font-weight: 700;
+          margin-bottom: 0.25rem;
         }
       }
     }

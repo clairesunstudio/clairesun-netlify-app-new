@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import rehypeReact from 'rehype-react'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import { Row, Col } from 'react-bootstrap'
@@ -12,16 +11,14 @@ import Content, { HTMLContent } from '../components/Content'
 import Counter from "../components/Counter"
 import Icon from "../components/Icon"
 import LightBox from "../components/LightBox"
-//import Photo from '../components/Photo';
-// import GridComponent from '../components/Grid';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import './project.scss';
 
 const ClickableImage = (props) => {
   return (
-    <div onClick={props.onClick}>
+    <span onClick={props.onClick}>
       <PreviewCompatibleImage imageInfo={props.childImageSharp} />
-    </div>
+    </span>
   );
 };
 
@@ -31,13 +28,15 @@ export const ProjectTemplate = ({
   description,
   tags,
   title,
+  url,
   helmet,
   allImageSharp
 }) => {
   const PostContent = contentComponent || Content;
   const projectHeaderProps = {
     title,
-    subtitle: description
+    subtitle: description,
+    url
   }
   const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -49,9 +48,14 @@ export const ProjectTemplate = ({
         const images = [];
         React.Children.forEach(children, element => {
           if (React.isValidElement(element)) {
-            const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === element.props.src);
-            images.push({ source: match.node.parent.childImageSharp.fluid.src })
-            //do something with source..
+            const { src, caption } = element.props;
+            const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === src);
+            console.log(caption)
+            images.push({ 
+              source: match ? match.node.parent.childImageSharp.fluid.src : `/img/${src}`,
+              caption,
+              alt: caption
+            })
           }
         })
         return (
@@ -60,10 +64,27 @@ export const ProjectTemplate = ({
       },
       'rehype-image': (props) => {
         const { src } = props;
+        // const isGIF = src.split('.')[1] === 'gif';
+        // console.log(isGIF)
+        // let gifProps = {};
+        // if (isGIF) {
+        //   gifProps = {
+        //     publicURL: `/img/${src}`,
+        //     ...props
+        //   }
+        // }
         const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === src);
+        const gifProps = {
+          publicURL: `/img/${src}`,
+          extension: 'gif',
+          ...props
+        }
+        const childImageSharp = match ? match.node.parent : gifProps;
+        
+        console.log(childImageSharp)
         //console.log(match.node.parent.childImageSharp)
         return (
-          <ClickableImage {...props} childImageSharp={match.node.parent} />
+          <ClickableImage {...props} childImageSharp={childImageSharp} />
         )
       }
     }
@@ -86,7 +107,7 @@ export const ProjectTemplate = ({
                     <li key={tag + `tag`}>
                       <Link
                         className="filter-button btn btn-outline-primary"
-                        to={`?tag=${encodeURIComponent(tag)}`}
+                        to={`/?tag=${encodeURIComponent(tag)}`}
                       >
                         {tag}
                       </Link>
@@ -108,8 +129,8 @@ ProjectTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const Project = ({ data: { project, pagers, allImageSharp } }) => {
-  const pager = pagers.edges.find((pager) => pager.node.id === project.id);
+const Project = ({ data: { project: {id, htmlAst, frontmatter: { title, description, url, tags }}, pagers, allImageSharp } }) => {
+  const pager = pagers.edges.find((pager) => pager.node.id === id);
   const pagerProps = {
     left: {
       slug: pager.previous && pager.previous.fields.slug,
@@ -123,27 +144,28 @@ const Project = ({ data: { project, pagers, allImageSharp } }) => {
   return (
     <Layout>
       <ProjectTemplate
-        content={project.htmlAst}
+        content={htmlAst}
         contentComponent={HTMLContent}
-        description={project.frontmatter.description}
+        description={description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${project.frontmatter.title}`}</title>
+            <title>{`${title}`}</title>
             <meta
               name="description"
-              content={`${project.frontmatter.description}`}
+              content={`${description}`}
             />
           </Helmet>
         }
-        tags={project.frontmatter.tags}
-        title={project.frontmatter.title}
+        tags={tags}
+        title={title}
+        url={url}
         allImageSharp={allImageSharp}
       />
-      <section className="section">
+      <nav>
         {
           <Pager {...pagerProps} />
         }
-      </section>
+      </nav>
     </Layout>
   )
 }
@@ -165,6 +187,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        url
         tags
       }
     }

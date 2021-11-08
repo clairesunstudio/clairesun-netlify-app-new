@@ -1,18 +1,29 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby'
-import { Row, Col, Container } from 'react-bootstrap'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import Masonry from '../components/Masonry'
-import Divider from '../components/Divider'
 
-export const IndexPageTemplate = ({ group: tags, filterPath }) => (
-  <Fragment>
-    <Masonry tags={tags} filterPath={filterPath} />
-  </Fragment>
-)
+export const IndexPageTemplate = ({ group: tags, filterPath }) => {
+  // useLayoutEffect in Masonry can't run until the JavaScript is downloaded in SSR
+  // Lazily show component with useLayoutEffect: https://gist.github.com/gaearon/e7d97cdf38a2907924ea12e4ebdf3c85
+  const [showChild, setShowChild] = useState(false);
+  // Wait until after client-side hydration to show
+  useEffect(() => {
+    setShowChild(true);
+  }, []);
+  
+  if (!showChild) {
+    // You can show some kind of placeholder UI here
+    return null;
+  }
+  return(
+    <Fragment>
+      <Masonry tags={tags} filterPath={filterPath} />
+    </Fragment>
+  )
+}
 
 IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
@@ -21,7 +32,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data, location }) => {
   const { tags, site: { siteMetadata} } = data;
-  const { search } = location;
+  const { search, pathname } = location;
   return (
     <Fragment>
       <Helmet
@@ -32,7 +43,7 @@ const IndexPage = ({ data, location }) => {
           { name: 'keywords', content: siteMetadata.keywords }
         ]}
       />
-      <Layout>
+      <Layout path={pathname}>
         <IndexPageTemplate {...tags} filterPath={search} />
       </Layout>
     </Fragment>

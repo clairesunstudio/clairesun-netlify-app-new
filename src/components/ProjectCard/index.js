@@ -17,7 +17,7 @@ const ProjectCard = ({ title, text, image, link }) => {
             style={{ padding: `${cardPadding}px` }}
             to={link}
           >
-            <PreviewCompatibleImage imageInfo={image} />
+            <PreviewCompatibleImage imageInfo={image} aspectRatio={1.67} />
           </Link>
         )}
         <Card.Body>

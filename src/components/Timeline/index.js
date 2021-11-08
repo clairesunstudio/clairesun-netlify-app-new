@@ -1,4 +1,5 @@
 import React from 'react'
+import MarkdownContent from '../MarkdownContent';
 import './index.scss'
 
 export const TimelineEvent = ({title, sub, url, project, date, children}) => {
@@ -25,8 +26,7 @@ export const TimelineEvent = ({title, sub, url, project, date, children}) => {
               url?<a href={url}><span>{sub}</span></a>:<span>{sub}</span>
 
             }</p>
-
-            {children}
+              <MarkdownContent content={children} />
             </div>
           </div>
         </div>

@@ -1,16 +1,15 @@
 ---
 templateKey: project
-title: The 'ABC' of High School Success
-image: /img/dese.jpg
-date: 2019-06-02T22:42:51.326Z
+title: The 'ABC' of High School Success (WIP)
 description: An interactive data story on high school success indicators
+image: /img/dese.jpg
 url: https://mass.gov/successabcs
+date: 2019-06-02T22:42:51.326Z
 tags:
   - React APP
   - API
   - design
   - development
-
 ---
 ## Overview
 

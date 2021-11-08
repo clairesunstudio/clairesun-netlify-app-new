@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel, { Modal, ModalGateway } from 'react-images';
+import Grid from '../Grid';
 import './index.scss';
 
 class LightBox extends React.Component {
@@ -15,11 +16,8 @@ class LightBox extends React.Component {
   render() {
     const { currentModal } = this.state;
     const { children, images, col } = this.props;
-    const getGridStyle = (col) => ({
-      gridTemplateColumns: `repeat(${col || 2}, auto)`,
-    })
+
     const validChildren = children.filter((child) => React.isValidElement(child))
-    console.log(validChildren)
     const childrenWithProps = React.Children.map(validChildren, (child, i) => {
       const clone = React.cloneElement(child, {
         onClick: () => this.toggleModal(i)
@@ -27,10 +25,10 @@ class LightBox extends React.Component {
       return clone;
     })
     return (
-      <div>
-        <div className='grid' style={getGridStyle(3)}>
+      <>
+        <Grid col={col}>
           {childrenWithProps}
-        </div>
+        </Grid>
         <ModalGateway>
           {Number.isInteger(currentModal) ? (
             <Modal
@@ -39,14 +37,13 @@ class LightBox extends React.Component {
             >
               <Carousel
                 currentIndex={currentModal}
-                components={{ Footer: null }}
                 views={images}
               />
             </Modal>
           ) : null}
 
         </ModalGateway>
-      </div>
+      </>
     );
   }
 }

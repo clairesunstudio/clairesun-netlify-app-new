@@ -5,7 +5,7 @@ import Header from '../Header'
 import './index.scss'
 import useSiteMetadata from './SiteMetadata'
 
-const TemplateWrapper = ({ children }) => {
+const Layout = ({ children, path }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -44,7 +44,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
       <div className="wrapper">
-        <Header />
+        <Header currentPath={path} />
         <div className="content">
           {children}
         </div>
@@ -54,4 +54,4 @@ const TemplateWrapper = ({ children }) => {
   )
 }
 
-export default TemplateWrapper
+export default Layout

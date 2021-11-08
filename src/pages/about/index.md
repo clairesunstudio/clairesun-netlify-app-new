@@ -16,22 +16,22 @@ skills:
     - name: Optimal Workshop
       value: 85
       size: sm
+    - name: Miro
+      value: 80
+      size: md
     - name: AI
       value: 100
-      size: lg
-    - name: XD
-      value: 80
       size: lg
     - name: PS
       value: 95
       size: lg
+    - name: XD
+      value: 80
+      size: lg
     - name: AE
       value: 50
       size: lg
-    - name: ID
-      value: 66
-      size: lg
-  code: HTML,CSS,SASS,JS,Jquery,SQL,React.JS,Node.JS,D3.JS,P5.JS,Arduino,Processing,GTM,Drupal,Twig,Git,Regex,R,ggplot2,Python,Pandas,AWS
+  code: HTML,CSS,SASS,JS,Jquery,SQL,React.JS,Node.JS,D3.JS,P5.JS,Arduino,Processing,Drupal,Twig,Git,Regex,R,ggplot2,Python,AWS,GTM
   languages: English,Mandarin Chinese,Cantonese
   skillSet:
     - name: Atomic Design
@@ -47,7 +47,7 @@ skills:
     - name: UX Design
       value: 30
     - name: Installation Art
-      value: 20
+      value: 15
     - name: Animation
       value: 20
     - name: UI Design
@@ -79,13 +79,17 @@ image: /img/profile-pic.jpg
 about:
   name: Minghua Sun
   job: Creative Technologist, UX Engineer
-  blurb: >
-    I wear many hats in various projects — conducting user research and
-    usability testing, gathering business requirements and translating them into
-    design, front-end development and code review, creating data stories,
-    analyzing web usage data and sometimes venturing into product management.
-    I'm the Design System Lead for Mayflower at Mass Digital. 
+  blurb: "My name is Minghua (she/her). I'm a full-stack designer and front end
+    developer who is experienced in building human-centered, data-driven digital
+    products for the public good. I work cross-functionally and wear multiple
+    hats on project teams — from planning and gathering requirements, UX
+    research and designing mockups, prototyping and development, to usability
+    testing and continuous iteration. Additionally, I'm specialized in data
+    visualization and storytelling, designing for accessibility, and building
+    and managing design systems. "
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
+    Technologist
+  title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist, Cat Mom
 info:
   - icon: phone
@@ -103,16 +107,41 @@ info:
   - icon: github
     href: https://github.com/clairesunstudio
     text: "@clairesunstudio"
+education:
+  - title: Graduate Certificate in Interactive Design
+    startDate: ""
+    subTitle: Dynamic Media Institute, MassArt, Boston, MA
+    endDate: May 2015
+  - title: Interactive Environment Group
+    endDate: May 2015
+    subTitle: MIT Media Lab, Cambridge
+    startDate: ""
+  - title: B.S. in Applied Mathematics, B.A. in Graphic Design
+    subTitle: New England College, NH
+    endDate: May 2013
+    descriptions: |-
+      * Magna Cum Laude Graduate
+      * Academic Achievement Award for Mathematic Program
+      * 4-year Presidential Scholarship and Dean’s List Recipient
+      * National College Honor Scholarship Society (Alpha Chi) Member
 jobs:
-  - jobTitle: UX Designer & Engineer
+  - jobTitle: Sr. UX Developer, Design System Lead
     workPlace: Digital Services, Commonwealth of Massachusetts
     startDate: May 2015
     endDate: Present
-    descriptions: |-
-      * UI/UX design, web front end development
-      * Analyze and visualize data for Mass.gov social media accounts
-      * Lead public facing marketing campaign branding and visual design
-      * Direct and mentor design interns
+    descriptions: >-
+      * Lead the design, dev and documentation efforts for the state's
+      open-source design system and component libraries. Uphold
+      design-development workflow through design reviews and code reviews. 
+
+      * Hands-on UX research and design, React and front-end Drupal development for Mass.gov and other Digital Service products.
+
+      * Onboard and guide in-house and vendor designers and developers. Mentor design interns. 
+
+      * Provide digital consulting services for partner state-agency projects in research, design and tech solutions.
+
+
+      > Previous title: UX and data visualization engineer, UX designer, summer design intern
   - jobTitle: Visual Designer
     workPlace: UMass Boston
     startDate: Mar 2014
@@ -139,25 +168,23 @@ highlights:
     descriptions: Interactive Data Story on the [Massachusetts opioid
       epidemic](https://chapter55.digital.mass.gov/), creative lead, data
       visualization developer.
-    endDate: Sep 2017
-    startDate: "2017"
+    endDate: "2017"
+    startDate: ""
   - title: Massachusetts Performance Recognition Program
     subTitle: Commonwealth of Massachusett
     descriptions: Mass.gov redesign and re-platform project
-    startDate: "2018"
+    startDate: ""
     endDate: "2018"
   - title: Artificial Bioluminescence
     subTitle: Boston CyberArts Gallery Exibition
     descriptions: A multisensory LED light installation
-    startDate: "2018"
+    startDate: ""
     endDate: "2018"
 volunteer:
-  - title: "Design Director, Marketing (Facebook) Admin "
+  - title: Creative Director
     subTitle: " Bright & Beautiful (有灵且美)"
     startDate: April 2015
     endDate: "2019"
-    descriptions: Bright & Beautiful is a non-profit organization aiming at
-      inspiring and encourage creative talents and art education to girls in
-      rural China. We host Summer Arts Camp once or twice a year at the middle
-      schools in rural Yunnan China.
+    descriptions: Bright & Beautiful is a non-profit organization aiming to inspire
+      creative talents by bringing arts education to the girls in rural China.
 ---

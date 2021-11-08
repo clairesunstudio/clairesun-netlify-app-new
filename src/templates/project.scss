@@ -1,14 +1,80 @@
 @import 'variables';
 
-.taglist {
-  padding: 0;
-  list-style: none;
+$paragraphWidth: 800px;
+// page content in project, blogpost 
+.container.content {
 
-  li {
-    display: inline-block;
 
-    &:not(:last-child) {
-      margin-right: 0.5rem;
+  h2 {
+    width: $paragraphWidth;
+    
+
+    @media screen {
+      font-weight: $font-bold;
+      font-size: $h6-font-size;
+      text-transform: uppercase;
+      color: $color-gray;
+      display: flex;
+      flex: auto;
+      
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+  
+      &:after {
+        margin-left: 1rem;
+        height: 1px;
+        content: " ";
+        text-shadow: none;
+        background-color: $color-gray-lighter;
+        width: 100%;
+        flex: 1;
+      }
     }
   }
+
+  p {
+    max-width: $paragraphWidth;
+  
+    img {
+      width: 100%;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $color-gray-dark;
+  
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+  // responsive youtube video iframe
+  .youtubeWrapper {
+    width: 100%;
+
+    iframe {
+      aspect-ratio: 2 / 1;
+    }
+  }
+
+  .taglist {
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
 }
+

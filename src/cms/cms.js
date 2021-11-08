@@ -18,73 +18,152 @@ CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('project', ProjectPreview)
 
 
+
+/* Youtube
+*/
+
+const youtubeVideo = ({ width, id, fullScreen }) => (
+  // Video aspect-ratio style set in project.scss for responsive iframe width
+  `<div class="youtubeWrapper" style="max-width:${width || 800}px"><iframe width="100%" src="https://www.youtube.com/embed/${id}?rel=0" frameborder="0" ${fullScreen ? 'allowfullscreen' : ''}></iframe></div>`
+)
+
 CMS.registerEditorComponent({
   // Internal id of the component
   id: "youtube",
   // Visible label
   label: "Youtube",
   // Fields the user need to fill out when adding an instance of the component
-  fields: [{name: 'id', label: 'Youtube Video ID', widget: 'string'}],
+  fields: [
+    { name: "id", label: "Youtube Video ID", widget: "string" },
+    { name: "width", label: "Max Width", widget: "number", default: 800 },
+    { name: "fullScreen", label: "Allow Full Screen", widget: "boolean", default: true },
+  ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^youtube (\S+)$/,
+  pattern: /^<div class="youtubeWrapper" style="max-width:(.*)px"><iframe width="100%" src="https:\/\/www.youtube.com\/embed\/(\S+)?rel=0" frameborder="0" (allowfullscreen)?><\/iframe><\/div>$/,
   // Function to extract data elements from the regexp match
   fromBlock: function(match) {
     return {
-      id: match[1]
+      width: match[1],
+      id: match[2],
+      fullScreen: match[3]
     };
   },
   // Function to create a text block from an instance of this component
-  toBlock: function(obj) {
-    return `<iframe width="560" height="315" src="https://www.youtube.com/embed/${obj.id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-  },
+  toBlock: (match) => youtubeVideo(match),
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: function(obj) {
-    return (
-      '<img src="http://img.youtube.com/vi/' + obj.id + '/maxresdefault.jpg" alt="Youtube Video"/>'
-    );
+  toPreview: (match) => youtubeVideo(match),
+});
+
+
+
+// /* Collage
+// */
+
+// CMS.registerEditorComponent({
+//   // Internal id of the component
+//   id: "collage",
+//   // Visible label
+//   label: "Collage",
+//   // Fields the user need to fill out when adding an instance of the component
+//   fields: [{
+//     name: 'images',
+//     label: 'Images',
+//     widget: 'list',
+//     default: [{ image: '', text: ''}],
+//     fields: [
+//       {label: 'Image', name: 'image', widget: 'image'},
+//       {label: 'Text', name: 'text', widget: 'string'}
+//     ]
+//   }],
+//   // Pattern to identify a block as being an instance of this component
+//   pattern: /^collage (\S+)$/,
+//   // Function to extract data elements from the regexp match
+//   fromBlock: function(match) {
+//     return {
+//       id: match[1]
+//     };
+//   },
+//   // Function to create a text block from an instance of this component
+//   toBlock: function(list) {
+//     if (list.images && list.images.length > 0) {
+//       list.images.map((item) => (
+//         `<rehype-image src="../..${item.image}" text="${item.text}}"></rehype-image>`
+//       ))
+//     }
+//   },
+//   // Preview output for this component. Can either be a string or a React component
+//   // (component gives better render performance)
+//   toPreview: function(list) {
+//     if (list.images && list.images.length > 0) {
+//       return (list.images.map((item) => {
+//         <img src={item.image} alt={item.text} />
+//       }))
+//     }
+//   }
+// });
+
+// gallery
+CMS.registerEditorComponent({
+  id: 'gallery',
+  label: 'Gallery',
+  fields: [
+    {label: 'Gallery',
+    name: 'images',
+    widget: 'list',
+    field:
+     {label: 'Image', name: 'image',  widget: 'image'}
+    }
+  ],
+  pattern: /^<lightbox imagesString="(.*)"\/>$/,
+  fromBlock: function(match) {
+    const images = match[1]
+      .split(',')
+      .filter(val => val)
+      .map(image => ({ image }));
+      const obj = {images};
+      return obj;
+  },
+  toBlock: function({ images }) {
+    if (images) {
+      return (
+        `<lightbox imagesString="${images.toString()}"/>`
+      );
+    }
   }
 });
 
+// parse string inside component 
+
+
+
+/* Blockquote
+*/
+
+const blockQuote = ({ quote, author }) => (
+  `<blockquote>${quote}<footer>${author}</footer></blockquote>`
+)
+
 CMS.registerEditorComponent({
-  // Internal id of the component
-  id: "collage",
-  // Visible label
-  label: "Collage",
+  id: 'blockquote', // Internal id of the component
+  label: 'Blockquote', // Visible label
   // Fields the user need to fill out when adding an instance of the component
-  fields: [{
-    name: 'images',
-    label: 'Images',
-    widget: 'list',
-    default: [{ image: '', text: ''}],
-    fields: [
-      {label: 'Image', name: 'image', widget: 'image'},
-      {label: 'Text', name: 'text', widget: 'string'}
-    ]
-  }],
-  // Pattern to identify a block as being an instance of this component
-  pattern: /^<rehype-image (\S+)"><\/rehype-image>$/,
+  fields: [
+      {name: 'quote', label: 'Quote', widget: 'string'},
+      {name: 'author', label: 'Author', widget: 'string'}
+  ],
+  pattern:
+      /^<blockquote>(.*)<footer>(.*)<\/footer><\/blockquote>/, // Pattern to identify a block as being an instance of this component
   // Function to extract data elements from the regexp match
-  fromBlock: function(match) {
-    return {
-      id: match[1]
-    };
+  fromBlock: function (match) {
+      return {
+          quote: match[1],
+          author: match[2],
+      }
   },
   // Function to create a text block from an instance of this component
-  toBlock: function(list) {
-    if (list.images && list.images.length > 0) {
-      list.images.map((item) => (
-        `<rehype-image src="../..${item.image}" text="${item.text}}"></rehype-image>`
-      ))
-    }
-  },
+  toBlock: (obj) => blockQuote(obj),
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
-  toPreview: function(list) {
-    if (list.images && list.images.length > 0) {
-      return (list.images.map((item) => {
-        <img src={item.image} alt={item.text} />
-      }))
-    }
-  }
+  toPreview: (obj) => blockQuote(obj)
 });

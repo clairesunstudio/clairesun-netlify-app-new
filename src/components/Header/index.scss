@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 nav.navbar {
     height: 50px;
@@ -13,6 +14,7 @@ nav.navbar {
     }
     a {
       color: $color-gray-darker;
+      text-decoration: none;
     }
     .navbar-brand {
       color: $color-gray-darker;
@@ -25,6 +27,10 @@ nav.navbar {
       align-items: baseline;
       & > * {
         margin-right: 10px;
+      }
+
+      &-link {
+        @include custom-link;
       }
     }
     &.navbar.fixed-top{

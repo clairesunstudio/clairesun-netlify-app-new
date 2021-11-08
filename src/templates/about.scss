@@ -1,0 +1,26 @@
+@import 'mixins';
+
+.profile_pic{
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+.info-list{
+  margin: 30px auto 50px;
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    margin-top: .5rem;
+  }
+
+  &-link {
+    @include custom-link;
+  }
+}
+// a{
+//   color: inherit;
+// }
+
+h4, .h4 {
+  font-size: 1.25rem !important;
+}
