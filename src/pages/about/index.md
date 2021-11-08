@@ -79,10 +79,14 @@ image: /img/profile-pic.jpg
 about:
   name: Minghua Sun
   job: Creative Technologist, UX Engineer
-  blurb: I wear many hats in various projects — conducting user research and
-    usability testing, gathering business requirements and translating them into
-    design, front-end development and code review, creating data stories,
-    analyzing web usage data and sometimes venturing into product management.
+  blurb: "My name is Minghua (she/her). I'm a full-stack designer and front end
+    developer who is experienced in building human-centered, data-driven digital
+    products for the public good. I work cross-functionally and wear multiple
+    hats on project teams — from planning and gathering requirements, UX
+    research and designing mockups, prototyping and development, to usability
+    testing and iterations. Additionally, I'm specialized in data visualization
+    and storytelling, providing accessible and inclusive design solutions, and
+    managing design system. "
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist
   title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
@@ -125,11 +129,16 @@ jobs:
     workPlace: Digital Services, Commonwealth of Massachusetts
     startDate: May 2015
     endDate: Present
-    descriptions: |-
-      * UI/UX design, web front end development
-      * Analyze and visualize data for Mass.gov social media accounts
-      * Lead public facing marketing campaign branding and visual design
-      * Direct and mentor design interns
+    descriptions: >-
+      * Lead the design, dev and documentation efforts for the state's
+      open-source design system and component libraries. Uphold
+      design-development workflow through design reviews and code reviews. 
+
+      * Hands-on UX research and design, React and front-end Drupal development for Mass.gov and other Digital Service products.
+
+      * Onboard and guide in-house and vendor designers and developers. Mentor design interns. 
+
+      * Provide digital consulting services for partner state-agency projects in research, design and tech solutions.
   - jobTitle: Visual Designer
     workPlace: UMass Boston
     startDate: Mar 2014
