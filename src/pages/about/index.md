@@ -84,9 +84,9 @@ about:
     products for the public good. I work cross-functionally and wear multiple
     hats on project teams — from planning and gathering requirements, UX
     research and designing mockups, prototyping and development, to usability
-    testing and iterations. Additionally, I'm specialized in data visualization
-    and storytelling, providing accessible and inclusive design solutions, and
-    managing design system. "
+    testing and continuous iteration. Additionally, I'm specialized in data
+    visualization and storytelling, designing for accessibility, and building
+    and managing design systems. "
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist
   title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
@@ -139,6 +139,9 @@ jobs:
       * Onboard and guide in-house and vendor designers and developers. Mentor design interns. 
 
       * Provide digital consulting services for partner state-agency projects in research, design and tech solutions.
+
+
+      > Previous title: UX and data visualization developer, UX designer, summer design intern
   - jobTitle: Visual Designer
     workPlace: UMass Boston
     startDate: Mar 2014

@@ -49,3 +49,9 @@ html, body, #root{
       }
     }
   }
+
+  blockquote {
+    border-left: 3px solid $color-gray-lighter;
+    padding-left: 1rem;
+    color: $color-gray-dark;
+  }
