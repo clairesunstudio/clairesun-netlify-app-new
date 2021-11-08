@@ -63,7 +63,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: 'public'
-          DEST_DIR: 'prod'
       # Invalidate Cloudfront
       - name: invalidate
         uses: chetan/invalidate-cloudfront-action@master
