@@ -24,7 +24,7 @@ As part of a multi-faceted effort to combat the opioid epidemic, Chapter 55 of t
     <rehype-image src="chapter55-death-percentage-age.png" caption="text"></rehype-image>
 </lightbox>
 <div class="grid grid--col_2">
-<rehype-image src="chapter55-prescription-decline.gif" caption="text"></rehype-image>
+<gif src="chapter55-prescription-decline.gif" caption="text"></gif>
 </div>
 
 ## Award

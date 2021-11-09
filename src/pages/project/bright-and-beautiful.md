@@ -9,7 +9,7 @@ date: 2019-04-30T04:26:43.334Z
 
 The Bright & Beautiful (有灵且美) is a non-profit organization that was created to bring art and mindfulness to the “left-behind” girls in rural China, aiming to help unlock their creative potentials and empower them to achieve their dreams. Between 2014 and 2017, the team had successfully hosted more than 6 summer and winter arts camps and other creative workshops partnering with local schools in rural areas, served over 400 girls, and connected more than 50 volunteers from around the globe.
 
-![](/img/bnb-parallax-scroll.gif)
+<gif src="bnb-parallax-scroll.gif"></gif>
 
 <small>As part of the promotional campaign for the arts camps on Indigogo and Kickstarter, I created this parallax scrolling site, to support volunteer recruitment and fundraising for the summer arts camp, which was later hosted in Yunnan China in 2015.</small>
 

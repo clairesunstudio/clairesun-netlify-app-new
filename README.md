@@ -103,3 +103,8 @@ For a single image to leverage the grid for responsive widths and gatsby image:
     <rehype-image src="facebookfan.jpg" caption="This is one of the four postcards I designed for this event. "></rehype-image>
 </div>
 ```
+
+For a gif with a play button:
+```
+<gif src="fashion-interact.gif"></gif>
+```
