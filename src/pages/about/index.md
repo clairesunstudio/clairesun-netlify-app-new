@@ -83,11 +83,11 @@ about:
   blurb: "My name is Minghua (she/her). I'm a full-stack designer and front end
     developer who is experienced in building human-centered, data-driven digital
     products for the public good. I work cross-functionally and wear multiple
-    hats on project teams — from planning and gathering requirements, UX
-    research and designing mockups, prototyping and development, to usability
-    testing and continuous iteration. Additionally, I'm specialized in data
-    visualization and storytelling, designing for accessibility, and building
-    and managing design systems. "
+    hats on project teams, from planning and coordinating requirements,
+    conducting UX research and creating design mockups, prototyping and
+    development, to usability testing and continuous iteration. Furthermore, I
+    specialize in data visualization/storytelling, designing for accessibility,
+    and building/managing design systems. "
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist
   title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
@@ -131,7 +131,7 @@ jobs:
     startDate: May 2015
     endDate: Present
     descriptions: >-
-      * Lead the design, dev and documentation efforts for the state's
+      * Lead the design, development and documentation efforts for the state's
       open-source design system and component libraries. Uphold
       design-development workflow through design reviews and code reviews. 
 
@@ -163,19 +163,19 @@ jobs:
 highlights:
   - title: Massachusetts Excellence in Technology Award – Innovation in Data Science
     subTitle: Center for Digital Government | GovTech
-    descriptions: Interactive Data Story on the [Massachusetts opioid
-      epidemic](https://chapter55.digital.mass.gov/), creative lead, data
-      visualization developer.
+    descriptions: Interactive data story on the [Massachusetts opioid
+      epidemic](https://chapter55.digital.mass.gov/) (creative lead, data
+      visualization developer)
     endDate: "2017"
     startDate: ""
   - title: Massachusetts Performance Recognition Program
     subTitle: Commonwealth of Massachusett
-    descriptions: Mass.gov redesign and re-platform project
+    descriptions: Mass.gov redesign and re-platform project (UX designer and developer)
     startDate: ""
     endDate: "2018"
   - title: Artificial Bioluminescence
     subTitle: Boston CyberArts Gallery Exibition
-    descriptions: A multisensory LED light installation
+    descriptions: A multisensory LED light installation (artist)
     startDate: ""
     endDate: "2018"
 volunteer:

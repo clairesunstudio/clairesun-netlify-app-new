@@ -1,7 +1,7 @@
 ---
 templateKey: project
 title: My DMI Diary
-description: Documentations of projects and courses I completed at Dynamic Media Institute
+description: Documentation on projects and courses I completed at Dynamic Media Institute
 image: /img/mdd.jpg
 url: http://clairesunstudio.github.io/mdd
 date: 2019-06-02T22:42:51.326Z
