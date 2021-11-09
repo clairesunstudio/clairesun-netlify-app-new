@@ -140,21 +140,22 @@ jobs:
       * Onboard and guide in-house and vendor designers and developers. Mentor design interns. 
 
       * Provide digital consulting services for partner state-agency projects in research, design and tech solutions.
-  - jobTitle: Visual Designer
+  - jobTitle: Visual Designer (Part-time)
     workPlace: UMass Boston
     startDate: Mar 2014
     endDate: Jun 2015
     descriptions: |-
-      * Design and create promotional collateral
-      * event filming (Chinese Bridge) and post productions
+      * Designed and created promotional collateral
+      * Event filming and post production
   - jobTitle: Web/Graphic Designer
     startDate: May 2014
     endDate: Oct 2014
     workPlace: StudentUniverse
-    descriptions: |-
-      * Wire-framing and front-end design of company’s new website
-      * Design website visuals and marketing collateral
-      * Create HTML email campaigns and landing pages
+    descriptions: >-
+      * Contributed to the redesign and rebranding of the company website and
+      mobile app through wireframing, template mockup, and logo design.
+
+      * Designed graphics for use on the website and marketing emails.
   - jobTitle: Design Internship
     workPlace: NH Division of Economic Development, Concord, NH
     startDate: Feb 2014
