@@ -31,8 +31,9 @@ skills:
     - name: AE
       value: 50
       size: lg
-  code: HTML,CSS,SASS,JS,Jquery,SQL,React.JS,Node.JS,D3.JS,P5.JS,Arduino,Processing,Drupal,Twig,Git,Regex,R,ggplot2,Python,AWS,GTM
-  languages: English,Mandarin Chinese,Cantonese
+  code: HTML, CSS, SASS, JS, JQuery, SQL, React.JS, Node.JS, D3.JS, P5.JS,
+    Arduino, Processing, Twig, Git, Regex, R, Python, AWS, GTM
+  languages: English, Mandarin Chinese, Cantonese
   skillSet:
     - name: Atomic Design
       value: 15
@@ -139,9 +140,6 @@ jobs:
       * Onboard and guide in-house and vendor designers and developers. Mentor design interns. 
 
       * Provide digital consulting services for partner state-agency projects in research, design and tech solutions.
-
-
-      > Previous title: UX and data visualization engineer, UX designer, summer design intern
   - jobTitle: Visual Designer
     workPlace: UMass Boston
     startDate: Mar 2014
