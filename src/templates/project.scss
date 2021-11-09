@@ -33,20 +33,20 @@ $paragraphWidth: 800px;
     }
   }
 
+  a {
+    text-decoration: underline;
+    color: $color-gray-dark;
+
+    &:hover {
+      color: $color-black;
+    }
+  }
+
   p {
     max-width: $paragraphWidth;
   
     img {
       width: 100%;
-    }
-
-    a {
-      text-decoration: underline;
-      color: $color-gray-dark;
-  
-      &:hover {
-        color: $color-black;
-      }
     }
   }
   
