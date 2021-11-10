@@ -4,7 +4,7 @@ import { Button, Container } from 'react-bootstrap'
 import classNames from 'classnames'
 import useMeasure from './useMeasure'
 import useMedia from './useMedia'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, navigate } from 'gatsby'
 import ProjectCard, { cardWidth, cardPadding } from '../ProjectCard'
 // import data from './data'
 import './index.scss'
@@ -39,6 +39,8 @@ const Masonry = ({ data, tags, filterPath }) => {
     })
     setItems(filterdItems);
     setFilter(tag)
+    navigate(`/?tag=${encodeURIComponent(tag)}`)
+
   }
   useEffect(() => {
     const regexp = /\?tag=(.*)/;
