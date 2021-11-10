@@ -7,8 +7,8 @@ url: https://search.mass.gov
 date: 2019-06-02T22:42:51.326Z
 tags:
   - React APP
-  - design
-  - development
+  - Design
+  - Dev
   - UX
   - API
 ---

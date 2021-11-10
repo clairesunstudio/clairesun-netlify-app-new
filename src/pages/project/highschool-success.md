@@ -8,8 +8,8 @@ date: 2019-06-02T22:42:51.326Z
 tags:
   - React APP
   - API
-  - design
-  - development
+  - Design
+  - Dev
 ---
 ## Overview
 
