@@ -149,7 +149,7 @@ const Project = ({ data: { project: {id, htmlAst, frontmatter: { title, descript
         contentComponent={HTMLContent}
         description={description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Project">
             <title>{`${title}`}</title>
             <meta
               name="description"
