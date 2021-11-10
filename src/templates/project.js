@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import rehypeReact from 'rehype-react'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import { Row, Col } from 'react-bootstrap'
 import Layout from '../components/Layout'
 import Pager from '../components/Pager'
 import ProjectHeader from '../components/ProjectHeader'
@@ -11,6 +10,7 @@ import Content, { HTMLContent } from '../components/Content'
 import Counter from "../components/Counter"
 import Icon from "../components/Icon"
 import LightBox from "../components/LightBox"
+import Gif from "../components/Gif"
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import './project.scss';
 
@@ -64,15 +64,6 @@ export const ProjectTemplate = ({
       },
       'rehype-image': (props) => {
         const { src } = props;
-        // const isGIF = src.split('.')[1] === 'gif';
-        // console.log(isGIF)
-        // let gifProps = {};
-        // if (isGIF) {
-        //   gifProps = {
-        //     publicURL: `/img/${src}`,
-        //     ...props
-        //   }
-        // }
         const match = allImageSharp.edges.find((image) => image.node.parent.relativePath === src);
         const gifProps = {
           publicURL: `/img/${src}`,
@@ -80,11 +71,21 @@ export const ProjectTemplate = ({
           ...props
         }
         const childImageSharp = match ? match.node.parent : gifProps;
-        
-        console.log(childImageSharp)
         //console.log(match.node.parent.childImageSharp)
         return (
           <ClickableImage {...props} childImageSharp={childImageSharp} />
+        )
+      },
+      'gif': (props) => {
+        const { src } = props;
+        const gifProps = {
+          publicURL: `/img/${src}`,
+          extension: 'gif',
+          ...props
+        }
+        return (
+          <PreviewCompatibleImage imageInfo={gifProps} />
+          // <Gif gif={`/img/${src}`} />
         )
       }
     }
@@ -148,7 +149,7 @@ const Project = ({ data: { project: {id, htmlAst, frontmatter: { title, descript
         contentComponent={HTMLContent}
         description={description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Project">
             <title>{`${title}`}</title>
             <meta
               name="description"

@@ -33,20 +33,21 @@ $paragraphWidth: 800px;
     }
   }
 
-  p {
+  // content link styles, excluding links with classname btn
+  a:not(.btn) {
+    text-decoration: underline;
+    color: $color-gray-dark;
+
+    &:hover {
+      color: $color-black;
+    }
+  }
+
+  p, ul, ol {
     max-width: $paragraphWidth;
   
     img {
       width: 100%;
-    }
-
-    a {
-      text-decoration: underline;
-      color: $color-gray-dark;
-  
-      &:hover {
-        color: $color-black;
-      }
     }
   }
   

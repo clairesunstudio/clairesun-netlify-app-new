@@ -4,7 +4,7 @@ import './index.scss'
 const Pill = ({ text }) => (<span className="capsule">{text}</span>);
 
 const Pills = ({ data }) => {
-    const dataArray = data.split(',');
+    const dataArray = data.split(', ');
     return (
       <div className='pills'>
         {
