@@ -13,7 +13,7 @@ tags:
 ---
 ## Overview
 
-Digital products are the front door for government agencies nowadays, accounting for more than 80% of the touch points from the general public. An intuitive, accessible, and consistent digital interface will improve the constituents experience and build trust with the public in their interactions with the state government. 
+Digital products are the front door of government agencies nowadays, accounting for more than 80% of the touch points with the general public. An intuitive, accessible, and consistent digital interface will improve the constituents experience and build trust with the public in their interactions with the state government. 
 
 Mayflower is a set of guidelines, best practices and tools aiming to help Massachusetts state government quickly and easily design and develop digital products that meet the public expectation. Originated as a UI library built with [Patternlab](https://patternlab.io/) as part of the Mass.gov redesign project, it has evolved into a more flexible and scalable design system that support many other state web properties.
 
