@@ -1,12 +1,9 @@
-// @import 'react-gif-player/src/GifPlayer.scss';
+@import 'react-gif-player/src/GifPlayer.scss';
 
 .gif_player {
     display: flex;
-    align-items: center;
-    justify-content: center;
 
     .play_button {
-        position: relative;
         width: 60px;
         height: 60px;
         display: flex;

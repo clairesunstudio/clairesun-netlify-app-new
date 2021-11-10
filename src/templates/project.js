@@ -13,7 +13,6 @@ import LightBox from "../components/LightBox"
 import Gif from "../components/Gif"
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import './project.scss';
-import 'react-gif-player/src/GifPlayer.scss';
 
 const ClickableImage = (props) => {
   return (
@@ -72,8 +71,6 @@ export const ProjectTemplate = ({
           ...props
         }
         const childImageSharp = match ? match.node.parent : gifProps;
-        
-        console.log(childImageSharp)
         //console.log(match.node.parent.childImageSharp)
         return (
           <ClickableImage {...props} childImageSharp={childImageSharp} />
@@ -81,8 +78,14 @@ export const ProjectTemplate = ({
       },
       'gif': (props) => {
         const { src } = props;
+        const gifProps = {
+          publicURL: `/img/${src}`,
+          extension: 'gif',
+          ...props
+        }
         return (
-          <Gif gif={`/img/${src}`} />
+          <PreviewCompatibleImage imageInfo={gifProps} />
+          // <Gif gif={`/img/${src}`} />
         )
       }
     }
