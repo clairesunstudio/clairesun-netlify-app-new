@@ -33,7 +33,8 @@ $paragraphWidth: 800px;
     }
   }
 
-  a {
+  // content link styles, excluding links with classname btn
+  a:not(.btn) {
     text-decoration: underline;
     color: $color-gray-dark;
 
