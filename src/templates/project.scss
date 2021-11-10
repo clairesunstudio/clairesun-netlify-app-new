@@ -43,7 +43,7 @@ $paragraphWidth: 800px;
     }
   }
 
-  p {
+  p, ul, ol {
     max-width: $paragraphWidth;
   
     img {

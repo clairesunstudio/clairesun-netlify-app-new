@@ -17,13 +17,16 @@ Digital products are the front door of government agencies nowadays, accounting 
 
 Mayflower is a set of guidelines, best practices and tools aiming to help Massachusetts state government quickly and easily design and develop digital products that meet the public expectation. Originated as a UI library built with [Patternlab](https://patternlab.io/) as part of the Mass.gov redesign project, it has evolved into a more flexible and scalable design system that support many other state web properties.
 
-Mayflower currently lives in an [open-source monorepo](https://github.com/massgov/mayflower) and contains four main packages:
-- [Mayflower Assets](https://www.npmjs.com/package/@massds/mayflower-assets) - a set of branding assets including static branding assets, based style variables and component specific styles, shared by the various implementations. 
-- [Mayflower React](https://mayflower.digital.mass.gov/react) - a React component library
-- [Mayflower Patternlab](https://mayflower.digital.mass.gov/patternlab) - a Twig component library that is used to build the Mass.gov front-end Drupal theme. 
-- [Mayflower Core](https://mayflower.digital.mass.gov/core/index.html) - an official documentation on the core principles and elements that make up the Mayflower styleguide.
-
 ![Mayflower design system homepage screenshot](/img/mayflower-home.png)
+
+Mayflower currently lives in an [open-source monorepo](https://github.com/massgov/mayflower) and contains four main packages:
+
+* [Mayflower Assets](https://www.npmjs.com/package/@massds/mayflower-assets) - a set of branding assets including static branding assets, based style variables and component specific styles, shared by the various implementations. 
+* [Mayflower React](https://mayflower.digital.mass.gov/react) - a React component library
+* [Mayflower Patternlab](https://mayflower.digital.mass.gov/patternlab) - a Twig component library that is used to build the Mass.gov front-end Drupal theme. 
+* [Mayflower Core](https://mayflower.digital.mass.gov/core/index.html) - an official documentation on the core principles and elements that make up the Mayflower styleguide.
+
+![Mayflower structure](/img/mayflower-structure.png)
 
 ## My Roles
 
