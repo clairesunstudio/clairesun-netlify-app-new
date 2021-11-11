@@ -1,6 +1,6 @@
 ---
 templateKey: project
-title: Search.mass.gov (WIP)
+title: Search.mass.gov
 description: The search application powering Mass.gov
 image: /img/search.jpg
 url: https://search.mass.gov
@@ -27,14 +27,15 @@ In the midst of the Mass.gov redesign process, Google announced the sunset of it
 
 In this project, I wore the hats of a solution architect, a UX designer and a React developer. From the initial research and design, prototype to development, vendor team management, to conducting user testing and synthesizing feedback for iterations to the final release, I played an integral part in the entire product cycle. 
 
-Integrated and synthesized the verbatim user feedback with web analytics on the existing Mass.gov search, I mocked up the features and improvements based on my research sand iterated the designs based on moderated user testing. I drafted the design and technical scope for the most viable product (MVP), and co-wrote the metadata standard for searchable site content. 
+Integrated and synthesized the verbatim user feedback with web analytics on the existing Mass.gov search, I mocked up the features and improvements based on my research sand iterated the designs based on moderated user testing. I drafted the design and technical scope for the most viable product (MVP), and co-wrote the metadata standard for site content for the rich result, faceted and advanced search features. 
 
-![](/img/search-rich-results.jpg)
-
-![](/img/search-news.png)
+<lightbox col='2'>
+    <rehype-image src="search-rich-results.jpg" caption="design mockups for rich results"></rehype-image>
+    <rehype-image src="search-news.png" caption="design mockup for news tab with search filters"></rehype-image>
+</lightbox>
 
 I was an early advocate for building a decoupled React single page app (SPA) outside of Drupal, which allowed full flexibility to pair the frontend with any search API solution. 
 
 ![Search infrastructure diagram](/img/search-infrastructure-diagram.png)
 
-In the early prototyping phase, I spearheaded a React front-end component library using Storybook. It sped up the development for the search app and later turned into \[Mayflower React](https://mayflower.digital.mass.gov/react) , which was proved to be fruitful for many more projects.
+In the early prototyping phase, I spearheaded a React front-end component library using Storybook. It sped up the development for the search app and later turned into [Mayflower React](https://mayflower.digital.mass.gov/react) , which was proved to be fruitful for many more projects.
