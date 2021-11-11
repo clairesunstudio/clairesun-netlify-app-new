@@ -32,7 +32,7 @@ collections:
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list", summary: '{{fields.tag}}', fields: [{ label: "Tag", name: "tag", widget: "string", summary: '{{fields.tag}}' }]}
 
   - name: "project"
     label: "Project"
@@ -51,7 +51,8 @@ collections:
       - { label: Image, name: image, widget: image }
       - { label: URL, name: url, widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "select", multiple: true, 
+          options: ["UI Design", "Research", "User Testing", "Dev", "Data Viz", "API", "Storytelling", "Interaction Design", "Creative Campaign", "Rapid Prototyping", "Installation Art"]}
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
