@@ -127,7 +127,7 @@ education:
       * National College Honor Scholarship Society (Alpha Chi) Member
 jobs:
   - jobTitle: Sr. UX Developer, Design System Lead
-    workPlace: Digital Services, Commonwealth of Massachusetts
+    workPlace: Massachusetts Digital Service
     startDate: May 2015
     endDate: Present
     descriptions: >-
@@ -143,9 +143,9 @@ jobs:
   - jobTitle: Visual Designer (Part-time)
     workPlace: UMass Boston
     startDate: Mar 2014
-    endDate: Jun 2015
+    endDate: May 2015
     descriptions: |-
-      * Designed and created promotional collateral
+      * Designed and produced promotional materials
       * Event filming and post production
   - jobTitle: Web/Graphic Designer
     startDate: May 2014
