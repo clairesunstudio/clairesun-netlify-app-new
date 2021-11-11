@@ -4,7 +4,7 @@ title: Rideshare in Massachussets
 description: An interative data report on rideshare in Massachussets
 image: /img/rideshare.jpg
 url: https://tnc.sites.digital.mass.gov/
-date: 2019-06-02T22:42:51.326Z
+date: 2019-06-01T22:42:51.326Z
 tags:
   - Data Viz
   - UI Design

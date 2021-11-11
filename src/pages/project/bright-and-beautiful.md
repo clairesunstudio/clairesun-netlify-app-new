@@ -3,7 +3,7 @@ templateKey: project
 title: The Bright & Beautiful Project
 description: Design for the non-profit project empowering young women in rural China
 image: /img/bnbcards.jpg
-date: 2019-04-30T04:26:43.334Z
+date: 2016-08-01T04:26:43.334Z
 tags:
   - Storytelling
   - Creative Campaign

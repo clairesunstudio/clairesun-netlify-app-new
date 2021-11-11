@@ -4,7 +4,7 @@ title: Young Workers Safety
 description: A marketing campaign raising awareness of young workers safety and rights
 image: /img/yes.jpg
 url: ""
-date: 2019-06-02T22:42:51.326Z
+date: 2017-05-01T22:42:51.326Z
 tags:
   - Creative Campaign
 ---
