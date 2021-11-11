@@ -8,6 +8,8 @@ date: 2019-04-30T04:26:43.334Z
 tags:
   - Rapid Prototyping
   - API
+  - Installation Art
+  - Interaction Design
 ---
 ## Overview
 

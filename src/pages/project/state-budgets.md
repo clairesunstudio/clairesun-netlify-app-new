@@ -6,9 +6,11 @@ image: /img/budget.jpg
 url: https://www.mass.gov/rideshare
 date: 2019-06-02T22:42:51.326Z
 tags:
-  - Data Viz
-  - Design
-  - Dev
+  - User Research
+  - UX Design
+  - UI Design
+  - DX Design
+  - Service Design
 ---
 ## Overview
 

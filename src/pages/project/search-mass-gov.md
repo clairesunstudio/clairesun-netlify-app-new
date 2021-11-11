@@ -6,11 +6,10 @@ image: /img/search.jpg
 url: https://search.mass.gov
 date: 2019-06-02T22:42:51.326Z
 tags:
-  - React APP
-  - Design
-  - Dev
-  - UX
   - API
+  - UI Design
+  - UX Design
+  - User Testing
 ---
 ## Overview
 

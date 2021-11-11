@@ -6,10 +6,10 @@ image: /img/dese.jpg
 url: https://mass.gov/successabcs
 date: 2019-06-02T22:42:51.326Z
 tags:
-  - React APP
-  - API
-  - Design
-  - Dev
+  - Data Viz
+  - Storytelling
+  - UI Design
+  - Interaction Design
 ---
 ## Overview
 

@@ -5,9 +5,8 @@ description: A Geolocation search for the Massachusetts Child Care Programs
 image: /img/childcare.jpg
 date: 2019-04-30T04:26:43.334Z
 tags:
-  - Data Viz
-  - Design
-  - Dev
+  - API
+  - UI Design
 ---
 ## Overview
 
