@@ -7,8 +7,8 @@ url: https://tnc.sites.digital.mass.gov/
 date: 2019-06-02T22:42:51.326Z
 tags:
   - Data Viz
-  - Design
-  - Dev
+  - UI Design
+  - User Testing
 ---
 ## Background
 

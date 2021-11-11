@@ -7,9 +7,10 @@ image: /img/mayflower.png
 url: https://mayflower.digital.mass.gov/
 date: 2021-11-03T14:02:48.077Z
 tags:
-  - Data Viz
-  - Design
-  - Dev
+  - UI Design
+  - UX Design
+  - DX Design
+  - Interaction Design
 ---
 ## Overview
 

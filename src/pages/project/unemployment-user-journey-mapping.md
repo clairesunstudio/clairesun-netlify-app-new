@@ -4,6 +4,10 @@ title: Unemployment User Journey Mapping (TODO)
 description: Rethink one of the unemployment services in the state based on end user needs
 image: /img/ui-journey-map.png
 date: 2021-11-07T13:25:31.329Z
+tags:
+  - User Research
+  - Service Design
+  - UX Design
 ---
 Our research approach aimed to gather both an aggregate (quantitative) and subjective (qualitative) view of our users. So we began by sending a survey to 25,000 people who had applied for UI within the last year. We received a solid 1,300 responses -- a 5 percent response rate. One of the most interesting findings was that satisfaction with UI Online --the online tool that people can use to file for benefits -- is positively correlated with age. Our hypothesis there is that younger claimants who are more tech-savvy are less satisfied with UI Online because they have higher expectations for how a modern website or application should perform. There are plenty more insights and we are still in the process of mining this data.
 

@@ -6,9 +6,10 @@ image: /img/mdd.jpg
 url: http://clairesunstudio.github.io/mdd
 date: 2019-06-02T22:42:51.326Z
 tags:
-  - Data Viz
-  - Design
-  - Dev
+  - Interaction Design
+  - Storytelling
+  - UX Design
+  - User Research
 ---
 ## Overview
 

@@ -6,9 +6,8 @@ image: /img/chapter55.jpg
 url: https://mass.gov/chapter55
 date: 2016-12-17T15:04:10.000Z
 tags:
-  - Dev
-  - Design
   - Data Viz
+  - UI Design
 ---
 ## Overview
 
