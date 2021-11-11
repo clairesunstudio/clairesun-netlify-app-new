@@ -52,7 +52,7 @@ collections:
       - { label: URL, name: url, widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Tags", name: "tags", widget: "select", multiple: true, 
-          options: ["UI Design", "Research", "User Testing", "Dev", "Data Viz", "API", "Storytelling", "Interaction Design", "Creative Campaign", "Rapid Prototyping", "Installation Art"]}
+          options: ["UI Design", "UX Design", "DX Design", "User Research", "Interaction Design", "Service Design", "User Testing", "Dev", "Data Viz", "API", "Storytelling", "Creative Campaign", "Rapid Prototyping", "Installation Art"]}
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
