@@ -43,7 +43,7 @@ On top of the most noticeable usability improvements like making pages responsiv
 
 ##### Developer experience (DX) journey mapping
 
-Meeting with technical stakeholders, listening to and understanding their needs and desires, was a necessary step that often overlooked. Journey mapping is a great exercise to build understanding and empathy around the process, and align and involve stakeholders so that they can help create solutions and feel invested throughout the project. I gathered the key stakeholders who are also the technical team in a room at the start of the project and help them visualize the existing process by writing down each step, including the tools they use, the people/organization they interact with, their expectations and their pain points, etc. 
+A good developer experience and toolset enables the building of a better end-user experience. Meeting with technical stakeholders, listening to and understanding their needs and desires, was a necessary step that often overlooked. Journey mapping is a great exercise to build understanding and empathy around the process, and align and involve stakeholders so that they can help create solutions and feel invested throughout the project. I gathered the key stakeholders who are also the technical team in a room at the start of the project and help them visualize the existing process by writing down each step, including the tools they use, the people/organization they interact with, their expectations and their pain points, etc. 
 
 ![](/img/budget-service-mapping.png)
 
