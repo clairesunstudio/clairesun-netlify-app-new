@@ -21,20 +21,17 @@ I worked closely with the Department of Education and Secondary Education on dev
 
 ## Prototype, Test and Iterate
 
-#### Correlation between failed courses and graduation rate
-<div class="grid">
-    <rehype-image src="dese-iterations-failed-courses.png" caption=""></rehype-image>
-</div>
+##### Correlation between failed courses and graduation rate explorations
+![](/img/dese-iterations-failed-courses.png)
 
-Radar Charts or polar chart are a way of comparing multiple quantitative variables, useful for seeing which variables are scoring high or low within a dataset, making them ideal for displaying multi-factor. 
+Radar Charts or polar chart are a way of comparing multiple quantitative variables, useful for seeing which variables are scoring high or low within a dataset, making them ideal for displaying multi-dimensional datasets. 
 However, the graduation data were collected by subjects and didn't have the granularity of the number of failed courses, so we couldn't join the pass/fail data with graduation data. 
-We combined the subject data into two categories — all subjects vs. core subjects to eliminate compounding factors that could lead to biased conclusions
+We ended up combining the subject data into two categories — all subjects vs. core subjects to eliminate the compounding factors that could lead to biased conclusions.
 
-#### 11th Grade Data Visualization Explorations
+##### 11th grade data visualization explorations
+Narrative makes complicated data simple. As we iterate based on user testing and feedback, we moved towards a more curated approach for illustrating the cohort datasets, embedding interactive data visualization with contextual text explanations to let viewers explore the data at their own pace.
 
-<div class="grid">
-    <rehype-image src="dese-iterations-11th-grade.png" caption=""></rehype-image>
-</div>
+![](/img/dese-iterations-11th-grade.png)
 
 ![](/img/dese-11th-grade-final.gif)
 
