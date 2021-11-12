@@ -80,14 +80,14 @@ image: /img/profile-pic.jpg
 about:
   name: Minghua Sun
   job: Creative Technologist, UX Engineer
-  blurb: "My name is Minghua (she/her). I'm a full-stack designer and front end
-    developer who is experienced in building human-centered, data-driven digital
-    products for the public good. I work cross-functionally and wear multiple
-    hats on project teams, from planning and coordinating requirements,
-    conducting UX research and creating design mockups, prototyping and
-    development, to usability testing and continuous iteration. Furthermore, I
-    specialize in data visualization/storytelling, designing for accessibility,
-    and building/managing design systems. "
+  blurb: "My name is Minghua |mɪŋ(h)wä| (she/her). I'm a full-stack designer and
+    front end developer who is experienced in building human-centered,
+    data-driven digital products for the public good. I work cross-functionally
+    and wear multiple hats on project teams, from planning and coordinating
+    requirements, conducting UX research and creating design mockups,
+    prototyping and development, to usability testing and continuous iteration.
+    Furthermore, I specialize in data visualization/storytelling, designing for
+    accessibility, and building/managing design systems. "
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist
   title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
@@ -127,7 +127,7 @@ education:
       * National College Honor Scholarship Society (Alpha Chi) Member
 jobs:
   - jobTitle: Sr. UX Developer, Design System Lead
-    workPlace: Digital Services, Commonwealth of Massachusetts
+    workPlace: Massachusetts Digital Service
     startDate: May 2015
     endDate: Present
     descriptions: >-
@@ -143,9 +143,9 @@ jobs:
   - jobTitle: Visual Designer (Part-time)
     workPlace: UMass Boston
     startDate: Mar 2014
-    endDate: Jun 2015
+    endDate: May 2015
     descriptions: |-
-      * Designed and created promotional collateral
+      * Designed and produced promotional materials
       * Event filming and post production
   - jobTitle: Web/Graphic Designer
     startDate: May 2014
