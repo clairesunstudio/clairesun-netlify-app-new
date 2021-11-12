@@ -29,9 +29,10 @@ However, the graduation data were collected by subjects and didn't have the gran
 We ended up combining the subject data into two categories — all subjects vs. core subjects to eliminate the compounding factors that could lead to biased conclusions.
 
 ##### 11th grade data visualization explorations
-Narrative makes complicated data simple. As we iterate based on user testing and feedback, we moved towards a more curated approach for illustrating the cohort datasets, embedding interactive data visualization with contextual text explanations to let viewers explore the data at their own pace.
-
+ hn    
 ![](/img/dese-iterations-11th-grade.png)
+
+Narrative makes complicated data simple. As we iterate based on user testing and feedback, we moved towards a more curated approach for illustrating the cohort datasets. Embedding interactive data visualization with contextual text explanationslet allowed viewers to be more engaged in the narrative. 
 
 ![](/img/dese-11th-grade-final.gif)
 

@@ -12,6 +12,8 @@ tags:
   - DX Design
   - Service Design
 ---
+![]()
+
 ## Overview
 
 As part of the state budgeting process, throughout each fiscal year, a small team of budget analysts and web masters within the Executive Office for Administration and Finance are tasked to edit and publish a data-driven microsite for each of the three budget types — the governor's budget proposal, the budget summary and a five-year capital budget plan. 
@@ -54,10 +56,10 @@ Making changes to an established process is never easy. It involves everyone bei
 ##### Technical solutioning
 
 Learning from the prior failed ventures, we focused on finding a solution that was closely aligned with the existing process so that we could improve and migrate the operations progressively. 
-Replacing the legacy programs with [JAMstack](https://jamstack.org/what-is-jamstack/) - a new standard architecture using git workflow and modern build tools to server-side render APIs into static pages substantially sped up the build process, made the sites more performant and allowed the design improvements to made both for the developer experience and the end user experience.[](https://www.draw.io/#G1EKZrZn_B-zaDnxOrGLRsz-_PK-vI76wV)[](https://www.draw.io/#G1EKZrZn_B-zaDnxOrGLRsz-_PK-vI76wV)
+Replacing the legacy programs with [JAMstack](https://jamstack.org/what-is-jamstack/) - a new standard architecture using git workflow and modern build tools to server-side render APIs into static pages substantially sped up the build process, made the sites more performant and allowed the design improvements to made both for the developer experience and the end user experience.
+
+![](/img/budget-infrastructure.png)
 
 ##### Design and Development
 
 I created wireframes and high-fidelity design mockups, drafted design and technical scopes for front-end components and page templates, as well as designing back-end data schema and data pipeline, building out data plugins, and developing and deploying the sites.
-
-![]()
