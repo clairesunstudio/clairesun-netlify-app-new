@@ -1,7 +1,7 @@
 ---
 templateKey: project
 title: The Bright & Beautiful Project
-description: Design for the non-profit project empowering young women in rural China
+description: Design for the cause of empowering "left-behind" girls in rural China
 image: /img/bnbcards.jpg
 date: 2016-08-01T04:26:43.334Z
 tags:
@@ -10,7 +10,7 @@ tags:
 ---
 ## Overview
 
-The Bright & Beautiful (有灵且美) is a non-profit organization that was created to bring art and mindfulness to the “left-behind” girls in rural China, aiming to help unlock their creative potentials and empower them to achieve their dreams. Between 2014 and 2017, the team had successfully hosted more than 6 summer and winter arts camps and other creative workshops partnering with local schools in rural areas, served over 400 girls, and connected more than 50 volunteers from around the globe.
+"Left-behind" children are those of the migrate workers who seek employment opportunities in big cities, a phenomenon not uncommon in rural China. Compared to their male counterparts, the young girls who are left behind usually struggle more for their parents' attention, are less likely to finish schools and are at higher risk of crime. The Bright & Beautiful (有灵且美) is a non-profit organization that aims to help these girls in rural China, by bringing art, creativity, mindfulness, attention and love to them. Between 2014 and 2017, the team had successfully hosted more than 6 summer and winter arts camps and other creative workshops partnering with local schools in rural areas, served over 400 girls, and connected more than 50 volunteers from around the globe.
 
 <gif src="bnb-parallax-scroll.gif"></gif>
 

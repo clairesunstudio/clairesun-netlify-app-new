@@ -1,7 +1,8 @@
 ---
 templateKey: project
 title: Search.mass.gov
-description: The search application powering Mass.gov
+description: Build the search application that help constituents find the
+  information they look for quickly
 image: /img/search.jpg
 url: https://search.mass.gov
 date: 2019-06-02T22:42:51.326Z

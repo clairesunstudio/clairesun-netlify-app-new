@@ -1,8 +1,7 @@
 ---
 templateKey: project
 title: Facebook Fan
-description: Useless machine created to experience the success and “cool” effect
-  of receiving social media approval
+description: An interactive device that lets you "feel" your popularity on social media
 image: /img/facebookfan.jpg
 date: 2015-08-01T04:26:43.334Z
 tags:

@@ -1,7 +1,7 @@
 ---
 templateKey: project
 title: Unemployment User Journey Mapping
-description: Rethink one of the most challenging public services based on end user needs
+description: Rethink one of the most challenging public services based on user needs
 image: /img/ui-journey-map.png
 date: 2021-11-07T13:25:31.329Z
 tags:

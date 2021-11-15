@@ -1,7 +1,7 @@
 ---
 templateKey: project
 title: Chapter55
-description: An interactive data story on Massachusetts opioid epidemic.
+description: An interactive data story on Massachusetts opioid epidemic
 image: /img/chapter55.jpg
 url: https://mass.gov/chapter55
 date: 2016-12-17T15:04:10.000Z
