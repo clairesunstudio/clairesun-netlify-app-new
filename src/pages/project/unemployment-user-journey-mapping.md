@@ -11,7 +11,7 @@ tags:
 ---
 ## Overview
 
-The [Executive Office of Labor and Workforce Development](https://www.mass.gov/orgs/executive-office-of-labor-and-workforce-development) (LWD) and the [Massachusetts Digital Service](https://www.mass.gov/orgs/digital-services) initiated a cross-secretariat joint effort to take a human-centered approach to improve the constituents interactions with the state's unemployment services. Collaborated with both the executive leadership at LWD and boots-on-the ground service providers at [Department of Unemployment Assistance](https://www.mass.gov/orgs/department-of-unemployment-assistance) (DUA) and [MassHire Department of Career Services](https://www.mass.gov/orgs/masshire-department-of-career-services) (MDCS), our team mapped out the end-to-end user journey for unemployed residents and jobseekers in Massachusetts — from the moment of losing their job to receiving the first unemployment check, maintaining weekly eligibility, and getting re-employed. This effort led to some quick-wins solutions that immediately assisted the constituents, and continues to guide the organization's priorities to improve its public services and organizational culture. 
+The [Executive Office of Labor and Workforce Development](https://www.mass.gov/orgs/executive-office-of-labor-and-workforce-development) (LWD) and the [Massachusetts Digital Service](https://www.mass.gov/orgs/digital-services) initiated a cross-secretariat joint effort to take a human-centered approach to improve the constituents interactions with the state's unemployment services. Collaborated with both the executive leadership at LWD and boots-on-the-ground service providers at [Department of Unemployment Assistance](https://www.mass.gov/orgs/department-of-unemployment-assistance) (DUA) and [MassHire Department of Career Services](https://www.mass.gov/orgs/masshire-department-of-career-services) (MDCS), our team mapped out the end-to-end user journey for unemployed residents and jobseekers in Massachusetts — from the moment of losing their job to receiving the first unemployment check, maintaining weekly eligibility, and getting re-employed. This effort led to some quick-wins solutions that immediately assisted the constituents, and continues to guide the organization's priorities to improve its public services and organizational culture. 
 
 ## Background
 
@@ -40,17 +40,19 @@ These interviews provided us with an all-around view of the process from combine
 ## Synthesis and Ideation
 ![](/img/ui-concept-sprint1.jpg)
 
-Back in the office, we started to synthesize what our findings into key themes and insights through the affinity mapping exercise and crafted 6 final personas, varied by age, primary language, industry, unemployment stage, and how tech-savvy and proactive they were.
+Back in the office, we began to synthesize our findings into key themes and insights through the affinity mapping exercise and crafted 6 final personas, representing all user types varied by age, industry, unemployment stage, primary language, and how tech-savvy and proactive they were.
 
 ![](/img/ui-journey-map.png)
 
-We took these personas into the concept sprint, an intensive ideation workshop, and charted their current state journey — mapping the emotions they go through, the tools they use and the people the interacted with and their pain points at each step, in their each experience. In brainstorming breakout sessions we generated ideas that would reduce their pain paints and map out their future state journeys with the improvements. We finalized the solutions into quick-wins as well as north-star goals and presented them to the senior management team of LWD. 
+We took these personas into the concept sprint, an intensive ideation workshop, and charted their current state journey — mapping the emotions they go through, the tools they use, the people they interacted with, and their pain points at each step. 
+
+In brainstorming breakout sessions, we collaboratively generated ideas to alleviate the current pain points and mapped out their future state journeys with the improvements. We consolidated and finalized the solutions into quick-wins as well as north-star goals, and presented them to the senior management team of LWD. 
 
 ![](/img/ui-concep-sprint2.jpg)
 
 ## My Role
-As a design and research practice representative on the Digital Service team, I took part in and contributed to all the research phases — from drafting interview plans, conducting on-site interviews at career centers and taking notes, to facilitating user journey mapping workshops and developing actionable insights at the concept sprint. 
+As a design and research practice representative on the Digital Service team, I contributed in all the research phases — from drafting interview plans, conducting on-site interviews at career centers and taking notes, to facilitating user journey mapping workshops and developing actionable insights at the concept sprint. 
 
-As part of the approved quick-win solutions, I designed, prototyped and tested the online calculators to help [UI claimants](https://www.mass.gov/info-details/how-your-unemployment-benefits-are-determined) and [seasonal workers](https://www.mass.gov/service-details/working-while-receiving-unemployment-benefits) quickly estimate their eligibility and benefits amounts without having to navigate the complicated formulas on their own. These  of   usability testing and refinement.
+As part of the approved quick-win solutions, I designed, prototyped and tested the online calculators to help [UI claimants](https://www.mass.gov/info-details/how-your-unemployment-benefits-are-determined) and [seasonal workers](https://www.mass.gov/service-details/working-while-receiving-unemployment-benefits) quickly estimate their eligibility and benefit amounts without having to navigate the complicated formulas on their own. I also help design and develop the front-end of a [multilingual unemployment benefits application portal](https://unemployment.mass.gov) to augment the existing [UI online claimant portal](https://uionline.detma.org/Claimant/Core/Login.ASPX).
 
-I later also help design and develop the front-end of the [multilingual unemployment benefits application portal](https://unemployment.mass.gov) to augment the existing [UI online claimant portal](https://uionline.detma.org/Claimant/Core/Login.ASPX).
+These implementations were tested and refined with the real users. Along with the work done by the content team, we were able to help reduce the confusion and frustration of those who were going through this already stressful life experience and assist call-center operators by reducing their work answering some reoccurring questions regarding UI benefits.

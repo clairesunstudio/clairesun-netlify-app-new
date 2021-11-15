@@ -1,6 +1,6 @@
 ---
 templateKey: project
-title: Mayflower Component Library
+title: Mayflower Design System
 description: "Leading the transition from the Mass.gov UI library to a design
   system for the state government "
 image: /img/mayflower.png
