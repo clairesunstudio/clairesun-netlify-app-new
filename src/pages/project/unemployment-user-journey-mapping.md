@@ -25,10 +25,18 @@ There were few organizational challenges that we faced with:
 
 In order to address these challenges holistically, we must first understand the needs of both the constituents and the state employees providing the services.
 
-## Process
+## Research
+
+First step to get to understand the needs of our users was to get some preliminary data from our users directly. We designed a survey and sent it out to \~25,000 people who had applied for UI within the last year and received \~1,300 responses. The responses provided an aggregate (quantitative) view of our users about their behaviors, experiences and demographics, which helped us create meaningful segments and informed our persona creation. 
+
+To develop a deeper understanding and empathy for our users, we conducted multi-faceted qualitative research,  which happened in person with different groups of users in different environments:
+
+\- We recruited and interviewed business owners in Massachusetts about their experiences with DUA services
+
+\- We interviewed DUA employees to gain a first-hand understanding of what it’s like to work in the organization
+
+\- We spent a day at Franklin-Hampshire Career Center in Greenfield and a day at Fall River Career Center, as well as half a day at the DUA Walk-In Center in Boston. We spoke to staff, sat in 2 career seminars, observed the spaces and resources that users have to navigate and, most importantly, talked to 46 people about their experiences with UI and career services.
+
+We conducted 12 in-depth, 1-hour interviews and 34 fly-bys — 10- to 15-minute interviews with people while they are waiting at an office. These provided us with a great view of the process from a human perspective. The people we spoke to spanned all ages, industries, and demographics, giving us a comprehensive sense of what different folks go through. Our Spanish-speaking team members also led some interviews in Spanish.
 
 User journey mapping focuses on the user’s own experience. It seeks to get at the emotions that people go through, the tools that they use, and the people they interact with on their journey.
-
-Our research approach aimed to gather both an aggregate (quantitative) and subjective (qualitative) view of our users. So we began by sending a survey to 25,000 people who had applied for UI within the last year. We received a solid 1,300 responses -- a 5 percent response rate. One of the most interesting findings was that satisfaction with UI Online --the online tool that people can use to file for benefits -- is positively correlated with age. Our hypothesis there is that younger claimants who are more tech-savvy are less satisfied with UI Online because they have higher expectations for how a modern website or application should perform. There are plenty more insights and we are still in the process of mining this data.
-
-The heart of our research, however, happened in person. We spent a day at Franklin-Hampshire Career Center in Greenfield and a day at Fall River Career Center, as well as half a day at the DUA Walk-In Center in Boston. We spoke to staff, sat in 2 career seminars, observed the spaces and resources that users have to navigate and, most importantly, talked to 46 people about their experiences with UI and career services.
