@@ -82,11 +82,10 @@ about:
   job: Creative Technologist, UX Engineer
   blurb: "My name is Minghua |mɪŋ(h)wä| (she/her). I'm a full-stack designer and
     front end developer who is experienced in building human-centered,
-    data-driven digital products for the public good. I work cross-functionally
-    and wear multiple hats on project teams, from planning and coordinating
-    requirements, conducting UX research and creating design mockups,
-    prototyping and development, to usability testing and continuous iteration.
-    Furthermore, I specialize in data visualization/storytelling, designing for
+    data-driven digital products for the public good. I work cross-functionally,
+    lead and contribute to complex projects from inception to completion. My
+    crossover between design and dev has put me in a unique position and enabled
+    my specialization in data visualization/storytelling, designing for
     accessibility, and building/managing design systems. "
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
     Technologist

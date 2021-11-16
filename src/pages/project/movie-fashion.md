@@ -1,7 +1,7 @@
 ---
 templateKey: project
 title: Fashion in Movies
-description: Proof of concept prototype for visualizing fashion in classic movies
+description: Proof of concept of visualizing fashion in classic movies
 image: /img/fashion.jpg
 url: http://clairesunstudio.github.io/fashion-viz/
 date: 2015-01-01T23:42:51.326Z
