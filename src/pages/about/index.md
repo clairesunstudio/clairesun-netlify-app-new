@@ -84,7 +84,7 @@ about:
     front end developer who is experienced in building human-centered,
     data-driven digital products for the public good. I work cross-functionally,
     lead and contribute to complex projects from inception to completion. My
-    crossover between design and dev has put me in a unique position and enables
+    crossover between design and dev has put me in a unique position and enabled
     my specialization in data visualization/storytelling, designing for
     accessibility, and building/managing design systems. "
   Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
