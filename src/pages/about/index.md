@@ -157,8 +157,8 @@ jobs:
       * Designed graphics for use on the website and marketing emails.
   - jobTitle: Design Internship
     workPlace: NH Division of Economic Development, Concord, NH
-    startDate: Feb 2014
-    endDate: Sep 2013
+    startDate: Sep 2013
+    endDate: Feb 2014
     descriptions: ""
 highlights:
   - title: Massachusetts Excellence in Technology Award – Innovation in Data Science
