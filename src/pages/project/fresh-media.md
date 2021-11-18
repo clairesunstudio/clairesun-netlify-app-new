@@ -3,7 +3,7 @@ templateKey: project
 title: Artificial Bioluminescence
 description: Interactive and immersive installation in the Fresh Media Show
 image: /img/freshmedia1.jpg
-date: 2019-06-02T22:42:51.326Z
+date: 2018-06-01T22:42:51.326Z
 tags:
   - Installation Art
   - Rapid Prototyping
