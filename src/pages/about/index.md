@@ -78,7 +78,7 @@ templateKey: about-page
 title: About Me
 image: /img/profile-pic.jpg
 about:
-  name: Minghua Sun
+  name: Minghua Claire Sun
   job: Creative Technologist, UX Engineer
   blurb: "My name is Minghua |mɪŋ(h)wä| (she/her). I'm a full-stack designer and
     front end developer who is experienced in building human-centered,

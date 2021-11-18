@@ -11,8 +11,6 @@ tags:
   - UI Design
   - Service Design
 ---
-![]()
-
 ## Overview
 
 The MassHire Department of Career Services (MassHire) came to us for a design consulting service on a new initiative that would allow jobseekers to access all the state workforce services in one place. A development team had being hired to build the digital tool, but the MassHire management team needed help to draft design requirements, and provide design guidance to the vendor team to ensure the final product will meet the users needs and be easy to use.
