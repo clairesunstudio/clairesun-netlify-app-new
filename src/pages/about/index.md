@@ -146,15 +146,15 @@ jobs:
     descriptions: |-
       * Designed and produced promotional materials
       * Event filming and post production
-  - jobTitle: Web/Graphic Designer
+  - jobTitle: Web Designer
     startDate: May 2014
     endDate: Oct 2014
     workPlace: StudentUniverse
     descriptions: >-
-      * Contributed to the redesign and rebranding of the company website and
-      mobile app through wireframing, template mockup, and logo design.
+      * Contributed to the redesign of StudentUniverse.com and the new mobile
+      app through wireframe creation, template mockup, and branding design.
 
-      * Designed graphics for use on the website and marketing emails.
+      * Designed graphics for use on the website and the marketing emails.
   - jobTitle: Design Internship
     workPlace: NH Division of Economic Development, Concord, NH
     startDate: Sep 2013
