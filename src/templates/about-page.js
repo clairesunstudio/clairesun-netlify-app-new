@@ -119,7 +119,7 @@ export const AboutPageTemplate = ({ image, about: { name, title, blurb }, info, 
                 ))
             }
         </Timeline>
-        <SectionHeader>Pro Bono<Icon name='volunteer' {...svgSize} /></SectionHeader>
+        <SectionHeader>Volunteer<Icon name='volunteer' {...svgSize} /></SectionHeader>
         <Timeline>
             { volunteer && volunteer.map((item, i) => (
                     <TimelineEvent
