@@ -81,7 +81,7 @@ about:
   name: Minghua Claire Sun
   job: Creative Technologist, UX Engineer
   blurb: "My name is Minghua |mɪŋ(h)wä| (she/her). I'm a full-stack designer and
-    front end developer who is experienced in building human-centered,
+    front-end developer who is experienced in building human-centered,
     data-driven digital products for the public good. I work cross-functionally,
     lead and contribute to complex projects from inception to completion. My
     crossover between design and dev has put me in a unique position and enabled
@@ -125,7 +125,7 @@ education:
       * 4-year Presidential Scholarship and Dean’s List Recipient
       * National College Honor Scholarship Society (Alpha Chi) Member
 jobs:
-  - jobTitle: Sr. UX Developer, Design System Lead
+  - jobTitle: Sr. UX Engineer, Design System Lead
     workPlace: Massachusetts Digital Service
     startDate: May 2015
     endDate: Present
@@ -161,23 +161,33 @@ jobs:
     endDate: Feb 2014
     descriptions: ""
 highlights:
+  - title: 2022 Excellence in Digital Award
+    subTitle: Digital Government Summit
+    descriptions: Mass Data Hub
+    startDate: ""
+    endDate: "Sep 2022"
+  - title: Citation for Outstanding PerformanceCitation
+    subTitle: Commonwealth of Massachusett
+    descriptions: Mass.gov Covid-19 Rapid Response
+    startDate: ""
+    endDate: "Mar 2022"
+  - title: Massachusetts Performance Recognition Program
+    subTitle: Commonwealth of Massachusett
+    descriptions: Mass.gov redesign and re-platform project (UX designer and developer)
+    startDate: ""
+    endDate: "Jan 2018"
   - title: Massachusetts Excellence in Technology Award – Innovation in Data Science
     subTitle: Center for Digital Government | GovTech
     descriptions: Interactive data story on the [Massachusetts opioid
       epidemic](https://chapter55.digital.mass.gov/) (creative lead, data
       visualization developer)
-    endDate: "2017"
     startDate: ""
-  - title: Massachusetts Performance Recognition Program
-    subTitle: Commonwealth of Massachusett
-    descriptions: Mass.gov redesign and re-platform project (UX designer and developer)
-    startDate: ""
-    endDate: "2018"
+    endDate: "Sep 2017"
   - title: Artificial Bioluminescence
     subTitle: Boston CyberArts Gallery Exibition
     descriptions: A multisensory LED light installation (artist)
     startDate: ""
-    endDate: "2018"
+    endDate: "2016"
 volunteer:
   - title: Creative Director
     subTitle: " Bright & Beautiful (有灵且美)"
