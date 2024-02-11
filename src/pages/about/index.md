@@ -84,13 +84,10 @@ about:
     front-end developer who is experienced in building human-centered,
     data-driven digital products for the public good. I work cross-functionally,
     lead and contribute to complex projects from inception to completion. My
-    crossover between design and dev has put me in a unique position and enabled
+    crossover between design and dev has enabled
     my specialization in data visualization/storytelling, designing for
     accessibility, and building/managing design systems. "
-  Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
-    Technologist
-  title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
-    Technologist, Cat Mom
+  title: UX Engineer, Design System Evangelist, Creative Technologist
 info:
   - icon: phone
     href: tel:6178341062
@@ -130,31 +127,33 @@ jobs:
     startDate: May 2015
     endDate: Present
     descriptions: >-
-      * Lead the design, development and documentation efforts for the state's
-      open-source design system and component libraries. Uphold
-      design-development workflow through design reviews and code reviews. 
+      * Spearheaded the design, development efforts for the state's open-source design system and component libraries. 
 
-      * Hands-on UX research and design, React and front-end Drupal development for Mass.gov and other Digital Service products.
+      * Practice area lead in UX research, UI design, and front-end development for Mass.gov and other Digital Service products. Uphold design-to-development workflow through design reviews, code reviews and product releases.
+            
+      * Provide digital consultancy for partner state organizations in service design, application design, and technical solutions.
 
-      * Onboard and guide in-house and vendor designers and developers. Mentor design interns. 
+      * Hire and onboard in-house and vendor designers and developers; mentor junior designers and interns. 
 
-      * Provide digital consulting services for partner state-agency projects in research, design and tech solutions.
-  - jobTitle: Visual Designer (Part-time)
-    workPlace: UMass Boston
+  - jobTitle: College Course Instructor
+    workPlace: Massachusetts College of Art and Design
+    startDate: Fall 2023
+    endDate: ""
+    descriptions: |-
+      Designed and taught course The Art of Data Visualization
+  - jobTitle: Visual Designer
+    workPlace: UMass Boston (Part-time)
     startDate: Mar 2014
     endDate: May 2015
     descriptions: |-
-      * Designed and produced promotional materials
-      * Event filming and post production
-  - jobTitle: Web Designer
+      Designed and produced promotional materials. Event filming and post production.
+  - jobTitle: UI/UX Designer
     startDate: May 2014
     endDate: Oct 2014
     workPlace: StudentUniverse
     descriptions: >-
-      * Contributed to the redesign of StudentUniverse.com and the new mobile
-      app through wireframe creation, template mockup, and branding design.
-
-      * Designed graphics for use on the website and the marketing emails.
+      Contributed to the redesign of StudentUniverse.com and the launch of an enterprise mobile
+      app through wireframing, branding design and usability testing and iterations.
   - jobTitle: Design Internship
     workPlace: NH Division of Economic Development, Concord, NH
     startDate: Sep 2013
