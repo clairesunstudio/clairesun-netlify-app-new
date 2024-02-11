@@ -3,10 +3,11 @@
 .pills{
   display: flex;
   flex-wrap: wrap;
+  font-size: 0.8rem;
 
   @media screen {
     .capsule {
-      background-color: $color-blue-alt;
+      background-color: $color-gray-darker;
       color: $color-white;
       border-radius: 100px;
     }

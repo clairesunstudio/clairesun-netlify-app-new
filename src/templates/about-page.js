@@ -56,7 +56,7 @@ export const AboutPageTemplate = ({ image, about: { name, title, blurb }, info, 
             skillSet && (
               <div className="about-section">
                 <SectionHeader>Core Competencies</SectionHeader>
-                <WordCloud data={skillSet}/>
+                <Pills data={skillSet} />
               </div>
             )
           }
@@ -191,10 +191,7 @@ export const aboutPageQuery = graphql`
         skills {
           code
           languages
-          skillSet {
-            name
-            value
-          }
+          skillSet
           toolSet {
             name
             value

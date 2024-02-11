@@ -34,43 +34,7 @@ skills:
   code: HTML, CSS, SASS, JS, JQuery, SQL, React.JS, Node.JS, D3.JS, P5.JS,
     Arduino, Processing, Twig, Git, Regex, R, Python, AWS, GTM
   languages: ""
-  skillSet:
-    - name: Atomic Design
-      value: 25
-    - name: Rapid Prototyping
-      value: 18
-    - name: Data Visualization
-      value: 20
-    - name: Front End Dev
-      value: 30
-    - name: User Research
-      value: 16
-    - name: UX Design
-      value: 30
-    - name: Installation Art
-      value: 15
-    - name: Animation
-      value: 20
-    - name: UI Design
-      value: 20
-    - name: Branding
-      value: 20
-    - name: Service Design
-      value: 25
-    - name: Design Thinking
-      value: 20
-    - name: Design Leadership
-      value: 20
-    - name: Data Analytics
-      value: 20
-    - name: Interaction Design
-      value: 20
-    - name: Agile
-      value: 13
-    - name: Product Management
-      value: 15
-    - name: Accessibility
-      value: 15
+  skillSet: UX Design, Service/Process Design, Design Thinking, Design Leadership, User Research, Usability Testing, Atomic Design, Front End Dev, Rapid Prototyping, A11Y Design, Inclusive Design, Data Visualization, Data Analytics, Branding Design, Product Management, Agile & Lean UX
 path: /about
 templateKey: about-page
 title: About Me
