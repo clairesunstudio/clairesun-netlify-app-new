@@ -7,17 +7,17 @@ skills:
     - name: Sketch
       value: 89
       size: md
-    - name: Invision
+    - name: Usability Hub
       value: 100
-      size: md
-    - name: User Zoom
-      value: 90
+      size: sm
+    - name: UserZoom
+      value: 100
       size: sm
     - name: Optimal Workshop
       value: 85
       size: sm
     - name: Miro
-      value: 80
+      value: 100
       size: md
     - name: AI
       value: 100
@@ -33,14 +33,14 @@ skills:
       size: lg
   code: HTML, CSS, SASS, JS, JQuery, SQL, React.JS, Node.JS, D3.JS, P5.JS,
     Arduino, Processing, Twig, Git, Regex, R, Python, AWS, GTM
-  languages: English, Mandarin Chinese, Cantonese
+  languages: ""
   skillSet:
     - name: Atomic Design
-      value: 15
+      value: 25
     - name: Rapid Prototyping
       value: 18
     - name: Data Visualization
-      value: 30
+      value: 20
     - name: Front End Dev
       value: 30
     - name: User Research
@@ -55,13 +55,11 @@ skills:
       value: 20
     - name: Branding
       value: 20
-    - name: Marketing Campaign
-      value: 15
+    - name: Service Design
+      value: 25
     - name: Design Thinking
       value: 20
-    - name: Social Media
-      value: 20
-    - name: Storytelling
+    - name: Design Leadership
       value: 20
     - name: Data Analytics
       value: 20
@@ -70,7 +68,7 @@ skills:
     - name: Agile
       value: 13
     - name: Product Management
-      value: 10
+      value: 15
     - name: Accessibility
       value: 15
 path: /about
@@ -82,11 +80,8 @@ about:
   job: Creative Technologist, UX Engineer
   blurb: "My name is Minghua |mɪŋ(h)wä| (she/her). I'm a full-stack designer and
     front-end developer who is experienced in building human-centered,
-    data-driven digital products for the public good. I work cross-functionally,
-    lead and contribute to complex projects from inception to completion. My
-    crossover between design and dev has enabled
-    my specialization in data visualization/storytelling, designing for
-    accessibility, and building/managing design systems. "
+    data-driven digital products for the public good. I excell at working cross-functionally, have led many
+    complex government digital projects from inception to completion, with passion in civic design and designing for equity. My expertise in design, user research and technical know-how has enabled my speciaties in designing for scale, designing for accessibility, data visualization and product management. "
   title: UX Engineer, Design System Evangelist, Creative Technologist
 info:
   - icon: phone
@@ -131,16 +126,16 @@ jobs:
 
       * Practice area lead in UX research, UI design, and front-end development for Mass.gov and other Digital Service products. Uphold design-to-development workflow through design reviews, code reviews and product releases.
             
-      * Provide digital consultancy for partner state organizations in service design, application design, and technical solutions.
+      * Provide digital consultancy for partner state organizations in service design, application design, user journey mapping and technical solutions.
 
       * Hire and onboard in-house and vendor designers and developers; mentor junior designers and interns. 
 
   - jobTitle: College Course Instructor
     workPlace: Massachusetts College of Art and Design
-    startDate: Fall 2023
-    endDate: ""
+    startDate: ""
+    endDate: Fall 2023
     descriptions: |-
-      Designed and taught course The Art of Data Visualization
+      Designed and taught "The Art of Data Visualization"
   - jobTitle: Visual Designer
     workPlace: UMass Boston (Part-time)
     startDate: Mar 2014
