@@ -7,17 +7,17 @@ skills:
     - name: Sketch
       value: 89
       size: md
-    - name: Invision
+    - name: Usability Hub
       value: 100
-      size: md
-    - name: User Zoom
-      value: 90
+      size: sm
+    - name: UserZoom
+      value: 100
       size: sm
     - name: Optimal Workshop
       value: 85
       size: sm
     - name: Miro
-      value: 80
+      value: 100
       size: md
     - name: AI
       value: 100
@@ -33,46 +33,8 @@ skills:
       size: lg
   code: HTML, CSS, SASS, JS, JQuery, SQL, React.JS, Node.JS, D3.JS, P5.JS,
     Arduino, Processing, Twig, Git, Regex, R, Python, AWS, GTM
-  languages: English, Mandarin Chinese, Cantonese
-  skillSet:
-    - name: Atomic Design
-      value: 15
-    - name: Rapid Prototyping
-      value: 18
-    - name: Data Visualization
-      value: 30
-    - name: Front End Dev
-      value: 30
-    - name: User Research
-      value: 16
-    - name: UX Design
-      value: 30
-    - name: Installation Art
-      value: 15
-    - name: Animation
-      value: 20
-    - name: UI Design
-      value: 20
-    - name: Branding
-      value: 20
-    - name: Marketing Campaign
-      value: 15
-    - name: Design Thinking
-      value: 20
-    - name: Social Media
-      value: 20
-    - name: Storytelling
-      value: 20
-    - name: Data Analytics
-      value: 20
-    - name: Interaction Design
-      value: 20
-    - name: Agile
-      value: 13
-    - name: Product Management
-      value: 10
-    - name: Accessibility
-      value: 15
+  languages: ""
+  skillSet: UX Design, Service/Process Design, Design Thinking, Design Leadership, User Research, Usability Testing, Atomic Design, Front End Dev, Rapid Prototyping, A11Y Design, Inclusive Design, Data Visualization, Data Analytics, Branding Design, Product Management, Agile & Lean UX
 path: /about
 templateKey: about-page
 title: About Me
@@ -82,15 +44,9 @@ about:
   job: Creative Technologist, UX Engineer
   blurb: "My name is Minghua |mɪŋ(h)wä| (she/her). I'm a full-stack designer and
     front-end developer who is experienced in building human-centered,
-    data-driven digital products for the public good. I work cross-functionally,
-    lead and contribute to complex projects from inception to completion. My
-    crossover between design and dev has put me in a unique position and enabled
-    my specialization in data visualization/storytelling, designing for
-    accessibility, and building/managing design systems. "
-  Title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
-    Technologist
-  title: Hybrid UX Designer + Developer, Design System Evangelist, Creative
-    Technologist, Cat Mom
+    data-driven digital products for the public good. I excell at working cross-functionally, have led many
+    complex government digital projects from inception to completion, with passion in civic design and designing for equity. My expertise in design, user research and technical know-how has enabled my speciaties in designing for scale, designing for accessibility, data visualization and product management. "
+  title: UX Engineer, Design System Evangelist, Creative Technologist
 info:
   - icon: phone
     href: tel:6178341062
@@ -130,31 +86,33 @@ jobs:
     startDate: May 2015
     endDate: Present
     descriptions: >-
-      * Lead the design, development and documentation efforts for the state's
-      open-source design system and component libraries. Uphold
-      design-development workflow through design reviews and code reviews. 
+      * Spearheaded the design, development efforts for the state's open-source design system and component libraries. 
 
-      * Hands-on UX research and design, React and front-end Drupal development for Mass.gov and other Digital Service products.
+      * Practice area lead in UX research, UI design, and front-end development for Mass.gov and other Digital Service products. Uphold design-to-development workflow through design reviews, code reviews and product releases.
+            
+      * Provide digital consultancy for partner state organizations in service design, application design, user journey mapping and technical solutions.
 
-      * Onboard and guide in-house and vendor designers and developers. Mentor design interns. 
+      * Hire and onboard in-house and vendor designers and developers; mentor junior designers and interns. 
 
-      * Provide digital consulting services for partner state-agency projects in research, design and tech solutions.
-  - jobTitle: Visual Designer (Part-time)
-    workPlace: UMass Boston
+  - jobTitle: College Course Instructor
+    workPlace: Massachusetts College of Art and Design
+    startDate: ""
+    endDate: Fall 2023
+    descriptions: |-
+      Designed and taught "The Art of Data Visualization"
+  - jobTitle: Visual Designer
+    workPlace: UMass Boston (Part-time)
     startDate: Mar 2014
     endDate: May 2015
     descriptions: |-
-      * Designed and produced promotional materials
-      * Event filming and post production
-  - jobTitle: Web Designer
+      Designed and produced promotional materials. Event filming and post production.
+  - jobTitle: UI/UX Designer
     startDate: May 2014
     endDate: Oct 2014
     workPlace: StudentUniverse
     descriptions: >-
-      * Contributed to the redesign of StudentUniverse.com and the new mobile
-      app through wireframe creation, template mockup, and branding design.
-
-      * Designed graphics for use on the website and the marketing emails.
+      Contributed to the redesign of StudentUniverse.com and the launch of an enterprise mobile
+      app through wireframing, branding design and usability testing and iterations.
   - jobTitle: Design Internship
     workPlace: NH Division of Economic Development, Concord, NH
     startDate: Sep 2013
