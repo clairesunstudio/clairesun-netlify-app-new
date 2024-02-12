@@ -53,18 +53,18 @@ export const AboutPageTemplate = ({ image, about: { name, title, blurb }, info, 
             </div>
           </div>
           {
-            toolSet && (
+            skillSet && (
               <div className="about-section">
-                <SectionHeader>Design Tools Proficiency</SectionHeader>
-                <DonutChart data={toolSet} />
+                <SectionHeader>Core Competencies</SectionHeader>
+                <Pills data={skillSet} />
               </div>
             )
           }
           {
-            skillSet && (
+            toolSet && (
               <div className="about-section">
-                <SectionHeader>Skill Set Cloud</SectionHeader>
-                <WordCloud data={skillSet}/>
+                <SectionHeader>Design Tech Stack</SectionHeader>
+                <DonutChart data={toolSet} />
               </div>
             )
           }
@@ -191,10 +191,7 @@ export const aboutPageQuery = graphql`
         skills {
           code
           languages
-          skillSet {
-            name
-            value
-          }
+          skillSet
           toolSet {
             name
             value
